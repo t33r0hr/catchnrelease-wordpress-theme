@@ -1,0 +1,284 @@
+@import '../utils';
+
+
+/* =====================
+Typography
+===================== */
+//
+
+
+body {
+    color: $color-font-dark;
+
+    line-height: $global-line-height;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @extend %default-sans-serif;
+    font-variant-numeric: lining-nums;
+    -moz-font-feature-settings: "lnum";
+    -webkit-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 $row-gutter*2;
+
+    font-weight: normal;
+
+    @include font-sizes-default();
+    @extend %default-sans-serif-medium;
+
+    em, i, strong, b {
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+p, li, address, blockquote, dl,
+figcaption {
+    margin: 0 0 $row-gutter;
+
+    font-weight: normal;
+
+    @include font-sizes-default();
+
+    > b,
+    > strong,
+    > a > b,
+    > a > strong {
+        @extend %default-sans-serif-bold;
+    }
+
+    em, i {
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    // special tag combination for word with background
+    > em {
+        position: relative;
+
+        display: inline-block;
+
+        margin: 0 rem-calc(2);
+
+        > strong {
+            position: relative;
+            z-index: 1;
+
+            color: $color-font-bright;
+        }
+
+        &:before {
+            position: absolute;
+            top: -5%;
+            left: -5%;
+
+            width: 110%;
+            height: 110%;
+
+            content: "";
+            transform: rotate(-1deg);
+
+            background: $color-background-black;
+        }
+    }
+}
+
+ul,
+ol {
+    padding-left: 1.2rem;
+    li {
+        margin-bottom: rem-calc(5);
+    }
+}
+
+dl {
+    dt, dd {
+        display: inline-block;
+
+        margin: 0;
+    }
+    dt {
+        @extend %default-sans-serif-bold;
+    }
+
+    dd {
+        display: inline;
+        &:after {
+            content:"\a";
+            white-space: pre;
+        }
+    }
+}
+
+b, strong {
+    font-weight: normal;
+}
+
+em, i {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+
+    color: $color-font-dark;
+
+    p &,
+    li & {
+        // text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            opacity: 0.75;
+        }
+    }
+}
+
+blockquote{
+
+    > p {
+        font-size: rem-calc(20);
+        line-height: (37/25);
+
+        @extend %default-monospace;
+
+        @media #{$medium-up} {
+            font-size: rem-calc(25);
+        }
+    }
+
+    cite {
+        margin-top: $row-gutter*2;
+    }
+
+    cite,
+    cite p {
+        display: block;
+
+        text-align: right;
+
+        font-size: rem-calc(22);
+        line-height: 1.2;
+
+        @extend %default-monospace;
+    }
+
+    cite p {
+        margin: 0;
+        padding: 0;
+    }
+
+    cite.has-meta {
+        overflow: hidden;
+
+        cursor: pointer;
+
+        &:after {
+            position: relative;
+
+            display: block;
+            float: right;
+
+            margin-top: rem-calc(8);
+
+            @extend %credits-info;
+        }
+
+        .meta {
+            padding-top: rem-calc(10);
+
+            font-size: 0.7em;
+
+            @extend %default-sans-serif;
+
+            &:not([hidden]) {
+                display: block;
+            }
+        }
+    }
+}
+
+address{
+    font-style: normal;
+}
+
+img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+figure{
+    margin: 0;
+}
+
+figcaption {
+    display: block;
+
+    margin: 0;
+    padding: rem-calc(2) 0;
+
+
+    * {
+        margin: 0;
+
+        text-transform: uppercase;
+
+        font-size: rem-calc(16);
+
+        @extend %default-sans-serif-medium;
+    }
+
+    &.has-credits {
+        cursor: pointer;
+
+        @media #{$medium-up} {
+            cursor: default;
+        }
+
+        publication-formatted-text p:last-child:after {
+            display: inline-block;
+
+            margin-right: rem-calc(-36);
+
+            vertical-align: bottom;
+
+            @extend %credits-info;
+        }
+
+        .credits {
+            padding-top: rem-calc(10);
+
+            * {
+                text-transform: none;
+
+                font-size: rem-calc(14);
+
+                @extend %default-sans-serif;
+            }
+
+            &:not([hidden]) {
+                display: block;
+            }
+        }
+    }
+}
+
+
+hr {
+    margin: $row-gutter*2 0;
+
+    border: none;
+    border-top: 1px solid $color-font-dark;
+}
+
+iframe {
+    width: 100%;
+
+    border: none;
+}

@@ -1,0 +1,228 @@
+%clearfix:after,
+%clearfix:before {
+    display: table;
+    /* 2 */
+
+    content: " ";
+    /* 1 */
+}
+
+%clearfix:after {
+    clear: both;
+}
+
+%ir {
+    overflow: hidden;
+
+    border: 0;
+    background-color: transparent;
+}
+
+%ir:before {
+    display: block;
+
+    width: 0;
+    height: 150%;
+
+    content: "";
+}
+
+%hide-small {
+    @media #{$small-only} {
+        display: none !important;
+    }
+}
+
+%hide-medium {
+    @media #{$medium-only} {
+        display: none !important;
+    }
+}
+
+%hide-medium-up {
+    @media #{$medium-up} {
+        display: none !important;
+    }
+}
+
+%default-paddings {
+    padding-top: $row-gutter*2;
+    padding-bottom: $row-gutter*2;
+    @media #{$medium-up} {
+        padding-top: $row-gutter*4;
+        padding-bottom: $row-gutter*4;
+    }
+}
+
+%default-margins {
+    margin-top: $row-gutter*2;
+    margin-bottom: $row-gutter*2;
+    @media #{$medium-up} {
+        margin-top: $row-gutter*4;
+        margin-bottom: $row-gutter*4;
+    }
+}
+
+%extended-paddings {
+    padding-top: $row-gutter*4;
+    padding-bottom: $row-gutter*4;
+    @media #{$medium-up} {
+        padding-top: $row-gutter*8;
+        padding-bottom: $row-gutter*8;
+    }
+}
+
+%bordered-ui-button {
+    border-width: rem-calc(2);
+    border-style: solid;
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: auto;
+        min-width: 50%;
+        max-width: 75%;
+        height: auto;
+        min-height: 50%;
+        max-height: 75%;
+
+        transform: translate(-50%, -50%);
+    }
+}
+
+%credits-info {
+    width: rem-calc(36);
+    height: rem-calc(17);
+    margin-bottom: rem-calc(4);
+
+    content: "";
+    cursor: pointer;
+    white-space: nowrap;
+
+    opacity: 0.35;
+    background-position: right center;
+    background-size: auto 95%;
+
+    @include credits-symbol();
+    will-change: opacity;
+
+    &:hover,
+    &:focus {
+        opacity: 0.75;
+    }
+}
+
+
+%meta-cloud-item-default {
+    display: block;
+
+    padding: rem-calc(20) rem-calc(15);
+
+    text-align: left;
+    text-transform: uppercase;
+
+    border: none;
+    outline: none;
+    box-shadow: 0 rem-calc(2) rem-calc(6) 0 rgba(0,0,0,0.12);
+
+    font-size: rem-calc(22);
+    line-height: 1;
+
+    @media #{$medium-up} {
+        white-space: nowrap;
+    }
+
+    &:hover,
+    &:focus {
+        transform: scale(1.025);
+    }
+}
+
+
+%meta-cloud-item-theme-1 {
+    background-color: $whitesmoke;
+
+    @extend %default-serif;
+}
+%meta-cloud-item-theme-2 {
+    background-color: $darkgraylight;
+
+    @extend %default-sans-serif-medium;
+}
+%meta-cloud-item-theme-2b {
+    background-color: $darkgraylight;
+
+    @extend %default-sans-serif-black;
+}
+%meta-cloud-item-theme-3 {
+    color: $color-font-bright;
+    background-color: $almostblack;
+
+    @extend %default-sans-serif-bold;
+}
+
+
+%tag-cloud-item-default {
+    display: block;
+
+    padding: rem-calc(15) rem-calc(30);
+
+    cursor: default;
+    text-transform: uppercase;
+    pointer-events: none;
+
+    color: $color-font-bright;
+    border: none;
+    outline: none;
+    box-shadow: 0 rem-calc(2) rem-calc(6) 0 rgba(0,0,0,0.12);
+
+    font-size: rem-calc(22);
+    line-height: 1;
+    @media #{$medium-up} {
+        white-space: nowrap;
+    }
+}
+
+%tag-cloud-bg-1 {
+    background-color: #3F3F3F;
+}
+%tag-cloud-bg-2 {
+    background-color: rgba(#5C6268, 0.84);
+}
+%tag-cloud-bg-3 {
+    background-color: rgba(#96A1B1, 0.68);
+}
+
+%tag-cloud-font-1 {
+    @extend %default-sans-serif-black;
+}
+%tag-cloud-font-2 {
+    @extend %default-sans-serif-medium;
+}
+%tag-cloud-font-3 {
+    @extend %default-serif-bold;
+}
+
+%tag-cloud-size-1 {
+    font-size: rem-calc(24);
+
+    @media #{$medium-up} {
+        font-size: rem-calc(40);
+    }
+}
+%tag-cloud-size-2 {
+    font-size: rem-calc(20);
+
+    @media #{$medium-up} {
+        font-size: rem-calc(32);
+    }
+}
+%tag-cloud-size-3 {
+    font-size: rem-calc(16);
+
+    @media #{$medium-up} {
+        font-size: rem-calc(24);
+    }
+}

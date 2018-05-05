@@ -1,0 +1,60 @@
+%default-sans-serif {
+    font-family: $font-family-sans-serif-regular;
+    font-weight: normal;
+    font-style: normal;
+}
+
+%default-sans-serif-medium,
+%default-sans-serif-bold {
+    font-family: $font-family-sans-serif-medium;
+    font-weight: normal;
+    font-style: normal;
+}
+
+%default-sans-serif-black {
+    font-family: $font-family-sans-serif-black;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+%default-monospace {
+    font-family: $font-family-monospace;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+%default-sans-serif-italic {
+    font-family: $font-family-sans-serif-regular;
+    font-weight: normal;
+    font-style: italic; // faux
+}
+
+%default-serif {
+    font-family: $font-family-serif-regular;
+    font-weight: normal;
+    font-style: normal;
+}
+
+%default-serif-bold {
+    font-family: $font-family-serif-bold;
+    font-weight: normal;
+    font-style: normal;
+}
+
+%default-serif-italic {
+    font-family: $font-family-serif-regular;
+    font-weight: normal;
+    font-style: italic; // faux
+}
+
+
+@mixin font-sizes-default($factor:1) {
+    font-size: rem-calc(18 * $factor);
+
+    @media #{$medium-up} {
+        font-size: rem-calc(22 * $factor);
+    }
+}

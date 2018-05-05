@@ -1,0 +1,63 @@
+%g-row {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-right: $column-gutter / 2;
+  padding-left: $column-gutter / 2;
+
+  @extend %clearfix;
+
+  @media #{$medium-only} {
+    max-width: $container-width * 0.74;
+  }
+}
+
+%g-rowcol {
+    padding-right: $column-gutter;
+    padding-left: $column-gutter;
+
+    @extend %g-row;
+}
+
+%g-row-reset {
+  max-width: none;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+%g-row-reset-hard {
+  max-width: none !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+%g-col {
+  float: left;
+
+  padding-right: $column-gutter / 2;
+  padding-left: $column-gutter / 2;
+}
+%g-col-end {
+  float: right;
+
+  padding-right: $column-gutter / 2;
+  padding-left: $column-gutter / 2;
+}
+
+
+%g-col-reset {
+  float: none;
+
+  width: auto;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+%g-col-reset-hard {
+  float: none !important;
+
+  width: auto !important;
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}

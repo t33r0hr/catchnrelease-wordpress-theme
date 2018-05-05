@@ -1,0 +1,20 @@
+@mixin vbox() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin hbox() {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin center() {
+  display: flex;
+  align-self: center;  
+  align-content: center;
+  justify-content: center;
+}
+
+@mixin stretch() {
+  align-items: stretch;
+}

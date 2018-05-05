@@ -1,0 +1,50 @@
+// names
+
+$white: #ffffff;
+$black: #000000;
+$gray: #878787;
+$red : red;
+
+$darkslategray: #3F3F3F; // black dark
+$dimgray: #5C6268; // black black
+$darkgray: #96A1B1; // black light
+$darkgraylight: #AAA7A7; // lightish
+$whitesmoke: #F3F0F1; // ultra light
+$lightsteelblue: #019cd2; // blue
+$darkblue : #00739E;
+
+$almostblack: #242229;
+$tomato: #E13F25;
+$light-transparent-50: rgba(255, 255, 255, 0.5);
+$light-transparent-20: rgba(255, 255, 255, 0.2);
+
+// definitions
+
+$color-background-default: $whitesmoke;
+$color-background-dark: $darkslategray;
+$color-background-black: $black;
+$color-background-bright: $white;
+$color-background-transparent: rgba(0, 173, 237, 0.5);
+
+$color-marked-default: $black;
+
+
+
+// typo
+
+$color-font-dark: $almostblack;
+$color-font-bright: $white;
+$color-placeholder: $gray;
+$color-link: $color-font-dark;
+$color-warning: $red;
+$color-font-highlight: $tomato;
+
+
+// header, footer & sidebar
+
+$color-background-header: $color-background-transparent;
+$color-background-footer: $color-background-black;
+$color-background-sidebar: $color-background-footer;
+$color-font-header: $color-font-bright;
+$color-font-footer: $color-font-bright;
+$color-font-sidebar: $color-font-footer;

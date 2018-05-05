@@ -1,0 +1,25 @@
+
+.sidebar {
+
+  .sidebar-widget > div {
+
+    display: none;
+
+  }
+
+  .sidebar-widget {
+
+    .widget_media_image {
+
+      display: flex;
+      flex-direction: row;
+
+      h2, .wp-caption-text {
+        display: none;
+      }
+
+    }
+
+  }
+
+}

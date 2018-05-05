@@ -1,0 +1,29 @@
+/** page content */
+
+.entry-header, .entry-content {
+
+  display: block;
+  float: none !important;
+  width: auto !important;
+
+  .wp-caption {
+    
+    background:  transparent;
+    border: none;
+
+  }
+
+  .wp-caption-text {
+
+    @include font-link;
+    color: $color-font-header;
+    font-size: 1.2em;
+  }
+
+}
+
+.site-content-contain {
+
+  background-color: transparent;
+
+}
