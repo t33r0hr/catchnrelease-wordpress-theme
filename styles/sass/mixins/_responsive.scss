@@ -1,0 +1,54 @@
+
+@mixin resp_margin_top () {
+  
+  margin-top: 35px;
+
+  @media #{$medium-up} {
+    margin-top: 25px;
+  }
+
+
+}
+
+@mixin resp_menu () {
+
+  flex-direction: column;
+  align-self: stretch;
+
+  > *,
+  > * > a {
+    margin: 0;
+    margin-right: 0;
+
+    flex-direction: row;
+    align-content: stretch;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+  }
+
+  @media #{$medium-up} {
+
+    flex-direction: row;
+
+    > *,
+    > * > a {
+
+      margin-right: $column-gutter;
+
+    }
+
+  }
+
+}
+
+
+@mixin font-sizes-default($factor:1) {
+    font-size: rem-calc(18 * $factor);
+
+    @media #{$medium-up} {
+        font-size: rem-calc(22 * $factor);
+    }
+}

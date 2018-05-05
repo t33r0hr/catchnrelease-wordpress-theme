@@ -1,0 +1,64 @@
+
+.main-navigation {
+
+  .navigation-wrapper {
+
+    .widget_polylang {
+
+      @include font-sizes-default(1);
+      line-height: 18px;
+
+      @include hbox;
+
+      ul > li,
+      ul > li > a {
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      ul > li {
+
+        align-self: center;
+
+        &.current-lang {
+
+          text-decoration: underline;
+
+          a {
+            pointer-events: none;
+            cursor: default;
+          }
+
+        }
+        
+        a {
+          
+          padding-right: ($column-gutter*0.5);
+          padding-left: ($column-gutter*0.5);
+          
+        }
+
+        &:first-of-type  {
+          a {
+            padding-left: 0;
+          }
+
+          border-right: solid thin;
+        }
+
+        &:last-of-type  {
+          a {
+            padding-right: 0; 
+          }
+
+          border-right: none;
+        }
+
+      }
+
+    }
+
+  }
+
+}

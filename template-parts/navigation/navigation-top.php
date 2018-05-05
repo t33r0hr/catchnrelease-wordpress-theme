@@ -28,9 +28,12 @@
 		<?php
 			if ( is_active_sidebar( 'navigation-sidebar-1' ) && true ) { ?>
 				<div class="spacer"></div>
-				<div class="widget-column navigation-widget-1">
+
+				<?php get_template_part( 'template-parts/audio/audio', 'player' ); ?>
+
+				<!-- <div class="widget-column navigation-widget-1"> -->
 					<?php dynamic_sidebar( 'navigation-sidebar-1' ); ?>
-				</div>
+				<!-- </div> -->
 		<?php } ?>
 
 		<?php if ( ( twentyseventeen_is_frontpage() || ( is_home() && is_front_page() ) ) && has_custom_header() ) : ?>

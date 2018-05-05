@@ -1,0 +1,56 @@
+
+.widget-audio-player {
+
+  @include hbox;
+  margin-right: $column-gutter;
+
+  > button {
+
+    display: none;
+    border: thin solid $color-font-header;
+    background-color: transparent;
+    color: $color-font-header;
+    border-radius: 0.15em;
+    padding: 0.3em 0.5em;
+
+  }
+
+  &.playing {
+
+    button.pause {
+
+      display: flex;
+
+    }
+
+  }
+
+  &.paused {
+
+    button.play {
+
+      display: flex;
+
+    }
+
+  }
+
+
+  .loading {
+
+    button {
+
+      display: none;
+
+    }
+
+  }
+
+}
+
+
+.js .widget-audio-player {
+
+
+
+}

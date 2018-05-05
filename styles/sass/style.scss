@@ -1,8 +1,11 @@
 @import "compass/reset";
 @import "mixins/flex";
+@import "mixins/responsive";
 @import "default/blank";
 @import "default/base";
 @import "default/variables";
+@import "partials/audio";
+@import "partials/lang";
 @import "partials/widgets";
 @import "partials/navigation";
 @import "partials/content";

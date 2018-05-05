@@ -50,11 +50,3 @@
     font-style: italic; // faux
 }
 
-
-@mixin font-sizes-default($factor:1) {
-    font-size: rem-calc(18 * $factor);
-
-    @media #{$medium-up} {
-        font-size: rem-calc(22 * $factor);
-    }
-}

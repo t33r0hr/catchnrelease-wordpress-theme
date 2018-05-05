@@ -26,4 +26,10 @@
 
   background-color: transparent;
 
+  .content-area {
+
+    @include resp_margin_top();
+
+  }
+
 }

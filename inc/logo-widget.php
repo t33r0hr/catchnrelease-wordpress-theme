@@ -23,7 +23,7 @@ class Logo_Footer_Widget extends WP_Widget_Media {
    */
   public function __construct() {
     parent::__construct( 'logo_footer', __( 'Logo Footer' ), array(
-      'description' => __( 'Displays an logos.' ),
+      'description' => __( 'Displays logos.' ),
       'mime_type'   => 'image',
     ) );
 
