@@ -1,12 +1,15 @@
 
+
 .site-footer {
 
-  position: fixed !important;
-  background-color: rgba(1, 156, 210, 1);
+  /* 
+  position: fixed !important; 
   bottom: 0;
-  width: 100%;
   left: 0;
   right: 0;
+  */
+  background-color: rgba(1, 156, 210, 1);
+  width: 100%;
   display: inline-block;
 
   .widget-area {

@@ -8,6 +8,14 @@
   const customPlayer_PlayButton = customPlayer.find('button.play');
   const customPlayer_PauseButton = customPlayer.find('button.pause');
 
+  function readStoredState () {
+    return localStorage.getItem('cnr-theme-state') || 'playing';
+  }
+
+  function writeStoredState ( state ) {
+    localStorage.setItem('cnr-theme-state', state);
+  }
+
   function toggleState ( nextState ) {
 
     const currentState = customPlayer.attr('state') || 'loading'
@@ -29,11 +37,13 @@
 
   customPlayer_PlayButton.click(function(ev){
     playerElement.play();
+    writeStoredState('playing')
   });
 
   
   customPlayer_PauseButton.click(function(ev){
     playerElement.pause();
+    writeStoredState('paused')
   });
   
   //player.attr('controls',null);
@@ -49,6 +59,14 @@
   window.__THEME_AUDIO__ = player;
 
   toggleState('loading');
+
+  const storedState = readStoredState()
+
+  if ( storedState !== 'playing' ) {
+    player.attr('autoplay', null);
+  }
+  
+  toggleState(storedState)
 
 
 

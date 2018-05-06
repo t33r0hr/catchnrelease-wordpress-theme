@@ -1,9 +1,10 @@
-$font-size-base : 16px;
+$font-size-base : 17px;
 $global-line-height: (30/22);
 
 $tablet-factor: 1.5; // deprecated
 
-$font-family-sans-serif-regular: normal normal 400 25px/1.4em raleway, sans-serif;
+$font-family-sans-serif-regular: raleway, sans-serif;
+$font-sans-serif-regular: normal normal normal 15px/1.3em raleway, sans-serif;
 $font-family-sans-serif-medium: $font-family-sans-serif-regular;
 $font-family-sans-serif-bold: normal normal 700 25px/1.4em raleway,sans-serif;
 $font-family-sans-serif-black: $font-family-sans-serif-bold;
@@ -13,8 +14,9 @@ $font-family-serif-bold: $font-family-sans-serif-bold;
 
 
 @mixin font-default() {
-  font-family: $font-family-sans-serif-regular;
+  font: $font-family-sans-serif-regular;
   font-weight: 400;
+  font-size: $font-size-base;
 }
 
 @mixin font-link() {

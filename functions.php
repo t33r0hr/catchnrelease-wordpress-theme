@@ -17,6 +17,16 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	return;
 }
 
+function twentyseventeen_setup_retina() {
+
+	$image_sizes = get_intermediate_image_sizes();
+
+	foreach ($image_sizes as $image_args => $name) {
+		add_image_size( $name . '@2x', $image_args['width']*2, $image_args['height']*2, $image_args['crop'] );
+	}
+
+}
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -54,6 +64,12 @@ function twentyseventeen_setup() {
 	add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
 
 	add_image_size( 'twentyseventeen-thumbnail-avatar', 100, 100, true );
+	
+	add_image_size( 'twentyseventeen-thumbnail-footer', 150, 94, true );
+
+	add_image_size( 'twentyseventeen-thumbnail-footer@2x', 300, 188, true );
+
+	twentyseventeen_setup_retina();
 
 	// Set the default content width.
 	$GLOBALS['content_width'] = 525;
@@ -317,6 +333,7 @@ add_filter( 'wp_resource_hints', 'twentyseventeen_resource_hints', 10, 2 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function twentyseventeen_widgets_init() {
+
 	register_sidebar( array(
 		'name'          => __( 'Navigation Sidebar', 'twentyseventeen' ),
 		'id'            => 'navigation-sidebar-1',
@@ -475,6 +492,9 @@ function twentyseventeen_scripts() {
 
 	wp_enqueue_script ('twentyseventeen-fix-footer-links', get_theme_file_uri( '/assets/js/fix-footer-links.js' ), array('jquery'), '1.0', true );
 
+	wp_enqueue_script( 'twentyseventeen-audio-widget', get_theme_file_uri( '/assets/js/theme-audio.js' ), array('jquery'), '1.0', true );
+	wp_enqueue_script( 'twentyseventeen-polylang-picker-transform', get_theme_file_uri( '/assets/js/select-to-links.js' ), array('jquery'), '1.0', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
 
@@ -580,6 +600,8 @@ function twentyseventeen_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'twentyseventeen_widget_tag_cloud_args' );
 
 require get_parent_theme_file_path( '/inc/logo-widget.php' );
+
+require_once get_parent_theme_file_path( '/widgets/theme-audio/theme-audio.widget.php' );
 
 /**
  * Implement the Custom Background feature.
