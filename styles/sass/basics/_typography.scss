@@ -1,284 +1,91 @@
-@import '../utils';
 
+body, html, a {
 
-/* =====================
-Typography
-===================== */
-//
+  color: $color-font-bright;
 
-
-body {
-    color: $color-font-dark;
-
-    line-height: $global-line-height;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    @extend %default-sans-serif;
-    font-variant-numeric: lining-nums;
-    -moz-font-feature-settings: "lnum";
-    -webkit-font-feature-settings: "lnum";
-    font-feature-settings: "lnum";
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 $row-gutter*2;
-
-    font-weight: normal;
-
-    @include font-sizes-default();
-    @extend %default-sans-serif-medium;
-
-    em, i, strong, b {
-        font-weight: normal;
-        font-style: normal;
-    }
+a, a:hover, a:active {
+  text-decoration: none;
+  box-shadow: none;
 }
 
-p, li, address, blockquote, dl,
-figcaption {
-    margin: 0 0 $row-gutter;
+/** caption */
 
-    font-weight: normal;
+.wp-caption {
+  font-family: $font-family-sans-serif-regular;
 
-    @include font-sizes-default();
-
-    > b,
-    > strong,
-    > a > b,
-    > a > strong {
-        @extend %default-sans-serif-bold;
-    }
-
-    em, i {
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    // special tag combination for word with background
-    > em {
-        position: relative;
-
-        display: inline-block;
-
-        margin: 0 rem-calc(2);
-
-        > strong {
-            position: relative;
-            z-index: 1;
-
-            color: $color-font-bright;
-        }
-
-        &:before {
-            position: absolute;
-            top: -5%;
-            left: -5%;
-
-            width: 110%;
-            height: 110%;
-
-            content: "";
-            transform: rotate(-1deg);
-
-            background: $color-background-black;
-        }
-    }
-}
-
-ul,
-ol {
-    padding-left: 1.2rem;
-    li {
-        margin-bottom: rem-calc(5);
-    }
-}
-
-dl {
-    dt, dd {
-        display: inline-block;
-
-        margin: 0;
-    }
-    dt {
-        @extend %default-sans-serif-bold;
-    }
-
-    dd {
-        display: inline;
-        &:after {
-            content:"\a";
-            white-space: pre;
-        }
-    }
-}
-
-b, strong {
-    font-weight: normal;
-}
-
-em, i {
-    font-style: normal;
-}
-
-a {
-    text-decoration: none;
-
-    color: $color-font-dark;
-
-    p &,
-    li & {
-        // text-decoration: underline;
-
-        &:hover,
-        &:focus {
-            opacity: 0.75;
-        }
-    }
-}
-
-blockquote{
-
-    > p {
-        font-size: rem-calc(20);
-        line-height: (37/25);
-
-        @extend %default-monospace;
-
-        @media #{$medium-up} {
-            font-size: rem-calc(25);
-        }
-    }
-
-    cite {
-        margin-top: $row-gutter*2;
-    }
-
-    cite,
-    cite p {
-        display: block;
-
-        text-align: right;
-
-        font-size: rem-calc(22);
-        line-height: 1.2;
-
-        @extend %default-monospace;
-    }
-
-    cite p {
-        margin: 0;
-        padding: 0;
-    }
-
-    cite.has-meta {
-        overflow: hidden;
-
-        cursor: pointer;
-
-        &:after {
-            position: relative;
-
-            display: block;
-            float: right;
-
-            margin-top: rem-calc(8);
-
-            @extend %credits-info;
-        }
-
-        .meta {
-            padding-top: rem-calc(10);
-
-            font-size: 0.7em;
-
-            @extend %default-sans-serif;
-
-            &:not([hidden]) {
-                display: block;
-            }
-        }
-    }
-}
-
-address{
-    font-style: normal;
-}
-
-img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-
-figure{
-    margin: 0;
-}
-
-figcaption {
-    display: block;
-
-    margin: 0;
-    padding: rem-calc(2) 0;
-
-
-    * {
-        margin: 0;
-
-        text-transform: uppercase;
-
-        font-size: rem-calc(16);
-
-        @extend %default-sans-serif-medium;
-    }
-
-    &.has-credits {
-        cursor: pointer;
-
-        @media #{$medium-up} {
-            cursor: default;
-        }
-
-        publication-formatted-text p:last-child:after {
-            display: inline-block;
-
-            margin-right: rem-calc(-36);
-
-            vertical-align: bottom;
-
-            @extend %credits-info;
-        }
-
-        .credits {
-            padding-top: rem-calc(10);
-
-            * {
-                text-transform: none;
-
-                font-size: rem-calc(14);
-
-                @extend %default-sans-serif;
-            }
-
-            &:not([hidden]) {
-                display: block;
-            }
-        }
-    }
+  &.aligncenter {
+    text-align: center;
+  }
 }
 
 
-hr {
-    margin: $row-gutter*2 0;
+/** headings */
 
-    border: none;
-    border-top: 1px solid $color-font-dark;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  line-height: 1.4;
+  margin: 0 0 0.25em;
+  padding: 0.5em 0 0;
 }
 
-iframe {
-    width: 100%;
-
-    border: none;
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  padding-top: 0;
 }
+
+h1 {
+  font-size: $font-size-base * 1.8;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+h2,
+.home.blog .entry-title {
+  font-size: $font-size-base * 1.5;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: .8em;
+}
+
+h3 {
+  font-size: $font-size-base * 1.25;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: .5em;
+}
+
+h4 {
+  font-size: $font-size-base * 1.1;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: .2em;
+}
+
+h5 {
+  font-size: $font-size-base;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: .2em;
+}
+
+h6 {
+  font-size: $font-size-base * 0.8125;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-bottom: .2em;
+}
+

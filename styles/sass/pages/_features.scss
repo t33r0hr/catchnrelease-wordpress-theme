@@ -1,0 +1,31 @@
+
+.site-content {
+
+  .entry-content {
+
+    header {
+      @include resp_margin_bottom;
+      font-family: $font-sans-serif-regular;
+      font-size: $font-size-base * 1.7;
+      line-height: $global-line-height;
+
+    }
+
+    .feature-list {
+
+      list-style: none;
+
+      font-family: $font-sans-serif-regular;
+      
+      li > h2 {
+        font-size: $font-size-base * 1.7;
+      }
+
+      
+
+
+    }
+
+  }
+
+}

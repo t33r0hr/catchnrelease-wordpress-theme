@@ -71,11 +71,6 @@ section {
   display: block;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 figcaption,
 figure,
 main {
@@ -411,71 +406,6 @@ template {
 5.0 Typography
 --------------------------------------------------------------*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  clear: both;
-  line-height: 1.4;
-  margin: 0 0 0.75em;
-  padding: 1.5em 0 0;
-}
-
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-  padding-top: 0;
-}
-
-h1 {
-  font-size: 24px;
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-h2,
-.home.blog .entry-title {
-  color: #666;
-  font-size: 20px;
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-h3 {
-  color: #333;
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 300;
-}
-
-h4 {
-  color: #333;
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 800;
-}
-
-h5 {
-  color: #767676;
-  font-size: 13px;
-  font-size: 0.8125rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-h6 {
-  color: #333;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  font-weight: 800;
-}
-
 p {
   margin: 0 0 1.5em;
   padding: 0;
@@ -489,7 +419,6 @@ i {
 }
 
 blockquote {
-  color: #666;
   font-size: 18px;
   font-size: 1.125rem;
   font-style: italic;
@@ -904,7 +833,6 @@ html[lang="th"] * {
 --------------------------------------------------------------*/
 
 label {
-  color: #333;
   display: block;
   font-weight: 800;
   margin-bottom: 0.5em;
@@ -1147,7 +1075,6 @@ td:last-child {
 --------------------------------------------------------------*/
 
 a {
-  color: #222;
   text-decoration: none;
 }
 
@@ -1163,7 +1090,7 @@ a:active {
 
 /* Hover effects */
 
-.entry-content a,
+/* .entry-content a,
 .entry-summary a,
 .comment-content a,
 .widget a,
@@ -1176,8 +1103,8 @@ a:active {
   transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
   transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
   transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
-}
-
+} */
+/* 
 .entry-title a,
 .entry-meta a,
 .page-links a,
@@ -1207,9 +1134,9 @@ a .nav-title,
   transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
   transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
   transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
-}
+} */
 
-.entry-content a:focus,
+/* .entry-content a:focus,
 .entry-content a:hover,
 .entry-summary a:focus,
 .entry-summary a:hover,
@@ -1262,20 +1189,21 @@ a:hover .nav-title,
   color: #000;
   -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
   box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-}
+} */
 
 /* Fixes linked images */
-.entry-content a img,
+/* .entry-content a img,
 .comment-content a img,
 .widget a img {
   -webkit-box-shadow: 0 0 0 8px #fff;
   box-shadow: 0 0 0 8px #fff;
 }
+ */
 
-.post-navigation a:focus .icon,
+/* .post-navigation a:focus .icon,
 .post-navigation a:hover .icon {
   color: #222;
-}
+} */
 
 /*--------------------------------------------------------------
 11.0 Featured Image Hover
@@ -1825,7 +1753,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 
 .twentyseventeen-front-page .panel-content .recent-posts article {
   border: 0;
-  color: #333;
   margin-bottom: 3em;
 }
 
@@ -1901,7 +1828,6 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 .entry-title a {
-  color: #333;
   text-decoration: none;
   margin-left: -2px;
 }
@@ -2134,11 +2060,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
   margin-top: 1em;
 }
 
-.entry-footer .cat-links a,
-.entry-footer .tags-links a {
-  color: #333;
-}
-
 .entry-footer .cat-links .icon,
 .entry-footer .tags-links .icon {
   color: #767676;
@@ -2185,7 +2106,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .format-quote blockquote {
-  color: #333;
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 300;
@@ -2228,7 +2148,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .nav-title {
-  color: #333;
   font-size: 15px;
   font-size: 0.9375rem;
 }
@@ -2437,7 +2356,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .comment-body {
-  color: #333;
   font-size: 14px;
   font-size: 0.875rem;
   margin-bottom: 4em;
@@ -2464,7 +2382,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
-  border: 1px solid #333;
+  border: 1px solid;
   padding: 2px;
 }
 

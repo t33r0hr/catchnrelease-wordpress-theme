@@ -1,0 +1,15 @@
+$svg_path: '/wp-content/themes/twentyseventeen-cnr/assets/svg/';
+$svg_icon_dropbox: $svg_path + 'icon-dropbox.svg';
+$svg_icon_dropbox_white: $svg_path + 'icon-dropbox-white.svg';
+
+@mixin background-svg($svg){
+    background-image: url($svg);
+}
+
+@mixin icon-dropbox () {
+  @include background-svg($svg_icon_dropbox);  
+}
+
+@mixin icon-dropbox-white () {
+  @include background-svg($svg_icon_dropbox_white);  
+}

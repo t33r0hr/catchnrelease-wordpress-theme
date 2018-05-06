@@ -7,6 +7,15 @@
     margin-top: 25px;
   }
 
+}
+
+@mixin resp_margin_bottom () {
+  
+  margin-bottom: 31px;
+
+  @media #{$medium-up} {
+    margin-bottom: 21px;
+  }
 
 }
 

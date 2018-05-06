@@ -1,0 +1,32 @@
+
+.site-content {
+
+  .entry-content {
+
+    ul.downloads {
+      list-style: none;
+
+      > li > a {
+
+        text-decoration: none;
+        font-style: italic;
+
+        padding-left: 32px + 28px;
+
+        background-position: 0 0;
+        background-size: 32px 32px;
+        background-repeat: no-repeat;
+
+        &.download-link-dropbox {
+          @include icon-dropbox-white();
+          &:hover {
+            @include icon-dropbox();
+          }
+        }
+
+      }
+    }
+
+  }
+
+}

@@ -1,12 +1,17 @@
 @import "compass/reset";
 @import "mixins/flex";
 @import "mixins/responsive";
-@import "default/blank";
+@import "mixins/svg";
+/* @import "default/blank"; */
 @import "default/base";
 @import "default/variables";
+@import "default/globals";
 @import "partials/audio";
 @import "partials/lang";
 @import "partials/widgets";
 @import "partials/navigation";
 @import "partials/content";
 @import "partials/footer";
+
+@import "pages/features";
+@import "pages/press";
