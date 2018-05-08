@@ -14,8 +14,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 @import "compass/reset";
-/* @import "default/blank"; */
-@import "default/variables";
+
+@import 'mixins/functions';
+@import 'variables/breakpoints';
+@import 'variables/media-queries';
+@import 'variables/colors';
+@import 'variables/typography';
+@import 'variables/layout';
+@import 'variables/easings';
+@import 'mixins/fonts';
+@import 'mixins/images';
+@import 'mixins/helpers';
+@import 'mixins/common';
+
 
 @import "mixins/flex";
 @import "mixins/responsive";
@@ -23,7 +34,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "mixins/breakpoints";
 @import "mixins/nav";
 
-@import "default/globals";
+@import 'basics/normalize';
+@import 'basics/remsizing';
+@import 'basics/typography';
+@import 'basics/animations';
+
 @import "default/base";
 @import "partials/wrap";
 @import "partials/header";
@@ -39,3 +54,4 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @import "pages/features";
 @import "pages/press";
+@import "pages/contact";
