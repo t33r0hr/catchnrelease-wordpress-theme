@@ -603,7 +603,7 @@ require get_parent_theme_file_path( '/inc/logo-widget.php' );
 
 require_once get_parent_theme_file_path( '/widgets/theme-audio/theme-audio.widget.php' );
 
-require get_parent_theme_file_path( '/post-types/feature/feature.post-type.php' );
+// require get_parent_theme_file_path( '/post-types/feature/feature.post-type.php' );
 
 /**
  * Implement the Custom Background feature.
