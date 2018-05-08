@@ -11,14 +11,28 @@
 ?>
 <div class="widget-audio-player">
 <?php
+
+  $buttons = array( 'play', 'pause' );
+
+  $stateLabels = array(
+    'play' => _x( 'theme state: play', 'Audio player label for state "play".', 'twentyseventeen' ),
+    'pause' => _x( 'theme state: pause', 'Audio player label for state "pause".', 'twentyseventeen' )
+  );
+
+  $theme_state_format = 'theme state: %s';
   
-  foreach ( array( 'play', 'pause' ) as $i => $key ) {
+  /* Render Buttons */
+
+  foreach ( $buttons as $i => $key ) {
     ?>
       <button type="button" class="<?php echo $key; ?>">
           
         <?php 
           echo twentyseventeen_get_svg( array( 'icon' => $key ) );
         ?>
+        <span class="button-label button-label-<?php echo $key; ?>">
+          <?php echo $stateLabels[$key]; ?>
+        </span>
 
       </button>
     <?php

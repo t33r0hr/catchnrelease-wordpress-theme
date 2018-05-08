@@ -1,0 +1,11 @@
+
+$bp_tiny: 20em;
+$bp_small: 30em;
+$bp_medium: 48em;
+$bp_large: 67em;
+$bp_larger: 79em;
+
+$bp_query_minimum: "(min-width: #{$bp_small})";
+$bp_query_medium: "(min-width: #{$bp_small})";
+$bp_query_large: "(min-width: #{$bp_medium})";
+

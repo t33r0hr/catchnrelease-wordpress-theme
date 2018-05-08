@@ -17,6 +17,12 @@
 
     .navigation-wrapper {
 
+      .menu-main-navigation-container {
+
+        align-items: stretch;
+
+      }
+
       flex-wrap: wrap;
       /* flex-direction: row;
       align-self: center; */
@@ -26,10 +32,10 @@
       > div, > section {
         padding: 0;
         display: flex;
-        flex-direction: row;
+        @include hbox;
       }
 
-      > section > audio {
+      .navigation-widgets > section > audio {
 
         display: none;
 
@@ -173,3 +179,183 @@
 
 }
 
+@media #{$medium-screen} {
+
+  .main-navigation .navigation-wrapper {
+
+    flex-direction: column;
+
+  }
+
+}
+
+/* new approach */
+
+nav.nav {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media #{$medium-screen} {
+    flex-direction: column;
+    align-content: stretch;
+    align-self: stretch;
+  }
+
+  @media #{$wide-screen} {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  > button {
+
+    display: block;
+
+    @media #{$medium-screen} {
+      display: none;
+    }
+
+    @media #{$wide-screen} {
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+  }
+
+  .spacer {
+
+    display: none;
+
+    &.spacer-medium {
+
+      @media #{$medium-screen} {
+        display: flex;
+        flex: 1;
+      }
+
+      @media #{$wide-screen} {
+        display: none;
+      }
+
+    }
+
+    &.spacer-wide {
+
+      @media #{$wide-screen} {
+        display: flex;
+        flex: 1;  
+      }
+
+    }
+    
+
+  }
+
+  ul, li {
+    display: flex;
+    margin: 0;
+  }
+
+  li {
+    padding: 5px 2px;
+  }
+
+  /* outer */
+  > ul {
+
+    border: 1px solid red;
+    flex: 1;
+    @include vbox;
+
+    > li > ul {
+
+      flex: 1;
+      @include vbox;
+
+      align-items: center;
+
+      @media #{$medium-screen} {
+        align-items: stretch;
+        @include hbox;
+      }
+    }
+
+    @media #{$wide-screen} {
+
+      flex: 1;
+      @include hbox;
+
+      li {
+        display: flex;
+        @include hbox;
+      }
+
+      > li > ul.links {
+        @include hbox;
+      }
+      
+
+    }
+
+  }
+
+  /*
+  
+  > ul li ul {
+    
+    @media #{$wide-screen} {
+      align-items: stretch;
+    }
+
+    @media #{$medium-screen} {
+      &.widgets {
+        flex: 1;
+      }
+      align-items: stretch;
+    }
+
+  }
+  */
+
+}
+
+
+.nav .debug {
+
+  position: fixed;
+  top: 0;
+
+  .small {
+    color: red;
+  }
+
+  .medium {
+    color: blue;
+  }
+
+  .wide {
+    color: green;
+  }
+
+  > * {
+    display: none;
+  }
+
+  .small {
+    display: block;
+  }
+
+  @media #{$wide-screen} {
+    .wide {
+      display: block;
+    }
+  }
+
+  @media #{$medium-screen} {
+    .medium {
+      display: block;
+    }
+  }
+
+}

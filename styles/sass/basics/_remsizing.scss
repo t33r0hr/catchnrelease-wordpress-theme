@@ -2,28 +2,27 @@
 // Rem-Sizing
 // ----------------------------------------------------------------------------
 
-
-$base-font-size: 16;
+$font-size-base-value: 14;
 
 $default-size-mobile: 375;
 $default-size-tablet: 1024;
 $default-size-desktop: 1440;
-$max-size-desktop: 1440;
+$max-size-desktop: 1980;
 
 
 
-html {
-	font-size: calc(100vw / #{$default-size-mobile} * #{$base-font-size});
+html, body {
+	font-size: calc(100vw / #{$default-size-mobile} * #{$font-size-base-value});
 
 	@media #{$medium-up} {
-		font-size: calc(100vw / #{$default-size-tablet} * #{$base-font-size});
+		font-size: calc(100vw / #{$default-size-tablet} * #{$font-size-base-value});
 	}
 
     @media #{$large-up} {
-		font-size: calc(100vw / #{$default-size-desktop} * #{$base-font-size});
+		font-size: calc(100vw / #{$default-size-desktop} * #{$font-size-base-value});
 	}
 
 	@media screen and (min-width: #{em-calc($max-size-desktop)}) {
-		font-size: $max-size-desktop / $default-size-desktop * $base-font-size * 1px;
+		font-size: $max-size-desktop / $default-size-desktop * $font-size-base-value * 1px;
 	}
 }

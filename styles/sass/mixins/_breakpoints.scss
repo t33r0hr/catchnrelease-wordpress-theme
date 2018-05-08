@@ -1,0 +1,18 @@
+
+@mixin screen_minimum () {
+  @media #{$bp_query_minimum} {
+    @content;
+  }
+}
+
+@mixin screen_medium () {
+  @media #{$bp_query_medium} {
+    @content;
+  }
+}
+
+@mixin screen_large () {
+  @media #{$bp_query_large} {
+    @content;
+  }
+}

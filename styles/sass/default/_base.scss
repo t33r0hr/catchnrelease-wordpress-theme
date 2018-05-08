@@ -420,7 +420,7 @@ i {
 
 blockquote {
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-style: italic;
   line-height: 1.7;
   margin: 0;
@@ -1228,21 +1228,17 @@ a:hover .nav-title,
 12.0 Navigation
 --------------------------------------------------------------*/
 
-.navigation-top {
+/* .navigation-top {
   background: #fff;
   border-bottom: 1px solid #eee;
   border-top: 1px solid #eee;
   font-size: 16px;
   font-size: 1rem;
   position: relative;
-}
+} */
 
-.navigation-top .wrap {
-  max-width: 1000px;
-  padding: 0;
-}
 
-.navigation-top a {
+/* .navigation-top a {
   color: #222;
   font-weight: 600;
   -webkit-transition: color 0.2s;
@@ -1266,11 +1262,12 @@ a:hover .nav-title,
   padding: 0 1.5em;
   text-align: left;
 }
+ */
 
 /* Hide the menu on small screens when JavaScript is available.
  * It only works with JavaScript.
  */
-
+/* 
 .js .main-navigation ul,
 .main-navigation .menu-item-has-children > a > .icon,
 .main-navigation .page_item_has_children > a > .icon,
@@ -1320,7 +1317,7 @@ a:hover .nav-title,
 
 .main-navigation a:hover {
   color: #767676;
-}
+} */
 
 /* Menu toggle */
 
@@ -1329,13 +1326,13 @@ a:hover .nav-title,
   border: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #222;
+  /* color: #222; */
   display: none;
-  font-size: 14px;
-  font-size: 0.875rem;
+  /* font-size: 14px;
+  font-size: 0.875rem; */
   font-weight: 800;
   line-height: 1.5;
-  margin: 1px auto 2px;
+  margin: auto;
   padding: 1em;
   text-shadow: none;
 }
@@ -1444,27 +1441,10 @@ body {
   word-wrap: break-word;
 }
 
-.wrap {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 700px;
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
-.wrap:after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
 /*--------------------------------------------------------------
 13.1 Header
 --------------------------------------------------------------*/
 
-#masthead .wrap {
-  position: relative;
-}
 
 .site-header {
   background-color: #fafafa;
@@ -1730,11 +1710,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 
 .panel-content {
   position: relative;
-}
-
-.panel-content .wrap {
-  padding-bottom: 0.5em;
-  padding-top: 1.75em;
 }
 
 /* Panel edit link */
@@ -2208,11 +2183,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 .site-footer {
   border-top: 1px solid #eee;
-}
-
-.site-footer .wrap {
-  padding-bottom: 1.5em;
-  padding-top: 2em;
 }
 
 /* Footer widgets */
@@ -2749,10 +2719,10 @@ p > object:only-child {
 
 .wp-caption,
 .gallery-caption {
-  color: #666;
+  /* color: #666;
   font-size: 13px;
   font-size: 0.8125rem;
-  font-style: italic;
+  font-style: italic; */
   margin-bottom: 1.5em;
   max-width: 100%;
 }
@@ -3099,17 +3069,17 @@ p > object:only-child {
 --------------------------------------------------------------*/
 
 /* Adjust positioning of edit shortcuts, override style in customize-preview.css */
-@media screen and (min-width: 20em) {
+@media screen and (min-width: $bp_tiny) {
 
   body.customize-partial-edit-shortcuts-shown .site-header .site-title {
     padding-left: 0;
   }
 }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: $bp_small) {
 
   /* Typography */
-
+/* 
   body,
   button,
   input,
@@ -3120,42 +3090,36 @@ p > object:only-child {
   }
 
   h1 {
-    font-size: 30px;
-    font-size: 1.875rem;
+    @include font-size-h1;
   }
 
   h2,
   .home.blog .entry-title,
   .page .panel-content .recent-posts .entry-title {
-    font-size: 26px;
-    font-size: 1.625rem;
+    @include font-size-h2;
   }
 
   h3 {
-    font-size: 22px;
-    font-size: 1.375rem;
+    @include font-size-h3;
   }
 
   h4 {
-    font-size: 18px;
-    font-size: 1.125rem;
+    @include font-size-h4;
   }
 
   h5 {
-    font-size: 13px;
-    font-size: 0.8125rem;
+    @include font-size-h5;
   }
 
   h6 {
-    font-size: 16px;
-    font-size: 1rem;
+    @include font-size-h6;
   }
-
-  .entry-content blockquote.alignleft,
+ */
+  /* .entry-content blockquote.alignleft,
   .entry-content blockquote.alignright {
     font-size: 14px;
     font-size: 0.875rem;
-  }
+  } */
 
   /* Fix image alignment */
   img.alignleft {
@@ -3176,17 +3140,8 @@ p > object:only-child {
 
   /* Front Page */
 
-  .panel-content .wrap {
-    padding-bottom: 2em;
-    padding-top: 3.5em;
-  }
-
-  .page-one-column .panel-content .wrap {
-    max-width: 740px;
-  }
-
   .panel-content .entry-header {
-    margin-bottom: 4.5em;
+    margin-bottom: 4.5rem;
   }
 
   .panel-content .recent-posts .entry-header {
@@ -3235,7 +3190,7 @@ p > object:only-child {
   }
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: $bp_medium) {
 
   /* Typography */
 
@@ -3244,24 +3199,17 @@ p > object:only-child {
   input,
   select,
   textarea {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
+    @include font-size-normal;
   }
 
-  .entry-content blockquote.alignleft,
+  /* .entry-content blockquote.alignleft,
   .entry-content blockquote.alignright {
     font-size: 13px;
     font-size: 0.8125rem;
-  }
+  } */
 
   /* Layout */
 
-  .wrap {
-    max-width: 1000px;
-    padding-left: 3em;
-    padding-right: 3em;
-  }
 
   .has-sidebar:not(.error404) #primary {
     float: left;
@@ -3366,17 +3314,12 @@ p > object:only-child {
     z-index: 3;
   }
 
-  .navigation-top .wrap {
-    max-width: 1000px;
-    /* The font size is 14px here and we need 50px padding in ems */
-    padding: 0.75em 3.4166666666667em;
-  }
 
   .navigation-top nav {
-    margin-left: -1.25em;
+    /* margin-left: -1.25em; */
   }
 
-  .site-navigation-fixed.navigation-top {
+  /* .site-navigation-fixed.navigation-top {
     bottom: auto;
     position: fixed;
     left: 0;
@@ -3388,7 +3331,7 @@ p > object:only-child {
 
   .admin-bar .site-navigation-fixed.navigation-top {
     top: 32px;
-  }
+  } */
 
   /* Main Navigation */
 
@@ -3631,10 +3574,6 @@ p > object:only-child {
     height: calc(100vh - 32px);
   }
 
-  .panel-content .wrap {
-    padding-bottom: 4.5em;
-    padding-top: 6em;
-  }
 
   .panel-image {
     height: 100vh;
@@ -3688,7 +3627,7 @@ p > object:only-child {
   /* Posts */
 
   .site-content {
-    padding: 5.5em 0 0;
+    padding: 1.5em 0 0;
   }
 
   .single-post .entry-title,
@@ -3976,14 +3915,11 @@ p > object:only-child {
   }
 }
 
-@media screen and ( min-width: 67em ) {
+@media screen and ( min-width: $bp_large ) {
 
   /* Layout */
 
   /* Navigation */
-  .navigation-top .wrap {
-    padding: 0.75em 2em;
-  }
 
   .navigation-top nav {
     margin-left: 0;
@@ -4026,7 +3962,7 @@ p > object:only-child {
   }
 }
 
-@media screen and ( min-width: 79em ) {
+@media screen and ( min-width: $bp_larger ) {
 
   .has-sidebar .entry-content blockquote.alignleft {
     margin-left: -20%;

@@ -26,13 +26,18 @@
 
 	<div class="panel-content">
 		<div class="wrap">
-			<header class="entry-header">
-				<?php // the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+			<?php if ( current_user_can('editor') ) { ?>
+				<header class="entry-header">
+					<?php 
+						// the_title( '<h2 class="entry-title">', '</h2>' ); 					
+					?>
 
-				<?php twentyseventeen_edit_link( get_the_ID() ); ?>
+					<?php twentyseventeen_edit_link( get_the_ID() ); ?>
 
-			</header><!-- .entry-header -->
+				</header><!-- .entry-header -->
 
+			<?php } ?>
+		
 			<div class="entry-content">
 				<?php
 					/* translators: %s: Name of current post */

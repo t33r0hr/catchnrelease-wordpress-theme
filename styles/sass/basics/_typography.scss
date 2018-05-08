@@ -1,8 +1,9 @@
 
 body, html, a {
 
+  font-family: $font-family-sans-serif-regular;
   color: $color-font-bright;
-
+  line-height: 1.4rem;
 }
 
 a, a:hover, a:active {
@@ -19,7 +20,25 @@ a, a:hover, a:active {
     text-align: center;
   }
 }
+/* 
 
+.site-main {
+
+  @media #{$large-only} {
+    @include font-size-normal;
+  }
+
+}
+ */
+
+p {
+  
+  @media screen and (min-width: $bp_medium) {
+    font-size: 0.7em;
+  }
+
+  line-height: 1.15;
+}
 
 /** headings */
 
@@ -45,37 +64,32 @@ h6:first-child {
 }
 
 h1 {
-  font-size: $font-size-base * 1.8;
-  font-size: 1.8rem;
+  @include font-size-h1;
   font-weight: 400;
   margin-bottom: 1em;
 }
 
 h2,
 .home.blog .entry-title {
-  font-size: $font-size-base * 1.5;
-  font-size: 1.5rem;
+  @include font-size-h2;
   font-weight: 400;
   margin-bottom: .8em;
 }
 
 h3 {
-  font-size: $font-size-base * 1.25;
-  font-size: 1.25rem;
+  @include font-size-h3;
   font-weight: 400;
   margin-bottom: .5em;
 }
 
 h4 {
-  font-size: $font-size-base * 1.1;
-  font-size: 1.1rem;
+  @include font-size-h4;
   font-weight: 700;
   margin-bottom: .2em;
 }
 
 h5 {
-  font-size: $font-size-base;
-  font-size: 1rem;
+  @include font-size-h5;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -83,9 +97,13 @@ h5 {
 }
 
 h6 {
-  font-size: $font-size-base * 0.8125;
-  font-size: 0.8125rem;
+  @include font-size-h6;
   font-weight: 700;
   margin-bottom: .2em;
 }
 
+
+
+.demo-section {
+  font-size: 1.4rem;
+}

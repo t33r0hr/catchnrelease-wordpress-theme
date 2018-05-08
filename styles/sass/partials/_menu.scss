@@ -1,0 +1,42 @@
+
+
+ul.menu {
+
+  list-style: none;
+
+  /* font-size: 0.5rem; */
+  font-weight: 700;
+
+  text-transform: uppercase;
+  margin: 0;
+
+  > li {
+    margin: 0;
+    padding: 1em 0.5em;
+  }
+
+  @include cross-center;
+  @include vbox;
+
+  @media screen and (min-width: $bp_medium) {
+    
+    @include hbox;
+
+    align-content: center;
+    align-items: center;
+
+    > li,
+    > li a {
+      margin: 0;
+      padding: 0;
+    }
+
+    li:not(:last-of-type) {
+
+      margin-right: 1em;
+
+    }
+
+  }
+
+}

@@ -5,6 +5,11 @@
 
     .widget_polylang {
 
+      &.widget {
+        margin: 0;
+        padding: 0;
+      }
+
       @include font-sizes-default(1);
       line-height: 18px;
 

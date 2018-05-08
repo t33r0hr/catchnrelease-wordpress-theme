@@ -8,13 +8,21 @@
   flex-direction: row;
 }
 
+@mixin cross-center() {
+  display: flex;
+  align-items: center;
+}
+
 @mixin center() {
   display: flex;
-  align-self: center;  
   align-content: center;
   justify-content: center;
 }
 
 @mixin stretch() {
   align-items: stretch;
+}
+
+@mixin cross-stretch() {
+  align-content: stretch;
 }

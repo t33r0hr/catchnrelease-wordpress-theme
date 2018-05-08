@@ -1,0 +1,30 @@
+
+@mixin on_display_menu_mobile () {
+  @media screen and (max-width: $bp_medium) {
+    @content;
+  }
+}
+
+@mixin on_display_menu () {
+  @media screen and (min-width: 48em) {
+    @content;
+  }
+}
+
+@mixin on_display_menu_small() {
+  @media screen and (min-width: 48em) and (max-width: 58em) {
+    @content;
+  }
+}
+
+@mixin on_menu_toggle_default () {
+
+  .js .main-menu {
+
+    @include screen_minimum () {
+      @content;
+    }
+
+  }
+
+}

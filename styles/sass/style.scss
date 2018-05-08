@@ -1,17 +1,41 @@
+/*
+Theme Name: Catch & Release
+Author: Matthias Buchholz
+Author Email: mb@averagejoe.de
+Description: Customization of Twentyseventeen for Catch&Release Game Website
+Version: 1.5.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen-cnr
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
 @import "compass/reset";
+/* @import "default/blank"; */
+@import "default/variables";
+
 @import "mixins/flex";
 @import "mixins/responsive";
 @import "mixins/svg";
-/* @import "default/blank"; */
-@import "default/base";
-@import "default/variables";
+@import "mixins/breakpoints";
+@import "mixins/nav";
+
 @import "default/globals";
+@import "default/base";
+@import "partials/wrap";
+@import "partials/header";
 @import "partials/audio";
 @import "partials/lang";
 @import "partials/widgets";
-@import "partials/navigation";
+@import "partials/language-selector";
+//@import "partials/navigation";
+@import "partials/nav";
 @import "partials/content";
 @import "partials/footer";
+@import "partials/menu";
 
 @import "pages/features";
 @import "pages/press";

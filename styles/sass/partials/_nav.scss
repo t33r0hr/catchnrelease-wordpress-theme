@@ -1,0 +1,94 @@
+
+.navigation-top {
+
+  position: relative;
+  background-color: $color-background-header;
+  border: 0;
+  color: $color-font-bright;
+  
+  font-size: 1.78rem;
+
+  @media screen and (min-width: $bp_medium) {
+    font-size: 0.5rem;
+  }
+
+
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+
+}
+
+.main-navigation {
+
+  > button {
+    font-size: 1.78rem;
+  }
+
+  &:not(.toggled-on) .rm-root {
+      
+      display: none;
+
+      @media screen and (min-width: $bp_medium) {
+        display: flex;
+      }
+  }
+
+}
+
+.rm-root {
+
+  align-items: center;
+
+  @media screen and (min-width: $bp_medium) {
+    @include hbox;
+    flex-wrap: wrap;
+
+    > div:first-child {
+      flex: 1;
+    }
+
+    .rm-spacer-x {
+      flex: 1;
+    }
+  }
+
+
+  .rm-level-1 {
+    
+    display: flex;
+    flex: 1;
+    margin-top: 0.5em;
+
+    .widget,
+    .widget > ul {
+      align-items: center;
+      flex: 1;
+      height: 1.1em;
+      overflow: hidden;
+
+      @media screen and (min-width: $bp_medium) {
+        flex: none;
+      }
+
+    }
+
+    .widget > ul > li {
+      align-content: center;
+      flex: 1;
+      text-align: center;
+      @media screen and (min-width: $bp_medium) {
+        flex: none;
+      }
+    }
+    
+    @media screen and (min-width: $bp_medium) {
+      margin-top: 0;
+      
+      .widget > ul > li {
+        flex: none;
+      }
+    }
+
+  }
+
+}
