@@ -1,0 +1,475 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: My Holiday\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-06 17:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: de_DE\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: archive.php:45 index.php:50 search.php:43
+msgid "Previous page"
+msgstr ""
+
+#: archive.php:46 index.php:51 search.php:44
+msgid "Next page"
+msgstr ""
+
+#: archive.php:47 index.php:52 search.php:45
+msgid "Page"
+msgstr ""
+
+#. translators: %s: post title
+#: comments.php:36
+#, php-format
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:60
+msgid "Reply"
+msgstr ""
+
+#: comments.php:66 single.php:31
+msgid "Previous"
+msgstr ""
+
+#: comments.php:67 single.php:32
+msgid "Next"
+msgstr ""
+
+#: comments.php:75
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:27
+msgid "Footer Social Links Menu"
+msgstr ""
+
+#: functions.php:79 functions.php:205
+#: template-parts/navigation/navigation-top.php:12
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:80 functions.php:216
+msgid "Social Links Menu"
+msgstr ""
+
+#: functions.php:173
+msgctxt "Theme starter content"
+msgid "Espresso"
+msgstr ""
+
+#: functions.php:177
+msgctxt "Theme starter content"
+msgid "Sandwich"
+msgstr ""
+
+#: functions.php:181
+msgctxt "Theme starter content"
+msgid "Coffee"
+msgstr ""
+
+#: functions.php:291
+msgctxt "Libre Franklin font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:338
+msgid "Navigation Sidebar"
+msgstr ""
+
+#: functions.php:340
+msgid "Add widgets here to appear next to main navigation."
+msgstr ""
+
+#: functions.php:348 sidebar.php:18
+msgid "Blog Sidebar"
+msgstr ""
+
+#: functions.php:350
+msgid ""
+"Add widgets here to appear in your sidebar on blog posts and archive pages."
+msgstr ""
+
+#: functions.php:358
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:360 functions.php:370
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: functions.php:368
+msgid "Footer 2"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: functions.php:396 template-parts/page/content-front-page-panels.php:43
+#: template-parts/page/content-front-page.php:40
+#: template-parts/post/content-audio.php:83
+#: template-parts/post/content-gallery.php:70
+#: template-parts/post/content-image.php:59
+#: template-parts/post/content-video.php:82
+#: template-parts/post/content.php:56
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: functions.php:478
+msgid "Expand child menu"
+msgstr ""
+
+#: functions.php:479
+msgid "Collapse child menu"
+msgstr ""
+
+#: header.php:29
+msgid "Skip to content"
+msgstr ""
+
+#: inc/back-compat.php:39 inc/back-compat.php:51 inc/back-compat.php:66
+#, php-format
+msgid ""
+"Twenty Seventeen requires at least WordPress version 4.7. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:48
+msgid "Light"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:50
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Theme Options"
+msgstr ""
+
+#: inc/customizer.php:77
+msgid "Page Layout"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid ""
+"When the two-column layout is assigned, the page title is in one column "
+"and content is in the other."
+msgstr ""
+
+#: inc/customizer.php:82 inc/customizer.php:131
+msgid "One Column"
+msgstr ""
+
+#: inc/customizer.php:83 inc/customizer.php:132
+msgid "Two Column"
+msgstr ""
+
+#. translators: %d is the front page section number
+#: inc/customizer.php:107
+#, php-format
+msgid "Front Page Section %d Content"
+msgstr ""
+
+#: inc/customizer.php:108
+msgid ""
+"Select pages to feature in each area from the dropdowns. Add an image to a "
+"section by setting a featured image in the page editor. Empty sections "
+"will not be displayed."
+msgstr ""
+
+#: inc/customizer/custom-background.php:21
+msgctxt "background image description"
+msgid "Default Image"
+msgstr ""
+
+#: inc/icon-functions.php:39
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: inc/icon-functions.php:44
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: inc/logo-widget.php:25
+msgid "Logo Footer"
+msgstr ""
+
+#: inc/logo-widget.php:26
+msgid "Displays logos."
+msgstr ""
+
+#: inc/logo-widget.php:31
+msgid "No images selected"
+msgstr ""
+
+#: inc/logo-widget.php:32
+msgctxt ""
+"label for button in the gallery widget; should not be longer than ~13 "
+"characters long"
+msgid "Add Images"
+msgstr ""
+
+#: inc/logo-widget.php:34
+msgctxt ""
+"label for button in the gallery widget; should not be longer than ~13 "
+"characters long"
+msgid "Edit Gallery"
+msgstr ""
+
+#: inc/logo-widget.php:54
+msgid "Title for the widget"
+msgstr ""
+
+#. translators: %s: post author
+#: inc/template-tags.php:21
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#. translators: %s: post date
+#: inc/template-tags.php:51
+#, php-format
+msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:65
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:84
+msgid "Categories"
+msgstr ""
+
+#: inc/template-tags.php:88
+msgid "Tags"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:116
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/template-tags.php:150
+#, php-format
+msgid "Front Page Section %1$s Placeholder"
+msgstr ""
+
+#: index.php:27
+msgid "Posts"
+msgstr ""
+
+#: post-types/feature/feature.post-type.php:8
+msgid "Game Features"
+msgstr ""
+
+#: post-types/feature/feature.post-type.php:9
+msgid "Game Feature"
+msgstr ""
+
+#: post-types/feature/feature.post-type.php:10
+msgid "Add New Game Feature"
+msgstr ""
+
+#: post-types/feature/feature.post-type.php:11
+msgid "Edit Game Feature"
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:21 template-parts/post/content-none.php:17
+msgid "Nothing Found"
+msgstr ""
+
+#: search.php:50
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: searchform.php:17
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:19
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:20
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: single.php:31
+msgid "Previous Post"
+msgstr ""
+
+#: single.php:32
+msgid "Next Post"
+msgstr ""
+
+#: template-parts/audio/audio-player.php:17
+msgctxt "Audio player label for state \"play\"."
+msgid "theme state: play"
+msgstr ""
+
+#: template-parts/audio/audio-player.php:18
+msgctxt "Audio player label for state \"pause\"."
+msgid "theme state: pause"
+msgstr ""
+
+#: template-parts/footer/footer-widgets.php:18
+msgid "Footer"
+msgstr ""
+
+#: template-parts/navigation/navigation-top.php:17
+msgid "Menu"
+msgstr ""
+
+#: template-parts/navigation/navigation-top.php:40
+msgid "Scroll down to content"
+msgstr ""
+
+#: template-parts/page/content-page.php:21
+#: template-parts/post/content-audio.php:88
+#: template-parts/post/content-gallery.php:75
+#: template-parts/post/content-image.php:64
+#: template-parts/post/content-video.php:87
+#: template-parts/post/content.php:61
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/post/content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/post/content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:28
+msgid "Theme Audio"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:29
+msgid "Theme audio playback widget for background music."
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:35
+msgid "No audio selected"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:36
+msgctxt "label for button in the audio widget"
+msgid "Add Audio"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:37
+msgctxt ""
+"label for button in the audio widget; should preferably not be longer than "
+"~13 characters long"
+msgid "Replace Audio"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:38
+msgctxt ""
+"label for button in the audio widget; should preferably not be longer than "
+"~13 characters long"
+msgid "Edit Audio"
+msgstr ""
+
+#. translators: %s: URL to media library
+#: widgets/theme-audio/theme-audio.widget.php:41
+#, php-format
+msgid ""
+"We can&#8217;t find that audio file. Check your <a href=\"%s\">media "
+"library</a> and make sure it wasn&#8217;t deleted."
+msgstr ""
+
+#. translators: %d: widget count
+#: widgets/theme-audio/theme-audio.widget.php:45
+#, php-format
+msgid "Audio Widget (%d)"
+msgid_plural "Audio Widget (%d)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: widgets/theme-audio/theme-audio.widget.php:46
+msgid "Audio Widget"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:47
+msgid ""
+"Looks like this isn&#8217;t the correct kind of file. Please link to an "
+"audio file instead."
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:70
+msgid "Preload"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:75
+msgid "Loop"
+msgstr ""
+
+#. translators: %s: audio extension
+#: widgets/theme-audio/theme-audio.widget.php:86
+#, php-format
+msgid "URL to the %s audio source file"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:221
+msgid "Unable to preview media due to an unknown error."
+msgstr ""

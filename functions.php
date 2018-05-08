@@ -41,7 +41,7 @@ function twentyseventeen_setup() {
 	 * If you're building a theme based on Twenty Seventeen, use a find and replace
 	 * to change 'twentyseventeen' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'twentyseventeen' );
+  load_theme_textdomain( 'twentyseventeen', get_parent_theme_file_path() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -629,3 +629,5 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+//require get_parent_theme_file_path( '/tools/translate/gettext.php');
