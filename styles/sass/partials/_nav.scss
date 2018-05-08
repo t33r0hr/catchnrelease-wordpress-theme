@@ -35,9 +35,11 @@
 
 }
 
-.rm-root {
-
+.rm-root, .rm-level-1 {
   align-items: center;
+}
+
+.rm-root {  
 
   @media screen and (min-width: $bp_medium) {
     @include hbox;

@@ -36,6 +36,11 @@
           img {
 
             box-shadow: none;
+            transform: scale(0.66);
+
+            @media screen and (min-width: $bp_medium) {
+              transform: scale(1);
+            }
 
           }
 

@@ -2672,7 +2672,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 --------------------------------------------------------------*/
 /* line 2184, styles/sass/default/_base.scss */
 .site-footer {
-  border-top: 1px solid #eee;
+  /* border-top: 1px solid #eee; */
 }
 
 /* Footer widgets */
@@ -4884,37 +4884,44 @@ p > object:only-child {
 
 /* line 28, styles/sass/partials/_wrap.scss */
 .site-footer .wrap {
-  padding-bottom: 0;
-  padding-top: .5rem;
+  padding-bottom: 0.25rem;
+  padding-top: .125rem;
+}
+@media screen and (min-width: 48em) {
+  /* line 28, styles/sass/partials/_wrap.scss */
+  .site-footer .wrap {
+    padding-bottom: 0.33rem;
+    padding-top: 0.25rem;
+  }
 }
 
-/* line 34, styles/sass/partials/_wrap.scss */
+/* line 40, styles/sass/partials/_wrap.scss */
 .navigation-top .wrap {
   max-width: 1000px;
   /* padding: 0; */
 }
 
 @media screen and (min-width: 30em) {
-  /* line 42, styles/sass/partials/_wrap.scss */
+  /* line 48, styles/sass/partials/_wrap.scss */
   .wrap {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* line 47, styles/sass/partials/_wrap.scss */
+  /* line 53, styles/sass/partials/_wrap.scss */
   .page-one-column .panel-content .wrap {
     max-width: 740px;
   }
 }
 @media screen and (min-width: 48em) {
-  /* line 55, styles/sass/partials/_wrap.scss */
+  /* line 61, styles/sass/partials/_wrap.scss */
   .wrap {
     max-width: 1000px;
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  /* line 61, styles/sass/partials/_wrap.scss */
+  /* line 67, styles/sass/partials/_wrap.scss */
   .navigation-top .wrap {
     max-width: 1000px;
     /* The font size is 14px here and we need 50px padding in ems */
@@ -4922,13 +4929,13 @@ p > object:only-child {
   }
 }
 @media screen and (min-width: 67em) {
-  /* line 72, styles/sass/partials/_wrap.scss */
+  /* line 78, styles/sass/partials/_wrap.scss */
   .wrap {
     padding-left: 40px;
     padding-right: 40px;
   }
 
-  /* line 78, styles/sass/partials/_wrap.scss */
+  /* line 84, styles/sass/partials/_wrap.scss */
   .navigation-top .wrap {
     /* padding: 0.75em 2em; */
   }
@@ -5117,32 +5124,33 @@ p > object:only-child {
 }
 
 /* line 38, styles/sass/partials/_nav.scss */
-.rm-root {
+.rm-root, .rm-level-1 {
   align-items: center;
 }
+
 @media screen and (min-width: 48em) {
-  /* line 38, styles/sass/partials/_nav.scss */
+  /* line 42, styles/sass/partials/_nav.scss */
   .rm-root {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  /* line 46, styles/sass/partials/_nav.scss */
+  /* line 48, styles/sass/partials/_nav.scss */
   .rm-root > div:first-child {
     flex: 1;
   }
-  /* line 50, styles/sass/partials/_nav.scss */
+  /* line 52, styles/sass/partials/_nav.scss */
   .rm-root .rm-spacer-x {
     flex: 1;
   }
 }
-/* line 56, styles/sass/partials/_nav.scss */
+/* line 58, styles/sass/partials/_nav.scss */
 .rm-root .rm-level-1 {
   display: flex;
   flex: 1;
   margin-top: 0.5em;
 }
-/* line 62, styles/sass/partials/_nav.scss */
+/* line 64, styles/sass/partials/_nav.scss */
 .rm-root .rm-level-1 .widget,
 .rm-root .rm-level-1 .widget > ul {
   align-items: center;
@@ -5151,30 +5159,30 @@ p > object:only-child {
   overflow: hidden;
 }
 @media screen and (min-width: 48em) {
-  /* line 62, styles/sass/partials/_nav.scss */
+  /* line 64, styles/sass/partials/_nav.scss */
   .rm-root .rm-level-1 .widget,
   .rm-root .rm-level-1 .widget > ul {
     flex: none;
   }
 }
-/* line 75, styles/sass/partials/_nav.scss */
+/* line 77, styles/sass/partials/_nav.scss */
 .rm-root .rm-level-1 .widget > ul > li {
   align-content: center;
   flex: 1;
   text-align: center;
 }
 @media screen and (min-width: 48em) {
-  /* line 75, styles/sass/partials/_nav.scss */
+  /* line 77, styles/sass/partials/_nav.scss */
   .rm-root .rm-level-1 .widget > ul > li {
     flex: none;
   }
 }
 @media screen and (min-width: 48em) {
-  /* line 56, styles/sass/partials/_nav.scss */
+  /* line 58, styles/sass/partials/_nav.scss */
   .rm-root .rm-level-1 {
     margin-top: 0;
   }
-  /* line 87, styles/sass/partials/_nav.scss */
+  /* line 89, styles/sass/partials/_nav.scss */
   .rm-root .rm-level-1 .widget > ul > li {
     flex: none;
   }
@@ -5277,6 +5285,13 @@ html .site, body .site {
 /* line 36, styles/sass/partials/_footer.scss */
 .site-footer .widget-area .widget-column .widget_media_image a img {
   box-shadow: none;
+  transform: scale(0.66);
+}
+@media screen and (min-width: 48em) {
+  /* line 36, styles/sass/partials/_footer.scss */
+  .site-footer .widget-area .widget-column .widget_media_image a img {
+    transform: scale(1);
+  }
 }
 
 /* .site-footer {

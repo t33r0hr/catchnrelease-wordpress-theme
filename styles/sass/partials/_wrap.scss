@@ -26,8 +26,14 @@
 
 
 .site-footer .wrap {
-  padding-bottom: 0;
-  padding-top: .5rem;
+  
+  padding-bottom: 0.25rem;
+  padding-top: .125rem;
+
+  @media screen and (min-width: $bp_medium) {
+    padding-bottom: 0.33rem;
+    padding-top: 0.25rem;
+  }
 }
 
 
