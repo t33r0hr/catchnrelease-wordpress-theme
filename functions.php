@@ -601,6 +601,7 @@ add_filter( 'widget_tag_cloud_args', 'twentyseventeen_widget_tag_cloud_args' );
 
 require get_parent_theme_file_path( '/inc/logo-widget.php' );
 
+require_once get_parent_theme_file_path( '/widgets/class-cnr-widget-media.php' );
 require_once get_parent_theme_file_path( '/widgets/theme-audio/theme-audio.widget.php' );
 
 // require get_parent_theme_file_path( '/post-types/feature/feature.post-type.php' );

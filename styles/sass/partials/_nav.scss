@@ -64,6 +64,20 @@
     flex: 1;
     margin-top: 0.5em;
 
+    flex-direction: column-reverse;
+
+    .rm-spacer {
+      display: none;
+    }
+
+    @media screen and (min-width: $bp_medium) {
+      flex-direction: row;
+      .rm-spacer {
+        display: flex;
+      }
+
+    }   
+
     .widget,
     .widget > ul {
       align-items: center;

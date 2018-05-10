@@ -8,7 +8,7 @@ Version: 1.5.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyseventeen-cnr
-Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, flexible-header, accessibility-ready, editor-style, footer-widgets, post-formats, rtl-language-support, theme-options, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -4373,6 +4373,48 @@ p > object:only-child {
   background: transparent;
 }
 
+.widget_theme_audio_widget {
+  margin: 0;
+  padding: 0;
+}
+.widget_theme_audio_widget .mejs-audio {
+  width: auto !important;
+}
+.widget_theme_audio_widget .mejs-controls .mejs-time,
+.widget_theme_audio_widget .mejs-controls .mejs-time-rail {
+  display: none;
+}
+.widget_theme_audio_widget .controls, .widget_theme_audio_widget .controls label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  margin: 0;
+}
+.widget_theme_audio_widget .controls {
+  font-size: .9rem;
+  margin-top: 1em;
+}
+@media screen and (min-width: 30em) {
+  .widget_theme_audio_widget .controls {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .widget_theme_audio_widget .controls {
+    margin-top: 0;
+    font-size: 0.5rem;
+  }
+  .widget_theme_audio_widget .controls label {
+    padding-top: 0.1rem;
+  }
+}
+@media screen and (min-width: 30em) {
+  .widget_theme_audio_widget {
+    margin-right: 1rem;
+  }
+}
+
 .widget-audio-player {
   display: flex;
   flex-direction: row;
@@ -4539,6 +4581,18 @@ p > object:only-child {
   display: flex;
   flex: 1;
   margin-top: 0.5em;
+  flex-direction: column-reverse;
+}
+.rm-root .rm-level-1 .rm-spacer {
+  display: none;
+}
+@media screen and (min-width: 48em) {
+  .rm-root .rm-level-1 {
+    flex-direction: row;
+  }
+  .rm-root .rm-level-1 .rm-spacer {
+    display: flex;
+  }
 }
 .rm-root .rm-level-1 .widget,
 .rm-root .rm-level-1 .widget > ul {
@@ -4593,14 +4647,13 @@ html .site, body .site {
   float: none !important;
   width: auto !important;
   margin-bottom: 1.5rem;
-  /* .wp-caption-text {
-
-    color: $color-font-header;
-  } */
 }
 .entry-header .wp-caption, .entry-content .wp-caption {
   background: transparent;
   border: none;
+}
+.entry-header .wp-caption-text, .entry-content .wp-caption-text {
+  font-size: 1.5rem;
 }
 
 .site-content-contain {

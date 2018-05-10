@@ -21,11 +21,13 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
 
   }
 
-  class Theme_Audio_Widget extends WP_Widget_Media {
+  class Theme_Audio_Widget extends CNR_Widget_Media {
+
+    public $l10n = array();
 
     public function __construct() {
 
-      parent::__construct( 'theme_audio_widget', __('Theme Audio'), array(
+      parent::__construct( 'theme_audio_widget', __('Theme Audio' ), array(
         'description' => __('Theme audio playback widget for background music.')
       ) );
 
@@ -48,7 +50,7 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
       ) );
 
     }
-  
+    
     /**
      * Get schema for properties of a widget instance (item).
      *
@@ -74,6 +76,16 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
             'default' => false,
             'description' => __( 'Loop' ),
           ),
+          'autoplay' => array(
+            'type' => 'boolean',
+            'default' => false,
+            'description' => __( 'Autoplay' ),
+          ),          
+          'controls' => array(
+            'type' => 'boolean',
+            'default' => true,
+            'description' => __( 'Show Controls' ),
+          ),
         )
       );
 
@@ -87,27 +99,8 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
         );
       }
 
-      debug_obj('Schema', $schema);
-      $this->debug_me();
-
       return $schema;
     }
-
-
-
-    
-    public function debug_me () {
-
-      debug_obj('Theme_Audio_Widget',array(
-        'id_base' => $this->id_base,
-        'registered' => $this->registered,
-        'number' => $this->number,
-        'widget_options' => $this->widget_options,
-        'l10n' => $this->l10n
-      ));
-
-    }
-
 
     /**
      * Render the media on the frontend.
@@ -131,18 +124,71 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
         $src = $instance['url'];
       }
 
-      echo wp_audio_shortcode(
+      /*echo wp_audio_shortcode(
         array_merge(
           $instance,
           compact( 'src' )
         )
+      );*/
+
+      $options = array(
+        //"loop" => $instance['loop'],
+        "loop" => true,
+        //"controls" => $instance['controls'],
+        "controls" => false,
+        //"autoplay" => $instance['autoplay'],
+        "autoplay" => true,
+        "source" => array(
+          $src
+        )
       );
+      
+      echo $this->renderAudioControls($options);
+      echo $this->renderAudioPlayer($options);
     }
 
-    /*public function form() {
-      return parent::form();
-    }*/
 
+    /**
+     * render html5 audio element
+     *
+     * @param      array  $attr   audio player attributes
+     */
+    public function renderAudioPlayer ( $attr ) {
+
+      $sources = is_array($attr['source']) ? $attr['source'] : array($attr['source']);
+
+      $html = '<audio' .
+          ($attr['loop'] ? ' loop' : '') .
+          ($attr['controls'] ? ' controls' : '') .
+          ($attr['autoplay'] ? ' autoplay' : '') .
+          '>';
+
+      foreach ($sources as $key => $source) {
+        $html = $html . '<source src="' . $source . '">';
+      }
+
+      $html = $html . '</audio>';
+
+      return $html;
+    }
+
+
+    /**
+     * render audio controls
+     *
+     * @param      array  $attr   audio player attributes
+     */
+    public function renderAudioControls ( $attr ) {
+
+      $html = '<div class="controls">' .
+          '<input id="' . $this->id_base . '_checkbox" type="checkbox">'.
+          '<label type="checkbox" for="'.$this->id_base.'_checkbox">'.
+          __('Theme Audio Playing', 'catchandrelease' ) .
+          '</label>'.          
+        '</div>';
+
+      return $html;
+    }
 
     /**
      * Enqueue preview scripts.
@@ -173,8 +219,8 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
       wp_enqueue_style( 'wp-mediaelement' );
       wp_enqueue_script( 'wp-mediaelement' );
 
-      $handle = 'media-audio-widget';
-      wp_enqueue_script( $handle );
+      $handle = 'media-theme-audio-widget';
+      wp_enqueue_script( $handle, get_parent_theme_file_uri('/assets/js/' . $handle . '.js' ) );
 
       $exported_schema = array();
       foreach ( $this->get_instance_schema() as $field => $field_schema ) {
@@ -209,9 +255,10 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
      * @since 4.8.0
      */
     public function render_control_template_scripts() {
+      echo "render_control_template_scripts";
       parent::render_control_template_scripts()
       ?>
-      <script type="text/html" id="tmpl-wp-theme-audio-widget-audio-preview">
+      <script type="text/html" id="tmpl-wp-media-widget-theme-audio-preview">
         <# if ( data.error && 'missing_attachment' === data.error ) { #>
           <div class="notice notice-error notice-alt notice-missing-attachment">
             <p><?php echo $this->l10n['missing_attachment']; ?></p>
@@ -226,20 +273,6 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
       </script>
       <?php
     }
-
-
-    public function widget ( $args, $instance ) {
-
-      echo '<!-- // widget-debug';
-      echo 'Args';
-      print_r($args);
-      echo 'Instance';
-      print_r($instance);
-
-      echo '--!>';
-
-    }
-
   }
 
   add_action( 'widgets_init', function(){
