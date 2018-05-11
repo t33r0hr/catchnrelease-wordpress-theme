@@ -55,7 +55,7 @@ abstract class CNR_Widget_Media extends WP_Widget {
    */
   public function __construct( $id_base, $name, $widget_options = array(), $control_options = array() ) {
     $widget_opts = wp_parse_args( $widget_options, array(
-      'description' => __( 'A media item.' ),
+      'description' => __( 'A media item.', 'twentyseventeen-cnr' ),
       'customize_selective_refresh' => true,
       'mime_type' => '',
     ) );
@@ -63,20 +63,20 @@ abstract class CNR_Widget_Media extends WP_Widget {
     $control_opts = wp_parse_args( $control_options, array() );
 
     $l10n_defaults = array(
-      'no_media_selected' => __( 'No media selected' ),
-      'add_media' => _x( 'Add Media', 'label for button in the media widget' ),
-      'replace_media' => _x( 'Replace Media', 'label for button in the media widget; should preferably not be longer than ~13 characters long' ),
-      'edit_media' => _x( 'Edit Media', 'label for button in the media widget; should preferably not be longer than ~13 characters long' ),
-      'add_to_widget' => __( 'Add to Widget' ),
+      'no_media_selected' => __( 'No media selected', 'twentyseventeen-cnr' ),
+      'add_media' => _x( 'Add Media', 'label for button in the media widget', 'twentyseventeen-cnr' ),
+      'replace_media' => _x( 'Replace Media', 'label for button in the media widget; should preferably not be longer than ~13 characters long', 'twentyseventeen-cnr' ),
+      'edit_media' => _x( 'Edit Media', 'label for button in the media widget; should preferably not be longer than ~13 characters long', 'twentyseventeen-cnr' ),
+      'add_to_widget' => __( 'Add to Widget', 'twentyseventeen-cnr' ),
       'missing_attachment' => sprintf(
         /* translators: %s: URL to media library */
-        __( 'We can&#8217;t find that file. Check your <a href="%s">media library</a> and make sure it wasn&#8217;t deleted.' ),
+        __( 'We can&#8217;t find that file. Check your <a href="%s">media library</a> and make sure it wasn&#8217;t deleted.', 'twentyseventeen-cnr' ),
         esc_url( admin_url( 'upload.php' ) )
       ),
       /* translators: %d: widget count */
-      'media_library_state_multi' => _n_noop( 'Media Widget (%d)', 'Media Widget (%d)' ),
-      'media_library_state_single' => __( 'Media Widget' ),
-      'unsupported_file_type' => __( 'Looks like this isn&#8217;t the correct kind of file. Please link to an appropriate file instead.' ),
+      'media_library_state_multi' => _n_noop( 'Media Widget (%d)', 'Media Widget (%d)', 'twentyseventeen-cnr' ),
+      'media_library_state_single' => __( 'Media Widget', 'twentyseventeen-cnr' ),
+      'unsupported_file_type' => __( 'Looks like this isn&#8217;t the correct kind of file. Please link to an appropriate file instead.', 'twentyseventeen-cnr' ),
     );
     $this->l10n = array_merge( $l10n_defaults, array_filter( $this->l10n ) );
 
@@ -132,20 +132,20 @@ abstract class CNR_Widget_Media extends WP_Widget {
         'type' => 'integer',
         'default' => 0,
         'minimum' => 0,
-        'description' => __( 'Attachment post ID' ),
+        'description' => __( 'Attachment post ID', 'twentyseventeen-cnr' ),
         'media_prop' => 'id',
       ),
       'url' => array(
         'type' => 'string',
         'default' => '',
         'format' => 'uri',
-        'description' => __( 'URL to the media file' ),
+        'description' => __( 'URL to the media file', 'twentyseventeen-cnr' ),
       ),
       'title' => array(
         'type' => 'string',
         'default' => '',
         'sanitize_callback' => 'sanitize_text_field',
-        'description' => __( 'Title for the widget' ),
+        'description' => __( 'Title for the widget', 'twentyseventeen-cnr' ),
         'should_preview_update' => false,
       ),
     );
@@ -403,7 +403,7 @@ abstract class CNR_Widget_Media extends WP_Widget {
     <script type="text/html" id="tmpl-widget-media-<?php echo esc_attr( $this->id_base ); ?>-control">
       <# var elementIdPrefix = 'el' + String( Math.random() ) + '_' #>
       <p>
-        <label for="{{ elementIdPrefix }}title"><?php esc_html_e( 'Title:' ); ?></label>
+        <label for="{{ elementIdPrefix }}title"><?php esc_html_e( 'Title:', 'twentyseventeen-cnr' ); ?></label>
         <input id="{{ elementIdPrefix }}title" type="text" class="widefat title">
       </p>
       <div class="media-widget-preview <?php echo esc_attr( $this->id_base ); ?>">

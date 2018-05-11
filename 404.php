@@ -18,7 +18,7 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header>
-					<h1><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyseventeen' ); ?></h1>
+					<h1><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyseventeen-cnr' ); ?></h1>
 				</header><!-- .page-header -->
 			</section><!-- .error-404 -->
 		</main><!-- #main -->

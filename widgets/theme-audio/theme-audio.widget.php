@@ -27,26 +27,26 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
 
     public function __construct() {
 
-      parent::__construct( 'theme_audio_widget', __('Theme Audio' ), array(
-        'description' => __('Theme audio playback widget for background music.')
+      parent::__construct( 'theme_audio_widget', __('Theme Audio', 'twentyseventeen-cnr' ), array(
+        'description' => __('Theme audio playback widget for background music.', 'twentyseventeen-cnr')
       ) );
 
 
 
       $this->l10n = array_merge( $this->l10n, array(
-        'no_media_selected' => __( 'No audio selected' ),
-        'add_media' => _x( 'Add Audio', 'label for button in the audio widget' ),
-        'replace_media' => _x( 'Replace Audio', 'label for button in the audio widget; should preferably not be longer than ~13 characters long' ),
-        'edit_media' => _x( 'Edit Audio', 'label for button in the audio widget; should preferably not be longer than ~13 characters long' ),
+        'no_media_selected' => __( 'No audio selected', 'twentyseventeen-cnr' ),
+        'add_media' => _x( 'Add Audio', 'label for button in the audio widget', 'twentyseventeen-cnr' ),
+        'replace_media' => _x( 'Replace Audio', 'label for button in the audio widget; should preferably not be longer than ~13 characters long', 'twentyseventeen-cnr' ),
+        'edit_media' => _x( 'Edit Audio', 'label for button in the audio widget; should preferably not be longer than ~13 characters long', 'twentyseventeen-cnr' ),
         'missing_attachment' => sprintf(
           /* translators: %s: URL to media library */
-          __( 'We can&#8217;t find that audio file. Check your <a href="%s">media library</a> and make sure it wasn&#8217;t deleted.' ),
+          __( 'We can&#8217;t find that audio file. Check your <a href="%s">media library</a> and make sure it wasn&#8217;t deleted.', 'twentyseventeen-cnr' ),
           esc_url( admin_url( 'upload.php' ) )
         ),
         /* translators: %d: widget count */
-        'media_library_state_multi' => _n_noop( 'Audio Widget (%d)', 'Audio Widget (%d)' ),
-        'media_library_state_single' => __( 'Audio Widget' ),
-        'unsupported_file_type' => __( 'Looks like this isn&#8217;t the correct kind of file. Please link to an audio file instead.' ),
+        'media_library_state_multi' => _n_noop( 'Audio Widget (%d)', 'Audio Widget (%d)', 'twentyseventeen-cnr' ),
+        'media_library_state_single' => __( 'Audio Widget', 'twentyseventeen-cnr' ),
+        'unsupported_file_type' => __( 'Looks like this isn&#8217;t the correct kind of file. Please link to an audio file instead.', 'twentyseventeen-cnr' ),
       ) );
 
     }
@@ -69,22 +69,22 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
             'type' => 'string',
             'enum' => array( 'none', 'auto', 'metadata' ),
             'default' => 'none',
-            'description' => __( 'Preload' ),
+            'description' => __( 'Preload', 'twentyseventeen-cnr' ),
           ),
           'loop' => array(
             'type' => 'boolean',
             'default' => false,
-            'description' => __( 'Loop' ),
+            'description' => __( 'Loop', 'twentyseventeen-cnr' ),
           ),
-          'autoplay' => array(
+          'autostart' => array(
             'type' => 'boolean',
             'default' => false,
-            'description' => __( 'Autoplay' ),
+            'description' => __( 'autostart', 'twentyseventeen-cnr' ),
           ),          
           'controls' => array(
             'type' => 'boolean',
             'default' => true,
-            'description' => __( 'Show Controls' ),
+            'description' => __( 'Show Controls', 'twentyseventeen-cnr' ),
           ),
         )
       );
@@ -95,7 +95,7 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
           'default' => '',
           'format' => 'uri',
           /* translators: %s: audio extension */
-          'description' => sprintf( __( 'URL to the %s audio source file' ), $audio_extension ),
+          'description' => sprintf( __( 'URL to the %s audio source file', 'twentyseventeen-cnr' ), $audio_extension ),
         );
       }
 
@@ -136,8 +136,9 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
         "loop" => true,
         //"controls" => $instance['controls'],
         "controls" => false,
-        //"autoplay" => $instance['autoplay'],
-        "autoplay" => true,
+        "preload" => true,
+        //"autostart" => $instance['autostart'],
+        "autostart" => true,
         "source" => array(
           $src
         )
@@ -160,7 +161,7 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
       $html = '<audio' .
           ($attr['loop'] ? ' loop' : '') .
           ($attr['controls'] ? ' controls' : '') .
-          ($attr['autoplay'] ? ' autoplay' : '') .
+          ($attr['autostart'] ? ' autostart' : '') .
           '>';
 
       foreach ($sources as $key => $source) {
@@ -183,7 +184,7 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
       $html = '<div class="controls">' .
           '<input id="' . $this->id_base . '_checkbox" type="checkbox">'.
           '<label type="checkbox" for="'.$this->id_base.'_checkbox">'.
-          __('Theme Audio Playing', 'catchandrelease' ) .
+          __('Theme Audio Playing', 'catchandrelease-cnr' ) .
           '</label>'.          
         '</div>';
 
@@ -265,7 +266,7 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
           </div>
         <# } else if ( data.error ) { #>
           <div class="notice notice-error notice-alt">
-            <p><?php _e( 'Unable to preview media due to an unknown error.' ); ?></p>
+            <p><?php _e( 'Unable to preview media due to an unknown error.', 'twentyseventeen-cnr' ); ?></p>
           </div>
         <# } else if ( data.model && data.model.src ) { #>
           <?php wp_underscore_audio_template() ?>

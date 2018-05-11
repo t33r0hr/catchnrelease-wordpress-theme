@@ -4416,8 +4416,8 @@ p > object:only-child {
 }
 
 .widget-audio-player {
-  display: flex;
-  flex-direction: row;
+  /* @include hbox; */
+  display: inline-block;
   margin-right: 1.25rem;
 }
 .widget-audio-player > button {
@@ -4581,6 +4581,7 @@ p > object:only-child {
   display: flex;
   flex: 1;
   margin-top: 0.5em;
+  height: 4em;
   flex-direction: column-reverse;
 }
 .rm-root .rm-level-1 .rm-spacer {
@@ -4589,6 +4590,7 @@ p > object:only-child {
 @media screen and (min-width: 48em) {
   .rm-root .rm-level-1 {
     flex-direction: row;
+    height: auto;
   }
   .rm-root .rm-level-1 .rm-spacer {
     display: flex;

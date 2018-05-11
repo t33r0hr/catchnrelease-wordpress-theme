@@ -111,7 +111,6 @@
 			var control = this, mediaFrame, metadata, updateCallback;
 
 			const control_model_data = control.model.toJSON();
-			console.log('control_model_data',control_model_data);
 			metadata = control.mapModelToMediaFrameProps( control_model_data );
 
 			// Set up the media frame.

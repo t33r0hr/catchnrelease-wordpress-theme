@@ -18,5 +18,5 @@ register_default_backgrounds( array(
   'yourimg' => array(
   'url' => get_template_directory_uri() . '/framework/images/background.jpg',
   'thumbnail_url' => get_template_directory_uri() . '/framework/images/background.jpg',
-  'description' => _x( 'Default Image', 'background image description', 'catch-and-release' )),
+  'description' => _x( 'Default Image', 'background image description', 'twentyseventeen-cnr' )),
 ));

@@ -53,7 +53,8 @@
 
 .widget-audio-player {
 
-  @include hbox;
+  /* @include hbox; */
+  display: inline-block;
   margin-right: $column-gutter;
 
   > button {

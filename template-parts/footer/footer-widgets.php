@@ -14,7 +14,7 @@
 if ( is_active_sidebar( 'sidebar-2' ) ) :
 ?>
 
-	<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'twentyseventeen' ); ?>">
+	<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'twentyseventeen-cnr' ); ?>">
 		<?php
 		if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
 			<div class="widget-column footer-widget-1">
