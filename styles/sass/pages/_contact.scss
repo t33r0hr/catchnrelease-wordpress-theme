@@ -1,0 +1,15 @@
+
+.contact-us {
+
+  @include hbox;
+  align-items: start;
+  flex-wrap: wrap;
+
+  span.label {
+    font-weight: bold;
+    padding-right: 1em;
+  }
+
+  
+
+}

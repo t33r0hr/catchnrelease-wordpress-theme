@@ -2,23 +2,24 @@
 // Rem-Sizing
 // ----------------------------------------------------------------------------
 
-$font-size-base-value: 14;
+$font-size-base-value: 20;
 
 $default-size-mobile: 375;
 $default-size-tablet: 1024;
 $default-size-desktop: 1440;
 $max-size-desktop: 1980;
 
-
+$em-desktop: em-calc($max-size-desktop);
+@debug "max-size-desktop #{$em-desktop}";
 
 html, body {
 	font-size: calc(100vw / #{$default-size-mobile} * #{$font-size-base-value});
 
-	@media #{$medium-up} {
+	@media #{$bp_query_minimum} {
 		font-size: calc(100vw / #{$default-size-tablet} * #{$font-size-base-value});
 	}
 
-    @media #{$large-up} {
+  @media #{$large-up} {
 		font-size: calc(100vw / #{$default-size-desktop} * #{$font-size-base-value});
 	}
 

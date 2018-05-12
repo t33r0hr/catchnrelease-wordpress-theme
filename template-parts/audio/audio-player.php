@@ -15,8 +15,8 @@
   $buttons = array( 'play', 'pause' );
 
   $stateLabels = array(
-    'play' => _x( 'theme state: play', 'Audio player label for state "play".', 'twentyseventeen' ),
-    'pause' => _x( 'theme state: pause', 'Audio player label for state "pause".', 'twentyseventeen' )
+    'play' => _x( 'theme state: play', 'Audio player label for state "play".', 'twentyseventeen-cnr' ),
+    'pause' => _x( 'theme state: pause', 'Audio player label for state "pause".', 'twentyseventeen-cnr' )
   );
 
   $theme_state_format = 'theme state: %s';

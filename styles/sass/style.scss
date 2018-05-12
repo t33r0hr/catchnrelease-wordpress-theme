@@ -2,20 +2,32 @@
 Theme Name: Catch & Release
 Author: Matthias Buchholz
 Author Email: mb@averagejoe.de
+GitHub Theme URI: t33r0hr/catchnrelease-wordpress-theme
 Description: Customization of Twentyseventeen for Catch&Release Game Website
 Version: 1.5.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyseventeen-cnr
-Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, flexible-header, accessibility-ready, editor-style, footer-widgets, post-formats, rtl-language-support, theme-options, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
 @import "compass/reset";
-/* @import "default/blank"; */
-@import "default/variables";
+
+@import 'mixins/functions';
+@import 'variables/breakpoints';
+@import 'variables/media-queries';
+@import 'variables/colors';
+@import 'variables/typography';
+@import 'variables/layout';
+@import 'variables/easings';
+@import 'mixins/fonts';
+@import 'mixins/images';
+@import 'mixins/helpers';
+@import 'mixins/common';
+
 
 @import "mixins/flex";
 @import "mixins/responsive";
@@ -23,7 +35,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "mixins/breakpoints";
 @import "mixins/nav";
 
-@import "default/globals";
+@import 'basics/normalize';
+@import 'basics/remsizing';
+@import 'basics/typography';
+@import 'basics/animations';
+
 @import "default/base";
 @import "partials/wrap";
 @import "partials/header";
@@ -39,3 +55,4 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @import "pages/features";
 @import "pages/press";
+@import "pages/contact";
