@@ -105,6 +105,12 @@ body, html, a {
   line-height: 1.4rem;
 }
 
+.menu .current-menu-item a, .menu .current-lang a,
+.widget > ul .current-menu-item a,
+.widget > ul .current-lang a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 a, a:hover, a:active {
   text-decoration: none;
   box-shadow: none;
@@ -4768,7 +4774,6 @@ html .site, body .site {
 } */
 ul.menu {
   list-style: none;
-  /* font-size: 0.5rem; */
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;

@@ -3,10 +3,7 @@
 ul.menu {
 
   list-style: none;
-
-  /* font-size: 0.5rem; */
   font-weight: 700;
-
   text-transform: uppercase;
   margin: 0;
 
@@ -14,6 +11,7 @@ ul.menu {
     margin: 0;
     padding: 1em 0.5em;
   }
+
 
   @include cross-center;
   @include vbox;
