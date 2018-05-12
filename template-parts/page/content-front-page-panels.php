@@ -40,7 +40,7 @@ global $twentyseventeencounter;
 				<?php
 					/* translators: %s: Name of current post */
 					the_content( sprintf(
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen-cnr' ),
 						get_the_title()
 					) );
 				?>

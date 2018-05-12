@@ -40,13 +40,11 @@ html, body {
     
     background:  transparent;
     border: none;
-
   }
 
-  /* .wp-caption-text {
-
-    color: $color-font-header;
-  } */
+  .wp-caption-text {
+    font-size: 1.5rem;
+  }
 
 }
 
@@ -56,7 +54,6 @@ html, body {
 
   .content-area {
 
-    @include resp_margin_top();
     color: $color-font-header;
     text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
 

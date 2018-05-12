@@ -1,9 +1,10 @@
 
+$small-range-low: 0px;
 
-$small-range: (0px, #{em-calc(739)} );
-$medium-range: (#{em-calc(740)}, #{em-calc(1023)});
-$large-range: (#{em-calc(1024)}, #{em-calc(1439)});
-$xlarge-range: (#{em-calc(1440)}, #{em-calc(99999999999999999)});
+$small-range: (0px, em-calc(739) );
+$medium-range: (em-calc(740), em-calc(1023));
+$large-range: (em-calc(1024), em-calc(1439));
+$xlarge-range: (em-calc(1440), em-calc(99999999999999999));
 
 $screen: "only screen";
 

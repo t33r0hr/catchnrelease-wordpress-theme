@@ -22,16 +22,16 @@ class Logo_Footer_Widget extends WP_Widget_Media {
    * @since 4.9.0
    */
   public function __construct() {
-    parent::__construct( 'logo_footer', __( 'Logo Footer' ), array(
-      'description' => __( 'Displays logos.' ),
+    parent::__construct( 'logo_footer', __( 'Logo Footer', 'twentyseventeen-cnr' ), array(
+      'description' => __( 'Displays logos.', 'twentyseventeen-cnr' ),
       'mime_type'   => 'image',
     ) );
 
     $this->l10n = array_merge( $this->l10n, array(
-      'no_media_selected' => __( 'No images selected' ),
-      'add_media' => _x( 'Add Images', 'label for button in the gallery widget; should not be longer than ~13 characters long' ),
+      'no_media_selected' => __( 'No images selected', 'twentyseventeen-cnr' ),
+      'add_media' => _x( 'Add Images', 'label for button in the gallery widget; should not be longer than ~13 characters long', 'twentyseventeen-cnr' ),
       'replace_media' => '',
-      'edit_media' => _x( 'Edit Gallery', 'label for button in the gallery widget; should not be longer than ~13 characters long' ),
+      'edit_media' => _x( 'Edit Gallery', 'label for button in the gallery widget; should not be longer than ~13 characters long', 'twentyseventeen-cnr' ),
     ) );
   }
 
@@ -51,7 +51,7 @@ class Logo_Footer_Widget extends WP_Widget_Media {
         'type' => 'string',
         'default' => '',
         'sanitize_callback' => 'sanitize_text_field',
-        'description' => __( 'Title for the widget' ),
+        'description' => __( 'Title for the widget', 'twentyseventeen-cnr' ),
         'should_preview_update' => false,
       ),
       'ids' => array(

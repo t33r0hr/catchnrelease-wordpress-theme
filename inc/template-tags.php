@@ -18,7 +18,7 @@ function twentyseventeen_posted_on() {
 	// Get the author name; wrap it in a link.
 	$byline = sprintf(
 		/* translators: %s: post author */
-		__( 'by %s', 'twentyseventeen' ),
+		__( 'by %s', 'twentyseventeen-cnr' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></span>'
 	);
 
@@ -48,7 +48,7 @@ function twentyseventeen_time_link() {
 	// Wrap the time string in a link, and preface it with 'Posted on'.
 	return sprintf(
 		/* translators: %s: post date */
-		__( '<span class="screen-reader-text">Posted on</span> %s', 'twentyseventeen' ),
+		__( '<span class="screen-reader-text">Posted on</span> %s', 'twentyseventeen-cnr' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 }
@@ -62,7 +62,7 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 function twentyseventeen_entry_footer() {
 
 	/* translators: used between list items, there is a space after the comma */
-	$separate_meta = __( ', ', 'twentyseventeen' );
+	$separate_meta = __( ', ', 'twentyseventeen-cnr' );
 
 	// Get Categories for posts.
 	$categories_list = get_the_category_list( $separate_meta );
@@ -81,11 +81,11 @@ function twentyseventeen_entry_footer() {
 
 						// Make sure there's more than one category before displaying.
 						if ( $categories_list && twentyseventeen_categorized_blog() ) {
-							echo '<span class="cat-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'twentyseventeen' ) . '</span>' . $categories_list . '</span>';
+							echo '<span class="cat-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'twentyseventeen-cnr' ) . '</span>' . $categories_list . '</span>';
 						}
 
 						if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-							echo '<span class="tags-links">' . twentyseventeen_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'twentyseventeen' ) . '</span>' . $tags_list . '</span>';
+							echo '<span class="tags-links">' . twentyseventeen_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'twentyseventeen-cnr' ) . '</span>' . $tags_list . '</span>';
 						}
 
 					echo '</span>';
@@ -113,7 +113,7 @@ function twentyseventeen_edit_link() {
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+			__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen-cnr' ),
 			get_the_title()
 		),
 		'<span class="edit-link">',
@@ -147,7 +147,7 @@ function twentyseventeen_front_page_section( $partial = null, $id = 0 ) {
 		wp_reset_postdata();
 	} elseif ( is_customize_preview() ) {
 		// The output placeholder anchor.
-		echo '<article class="panel-placeholder panel twentyseventeen-panel twentyseventeen-panel' . $id . '" id="panel' . $id . '"><span class="twentyseventeen-panel-title">' . sprintf( __( 'Front Page Section %1$s Placeholder', 'twentyseventeen' ), $id ) . '</span></article>';
+		echo '<article class="panel-placeholder panel twentyseventeen-panel twentyseventeen-panel' . $id . '" id="panel' . $id . '"><span class="twentyseventeen-panel-title">' . sprintf( __( 'Front Page Section %1$s Placeholder', 'twentyseventeen-cnr' ), $id ) . '</span></article>';
 	}
 }
 

@@ -1,7 +1,60 @@
 
+.widget_theme_audio_widget {
+
+  margin: 0;
+  padding: 0;
+
+  .mejs-audio {
+    width: auto !important;
+  }
+
+  .mejs-controls {
+
+    .mejs-time,
+    .mejs-time-rail {
+      display: none;
+    }
+
+  }
+
+
+  .controls, .controls label {
+    @include hbox;
+    align-items: center;
+    align-self: center;
+    margin: 0;
+  }
+  
+  .controls {
+    font-size: .9rem;
+    margin-top: 1em;
+
+    @media screen and (min-width: 30em) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 48em) {
+
+      margin-top: 0;      
+      font-size: 0.5rem;
+
+      label {
+        padding-top: 0.1rem;
+      }
+    }     
+  }
+
+  @media screen and (min-width: 30em) {
+    margin-right: 1rem;
+
+  }
+
+}
+
 .widget-audio-player {
 
-  @include hbox;
+  /* @include hbox; */
+  display: inline-block;
   margin-right: $column-gutter;
 
   > button {

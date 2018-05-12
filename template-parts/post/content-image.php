@@ -56,12 +56,12 @@
 			// Only show content if is a single post, or if there's no featured image.
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen-cnr' ),
 				get_the_title()
 			) );
 
 			wp_link_pages( array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen-cnr' ),
 				'after'       => '</div>',
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',
