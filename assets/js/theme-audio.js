@@ -67,14 +67,14 @@
   const storedState = readStoredState()
 
   if ( storedState !== 'playing' ) {
-    player.attr('autostart', null);
+    player.attr('autoplay', null);
   }
   
   toggleState(storedState)
 
-  if ( storedState === 'playing' ) {
+  /*if ( storedState === 'playing' ) {
     playerElement.play();
-  }
+  }*/
 
 
 })(jQuery);

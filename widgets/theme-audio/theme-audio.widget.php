@@ -76,10 +76,10 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
             'default' => false,
             'description' => __( 'Loop', 'twentyseventeen-cnr' ),
           ),
-          'autostart' => array(
+          'autoplay' => array(
             'type' => 'boolean',
             'default' => false,
-            'description' => __( 'autostart', 'twentyseventeen-cnr' ),
+            'description' => __( 'autoplay', 'twentyseventeen-cnr' ),
           ),          
           'controls' => array(
             'type' => 'boolean',
@@ -137,8 +137,8 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
         //"controls" => $instance['controls'],
         "controls" => false,
         "preload" => true,
-        //"autostart" => $instance['autostart'],
-        "autostart" => true,
+        //"autoplay" => $instance['autoplay'],
+        "autoplay" => true,
         "source" => array(
           $src
         )
@@ -161,7 +161,7 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
       $html = '<audio' .
           ($attr['loop'] ? ' loop' : '') .
           ($attr['controls'] ? ' controls' : '') .
-          ($attr['autostart'] ? ' autostart' : '') .
+          ($attr['autoplay'] ? ' autoplay' : '') .
           '>';
 
       foreach ($sources as $key => $source) {
