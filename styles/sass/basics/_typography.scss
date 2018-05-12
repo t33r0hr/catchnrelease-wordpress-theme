@@ -6,6 +6,19 @@ body, html, a {
   line-height: 1.4rem;
 }
 
+.menu, 
+.widget > ul {
+
+  .current-menu-item, .current-lang {
+
+    a {
+      color: rgba(255,255,255,0.7);
+    }
+
+  }
+
+}
+
 a, a:hover, a:active {
   text-decoration: none;
   box-shadow: none;
