@@ -4686,12 +4686,6 @@ html .site, body .site {
 }
 
 .site-footer {
-  /* 
-  position: fixed !important; 
-  bottom: 0;
-  left: 0;
-  right: 0;
-  */
   background-color: #019cd2;
   width: 100%;
   display: inline-block;
@@ -4700,11 +4694,44 @@ html .site, body .site {
   display: flex;
   flex-direction: row;
   padding: 0;
+  align-items: stretch;
+  align-content: stretch;
 }
 .site-footer .widget-area .widget-column {
   display: flex;
   flex-direction: row;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+.site-footer .widget-area .widget-column.footer-widget-2 {
   flex: 1;
+}
+.site-footer .widget-area .widget-column .widget {
+  padding: 0;
+}
+.site-footer .widget-area .widget-column .widget_apsi_widget {
+  /* social app icons */
+}
+@media screen and (min-width: 48em) {
+  .site-footer .widget-area .widget-column .widget_apsi_widget {
+    align-self: start;
+  }
+}
+@media screen and (min-width: 48em) {
+  .site-footer .widget-area .widget-column .widget_apsi_widget .aps-each-icon {
+    margin: 0.25rem 0.5rem;
+  }
+}
+.site-footer .widget-area .widget-column .widget_apsi_widget .aps-each-icon img {
+  width: 48px;
+  height: 48px;
+  transform: scale(0.66);
+}
+@media screen and (min-width: 48em) {
+  .site-footer .widget-area .widget-column .widget_apsi_widget .aps-each-icon img {
+    transform: scale(1);
+  }
 }
 .site-footer .widget-area .widget-column .widget_media_image {
   flex: 1;
@@ -4718,68 +4745,23 @@ html .site, body .site {
   box-shadow: none;
 }
 .site-footer .widget-area .widget-column .widget_media_image a img {
+  width: auto;
+  transition: max-height 300ms linear;
+  max-height: 64px;
   box-shadow: none;
-  transform: scale(0.66);
+  /* @include responsive-transform; */
 }
-@media screen and (min-width: 48em) {
+@media (min-width: 30em) {
   .site-footer .widget-area .widget-column .widget_media_image a img {
-    transform: scale(1);
+    max-height: 96px;
+  }
+}
+@media (min-width: 30em) {
+  .site-footer .widget-area .widget-column .widget_media_image a img {
+    max-height: 150px;
   }
 }
 
-/* .site-footer {
-  position: fixed !important;
-  background-color: rgba(1, 156, 210, 1);
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  right: 0;
-  display: inline-block;
-  border: 1px solid orange;
-
-  .footer-spacer {
-    
-  }
-  
-
-
-  .footer-logos {
-
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-self: stretch;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-
-    .widget_media_image {
-
-      flex-direction: column;
-      flex: 1;
-      align-items: center;
-      align-content: center;
-
-    }
-
-    .footer-logo {
-      
-      height: 106px;
-      flex: 1;
-      
-      @include center();
-
-      a {
-        flex: 1;
-        @include center();
-      }
-
-    }
-
-
-  }
-
-} */
 ul.menu {
   list-style: none;
   font-weight: 700;

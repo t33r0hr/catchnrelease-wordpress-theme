@@ -38,19 +38,6 @@
 
   }
 
-  /* @media #{$medium-up} {
-
-    flex-direction: row;
-
-    > *,
-    > * > a {
-
-      margin-right: $column-gutter;
-
-    }
-
-  } */
-
 }
 
 
@@ -62,3 +49,12 @@
     } */
 }
 
+@mixin responsive-transform($min: 0.66) {
+
+  transform: scale($min);
+
+  @media screen and (min-width: $bp_medium) {
+    transform: scale(1);
+  }
+
+}

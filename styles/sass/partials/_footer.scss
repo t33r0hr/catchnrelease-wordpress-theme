@@ -1,13 +1,6 @@
 
 
 .site-footer {
-
-  /* 
-  position: fixed !important; 
-  bottom: 0;
-  left: 0;
-  right: 0;
-  */
   background-color: rgba(1, 156, 210, 1);
   width: 100%;
   display: inline-block;
@@ -16,11 +9,43 @@
 
     @include hbox;
     padding: 0;
+    @include stretch;
+    @include cross-stretch;
 
     .widget-column {
       
       @include hbox;
-      flex: 1;
+      @include cross-center;
+      align-self: stretch;
+
+      &.footer-widget-2 {
+        flex: 1;
+      }
+      
+      .widget {
+        padding: 0;
+      }
+
+      .widget_apsi_widget {
+        /* social app icons */
+        
+        @media screen and (min-width: $bp_medium) {
+          align-self: start;
+        }
+
+        .aps-each-icon {
+          @media screen and (min-width: $bp_medium) {
+              margin: 0.25rem 0.5rem;
+          }
+
+          img {
+            width: 48px;
+            height: 48px;
+            @include responsive-transform;
+          }
+        }
+
+      }
 
       .widget_media_image {
 
@@ -35,12 +60,23 @@
 
           img {
 
-            box-shadow: none;
-            transform: scale(0.66);
+            width: auto;
 
-            @media screen and (min-width: $bp_medium) {
-              transform: scale(1);
+            transition: max-height 300ms linear;
+
+            max-height: 64px;
+
+            @include screen_minimum {
+              max-height: 96px;
             }
+            
+            @include screen_medium {
+              max-height: 150px;
+            }
+
+            box-shadow: none;
+
+            /* @include responsive-transform; */
 
           }
 
@@ -52,59 +88,5 @@
 
   }
 
+
 }
-  
-
-/* .site-footer {
-  position: fixed !important;
-  background-color: rgba(1, 156, 210, 1);
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  right: 0;
-  display: inline-block;
-  border: 1px solid orange;
-
-  .footer-spacer {
-    
-  }
-  
-
-
-  .footer-logos {
-
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-self: stretch;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-
-    .widget_media_image {
-
-      flex-direction: column;
-      flex: 1;
-      align-items: center;
-      align-content: center;
-
-    }
-
-    .footer-logo {
-      
-      height: 106px;
-      flex: 1;
-      
-      @include center();
-
-      a {
-        flex: 1;
-        @include center();
-      }
-
-    }
-
-
-  }
-
-} */
