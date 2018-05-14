@@ -115,3 +115,15 @@
   }
 
 }
+
+
+.widget_nav_menu {
+
+  padding-top: 1rem;
+  flex-direction: row;
+
+  h2.widget-title {
+      display: none;
+  }
+
+}

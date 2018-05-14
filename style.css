@@ -4635,6 +4635,14 @@ p > object:only-child {
   }
 }
 
+.widget_nav_menu {
+  padding-top: 1rem;
+  flex-direction: row;
+}
+.widget_nav_menu h2.widget-title {
+  display: none;
+}
+
 /** page content */
 html, body {
   display: flex;
