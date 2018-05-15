@@ -5,7 +5,7 @@ Author: Matthias Buchholz
 Author Email: mb@averagejoe.de
 GitHub Theme URI: t33r0hr/catchnrelease-wordpress-theme
 Description: Customization of Twentyseventeen for Catch&Release Game Website
-Version: 1.5.3
+Version: 1.5.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyseventeen-cnr
@@ -4673,6 +4673,11 @@ html .site, body .site {
   font-size: 1.5rem;
 }
 
+.entry-content ul, .entry-content ol {
+  margin-left: 1rem;
+  font-size: 0.75rem;
+}
+
 .site-content-contain {
   background-color: transparent;
 }
@@ -4710,26 +4715,26 @@ html .site, body .site {
 .site-footer .widget-area .widget-column .widget {
   padding: 0;
 }
-.site-footer .widget-area .widget-column .widget_apsi_widget {
+.site-footer .widget-area .widget-column .widget_apsi_widget, .site-footer .widget-area .widget-column .sfsi {
   /* social app icons */
 }
 @media screen and (min-width: 48em) {
-  .site-footer .widget-area .widget-column .widget_apsi_widget {
+  .site-footer .widget-area .widget-column .widget_apsi_widget, .site-footer .widget-area .widget-column .sfsi {
     align-self: start;
   }
 }
 @media screen and (min-width: 48em) {
-  .site-footer .widget-area .widget-column .widget_apsi_widget .aps-each-icon {
+  .site-footer .widget-area .widget-column .widget_apsi_widget .aps-each-icon, .site-footer .widget-area .widget-column .sfsi .aps-each-icon {
     margin: 0.25rem 0.5rem;
   }
 }
-.site-footer .widget-area .widget-column .widget_apsi_widget .aps-each-icon img {
+.site-footer .widget-area .widget-column .widget_apsi_widget .aps-each-icon img, .site-footer .widget-area .widget-column .sfsi .aps-each-icon img {
   width: 48px;
   height: 48px;
   transform: scale(0.66);
 }
 @media screen and (min-width: 48em) {
-  .site-footer .widget-area .widget-column .widget_apsi_widget .aps-each-icon img {
+  .site-footer .widget-area .widget-column .widget_apsi_widget .aps-each-icon img, .site-footer .widget-area .widget-column .sfsi .aps-each-icon img {
     transform: scale(1);
   }
 }

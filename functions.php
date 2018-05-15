@@ -78,6 +78,7 @@ function twentyseventeen_setup() {
 	register_nav_menus( array(
 		'top'    => __( 'Top Menu', 'twentyseventeen-cnr' ),
 		'social' => __( 'Social Links Menu', 'twentyseventeen-cnr' ),
+		'links' => __( 'Further Links Menu', 'twentyseventeen-cnr' ),
 	) );
 
 	/*
@@ -85,8 +86,8 @@ function twentyseventeen_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'comment-form',
-		'comment-list',
+		/*'comment-form',
+		'comment-list',*/
 		'gallery',
 		'caption',
 	) );
@@ -220,6 +221,15 @@ function twentyseventeen_setup() {
 					'link_twitter',
 					'link_instagram',
 					'link_email',
+				),
+			),
+
+			// Assign a menu to the "social" location.
+			'links' => array(
+				'name' => __( 'Further Links Menu', 'twentyseventeen-cnr' ),
+				'items' => array(
+					'page_tos',
+					'page_pp',
 				),
 			),
 		),
