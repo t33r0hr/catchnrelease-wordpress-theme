@@ -11,7 +11,11 @@
         text-decoration: none;
         font-style: italic;
 
-        padding-left: 32px + 28px;
+        padding: 0.4rem 32px 0;
+      
+        /* @media screen and (min-width: $bp_small) {
+          padding: 0.25rem 1.5rem;
+        } */
 
         background-position: 0 0;
         background-size: 32px 32px;

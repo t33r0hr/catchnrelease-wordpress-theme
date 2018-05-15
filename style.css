@@ -139,7 +139,8 @@ p {
 }
 @media screen and (min-width: 48em) {
   p {
-    font-size: 0.7em;
+    /* font-size: 0.7em; */
+    font-size: 1em;
   }
 }
 
@@ -4889,7 +4890,7 @@ ul.menu > li {
     margin-bottom: 21px;
   } */
   font-family: normal normal 400 15px/1.3em raleway, sans-serif;
-  font-size: 28.9px;
+  /* font-size: $font-size-base * 1.7; */
   line-height: 1.2;
 }
 .site-content .entry-content .feature-list {
@@ -4906,7 +4907,10 @@ ul.menu > li {
 .site-content .entry-content ul.downloads > li > a {
   text-decoration: none;
   font-style: italic;
-  padding-left: 60px;
+  padding: 0.4rem 32px 0;
+  /* @media screen and (min-width: $bp_small) {
+    padding: 0.25rem 1.5rem;
+  } */
   background-position: 0 0;
   background-size: 32px 32px;
   background-repeat: no-repeat;

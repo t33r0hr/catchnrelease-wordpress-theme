@@ -47,7 +47,8 @@ a, a:hover, a:active {
 p {
   
   @media screen and (min-width: $bp_medium) {
-    font-size: 0.7em;
+    /* font-size: 0.7em; */
+    font-size: 1em;
   }
 
   line-height: 1.15;

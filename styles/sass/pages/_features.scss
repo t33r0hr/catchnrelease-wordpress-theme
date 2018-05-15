@@ -6,7 +6,7 @@
     header {
       @include resp_margin_bottom;
       font-family: $font-sans-serif-regular;
-      font-size: $font-size-base * 1.7;
+      /* font-size: $font-size-base * 1.7; */
       line-height: $global-line-height;
 
     }
