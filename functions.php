@@ -365,9 +365,9 @@ function twentyseventeen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'twentyseventeen-cnr' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen-cnr' ),
+		'name'          => __( 'Footer Start', 'twentyseventeen-cnr' ),
+		'id'            => 'sidebar-start',
+		'description'   => __( 'Add widgets here to appear in your footer, aligned at start.', 'twentyseventeen-cnr' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -375,9 +375,19 @@ function twentyseventeen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'twentyseventeen-cnr' ),
-		'id'            => 'sidebar-3',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen-cnr' ),
+		'name'          => __( 'Footer Center', 'twentyseventeen-cnr' ),
+		'id'            => 'sidebar-center',
+		'description'   => __( 'Add widgets here to appear in your footer, aligned at center.', 'twentyseventeen-cnr' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer End', 'twentyseventeen-cnr' ),
+		'id'            => 'sidebar-end',
+		'description'   => __( 'Add widgets here to appear in your footer, aligned at end.', 'twentyseventeen-cnr' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -615,8 +625,7 @@ add_filter( 'widget_tag_cloud_args', 'twentyseventeen_widget_tag_cloud_args' );
 
 require get_parent_theme_file_path( '/inc/logo-widget.php' );
 
-require_once get_parent_theme_file_path( '/widgets/class-cnr-widget-media.php' );
-require_once get_parent_theme_file_path( '/widgets/theme-audio/theme-audio.widget.php' );
+require_once get_parent_theme_file_path( '/widgets/init.php' );
 
 // require get_parent_theme_file_path( '/post-types/feature/feature.post-type.php' );
 

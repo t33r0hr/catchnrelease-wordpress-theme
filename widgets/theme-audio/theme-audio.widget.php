@@ -13,14 +13,6 @@ if ( !defined( 'ABSPATH' ) ) {
 
 if ( !class_exists( 'Theme_Audio_Widget' ) ) {
 
-  function debug_obj ( $label, $obj ) {
-
-    echo '<!-- // Debug "' . $label . '" ';
-    print_r($obj);
-    echo '-->';
-
-  }
-
   class Theme_Audio_Widget extends CNR_Widget_Media {
 
     public $l10n = array();
@@ -276,8 +268,8 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
     }
   }
 
-  add_action( 'widgets_init', function(){
+  /*add_action( 'widgets_init', function(){
     register_widget( 'Theme_Audio_Widget' );
-  });
+  });*/
 
 }

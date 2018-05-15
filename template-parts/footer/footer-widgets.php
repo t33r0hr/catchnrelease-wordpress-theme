@@ -11,23 +11,29 @@
 ?>
 
 <?php
-if ( is_active_sidebar( 'sidebar-2' ) ) :
+if ( is_active_sidebar( 'sidebar-start' ) || is_active_sidebar( 'sidebar-center' ) || is_active_sidebar( 'sidebar-end' ) ) :
 ?>
 
 	<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'twentyseventeen-cnr' ); ?>">
 		<?php
-		if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
-			<div class="widget-column footer-widget-1">
-				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+		if ( true || is_active_sidebar( 'sidebar-start' ) ) { ?>
+			<div class="widget-column footer-widget-start">
+				<?php dynamic_sidebar( 'sidebar-start' ); ?>
 			</div>
-		<?php }
+		<?php } ?>
 		 
-		if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
-			<div class="widget-column footer-widget-2">
-				<?php dynamic_sidebar( 'sidebar-3' ); ?>
+		<?php if ( true || is_active_sidebar( 'sidebar-center' ) ) { ?>
+			<div class="widget-column footer-widget-center">
+				<?php dynamic_sidebar( 'sidebar-center' ); ?>
 			</div>
-		<?php } 
-		 ?>
+		<?php } ?>
+		
+		<?php if ( true || is_active_sidebar( 'sidebar-end' ) ) { ?>
+			<div class="widget-column footer-widget-end">
+				<?php dynamic_sidebar( 'sidebar-end' ); ?>
+			</div>
+		<?php } ?>
+		
 	</aside><!-- .widget-area -->
 
 <?php endif; ?>
