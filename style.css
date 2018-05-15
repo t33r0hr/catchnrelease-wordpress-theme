@@ -4690,14 +4690,100 @@ html .site, body .site {
   border: 0;
 }
 
+/* footer parts alignment */
+.widget-area {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.widget-area .footer-widget-start {
+  align-self: start;
+}
+.widget-area .footer-widget-start ul {
+  align-items: start;
+}
+.widget-area .footer-widget-end {
+  align-self: end;
+}
+.widget-area .footer-widget-end ul {
+  align-items: end;
+}
+.widget-area .footer-widget-start, .widget-area .footer-widget-end {
+  font-size: .5rem;
+}
+.widget-area .footer-widget-start ul, .widget-area .footer-widget-end ul {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.widget-area .footer-widget-start ul li, .widget-area .footer-widget-end ul li {
+  border: 0;
+  margin: 0;
+  padding: 0.25rem 0;
+}
+.widget-area .footer-widget-start .widget, .widget-area .footer-widget-end .widget {
+  flex: 1;
+}
+.widget-area .footer-widget-center {
+  flex: 1;
+}
+
+@media screen and (min-width: 48em) {
+  .widget-area {
+    display: flex;
+    flex-direction: row;
+  }
+  .widget-area .widget-column {
+    flex-wrap: wrap;
+  }
+  .widget-area .footer-widget-start,
+  .widget-area .footer-widget-end {
+    display: flex;
+    flex-direction: column;
+  }
+  .widget-area .footer-widget-start ul,
+  .widget-area .footer-widget-end ul {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: start;
+  }
+  .widget-area .footer-widget-start ul > li,
+  .widget-area .footer-widget-end ul > li {
+    font-size: 0.66rem;
+    padding: 0.125rem 0.25rem;
+    border: 0;
+    text-align: center;
+    flex: 1;
+  }
+  .widget-area .footer-widget-start ul > li a,
+  .widget-area .footer-widget-end ul > li a {
+    text-align: center;
+  }
+}
+/* footer navigation */
+footer .widget_nav_menu {
+  align-items: stretch;
+  flex: 1;
+    /* ul.menu {
+      @include hbox;
+      @include stretch;
+
+      @media screen and (min-width: $bp_medium) {
+        @include vbox;
+      }
+    }
+ */
+}
+
 .site-footer {
   background-color: #019cd2;
   width: 100%;
   display: inline-block;
 }
 .site-footer .widget-area {
-  display: flex;
-  flex-direction: row;
   padding: 0;
   align-items: stretch;
   align-content: stretch;
@@ -4705,8 +4791,7 @@ html .site, body .site {
 .site-footer .widget-area .widget-column {
   display: flex;
   flex-direction: row;
-  display: flex;
-  align-items: center;
+  align-items: start;
   align-self: stretch;
 }
 .site-footer .widget-area .widget-column.footer-widget-2 {
