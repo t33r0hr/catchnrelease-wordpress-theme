@@ -150,7 +150,7 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
 
       $sources = is_array($attr['source']) ? $attr['source'] : array($attr['source']);
 
-      $html = '<audio' .
+      $html = '<audio id="' . $this->id_base . '" ' .
           ($attr['loop'] ? ' loop' : '') .
           ($attr['controls'] ? ' controls' : '') .
           ($attr['autoplay'] ? ' autoplay' : '') .

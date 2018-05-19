@@ -516,8 +516,10 @@ function twentyseventeen_scripts() {
 
 	wp_enqueue_script ('twentyseventeen-fix-footer-links', get_theme_file_uri( '/assets/js/fix-footer-links.js' ), array('jquery'), '1.0', true );
 
+	//wp_enqueue_script( 'twentyseventeen-html5-routing', get_theme_file_uri( '/assets/js/routing.js' ), array('jquery'), '1.0', true );
 	wp_enqueue_script( 'twentyseventeen-audio-widget', get_theme_file_uri( '/assets/js/theme-audio.js' ), array('jquery'), '1.0', true );
 	wp_enqueue_script( 'twentyseventeen-polylang-picker-transform', get_theme_file_uri( '/assets/js/select-to-links.js' ), array('jquery'), '1.0', true );
+	wp_enqueue_script( 'twentyseventeen-shadow-update', get_theme_file_uri( '/assets/js/shadow-update.bundle.js' ), array('jquery'), '1.0', true );
 	wp_enqueue_script( 'twentyseventeen-catchnrelease', get_theme_file_uri( '/assets/js/catchnrelease.js' ), array('jquery'), '1.0', true );
 
 }
@@ -654,5 +656,8 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+/** theme options */
+require get_parent_theme_file_path( '/inc/options-page.php' );
 
 //require get_parent_theme_file_path( '/tools/translate/gettext.php');
