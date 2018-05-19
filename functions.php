@@ -463,7 +463,7 @@ add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
  */
 function twentyseventeen_scripts() {
 	
-	wp_enqueue_style('twentyseventeen-googlefonts', 'https://fonts.googleapis.com' );
+	//wp_enqueue_style('twentyseventeen-googlefonts', 'https://fonts.googleapis.com' );
 	wp_enqueue_style('twentyseventeen-raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:n,b,i,bi|Open+Sans+Condensed:300:n,b,i,bi|&subset=latin' );
 
 	// Add custom fonts, used in the main stylesheet.
@@ -518,6 +518,7 @@ function twentyseventeen_scripts() {
 
 	wp_enqueue_script( 'twentyseventeen-audio-widget', get_theme_file_uri( '/assets/js/theme-audio.js' ), array('jquery'), '1.0', true );
 	wp_enqueue_script( 'twentyseventeen-polylang-picker-transform', get_theme_file_uri( '/assets/js/select-to-links.js' ), array('jquery'), '1.0', true );
+	wp_enqueue_script( 'twentyseventeen-catchnrelease', get_theme_file_uri( '/assets/js/catchnrelease.js' ), array('jquery'), '1.0', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
