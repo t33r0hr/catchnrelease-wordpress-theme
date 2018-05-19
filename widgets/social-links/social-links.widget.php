@@ -10,12 +10,12 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
 
   class Social_Links_Widget extends WP_Widget {
 
-    private const BASE_ID = 'social_links_widget';
+    private static $BASE_ID = 'social_links_widget';
 
     public function __construct() {
 
-      parent::__construct( Social_Links_Widget::BASE_ID, __('Social Links', 'twentyseventeen-cnr' ), array(
-        'classname' => Social_Links_Widget::BASE_ID,
+      parent::__construct( Social_Links_Widget::$BASE_ID, __('Social Links', 'twentyseventeen-cnr' ), array(
+        'classname' => Social_Links_Widget::$BASE_ID,
         'description' => __('Display Links to your social profiles.', 'twentyseventeen-cnr')
       ) );
 
@@ -26,7 +26,8 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
       return array(
         'facebook',
         'twitter',
-        'youtube'
+        'youtube',
+        'instagram'
       );
 
     }
@@ -90,13 +91,16 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
       $field_name = $this->get_field_name($icon_id);
       $field_id = $this->get_field_id($icon_id);
 
-      echo '<h3>' . $icon_id . '</h3>';
-      echo '<ul>';
-      echo '<li>';
-      echo '<input id="' . esc_attr($field_id) . '" type="checkbox" name="' . esc_attr($field_name) .'" ' . $checked . '>';      
+      echo '<h3>';
+      echo '<input id="' . esc_attr($field_id) . 
+      '" type="checkbox" name="' . esc_attr($field_name) .'" ' . 
+      'change="cnr_toggle_social_form_group(this)" name="' . esc_attr($field_name) .'" ' . 
+      $checked . '>';      
+      
       echo '<label for="' . esc_attr($field_name) . '">' . $icon_id . '</label>';
-      echo '</li>';
-
+      echo '</h3>';
+      
+      echo '<ul>';
       $caption_field_name = $this->get_field_name($icon_id . '_caption');
       $caption_field_id = $this->get_field_id($icon_id . '_caption');
 
@@ -145,6 +149,8 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
 
       $icon_ids = $this->get_icon_ids();
       
+      echo '<ul class="cnr-social-links">';
+
       foreach ($icon_ids as $icon_id) {
         echo '<li class="' . $icon_id . '">';
         $this->field($instance, $icon_id);
@@ -158,7 +164,7 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
     public function form( $instance ) {
 
       $title = array_key_exists('title', $instance ) ? $instance['title'] : esc_html__( 'New title', 'text_domain' );
-      $this->debug_instance($instance);
+      //$this->debug_instance($instance);
       ?>
       <p>
       <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'text_domain' ); ?></label> 
@@ -166,6 +172,7 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
       </p>
       <?php 
       $this->icon_selection($instance);
+      echo '<script type="javascript">cnr_handle_social_links_form()</script>';
     }
 
 
@@ -186,6 +193,21 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
       }
 
       return $instance;
+    }
+
+    public function _register_one ( $number ) {
+      parent::_register_one($number);
+
+      add_action( 'admin_print_scripts-widgets.php', array( $this, 'enqueue_admin_scripts' ) );
+
+    }
+
+
+    public function enqueue_admin_scripts () {
+
+      $handle = 'social-links-form';
+      wp_enqueue_script( $handle, get_parent_theme_file_uri('/assets/js/' . $handle . '.js' ) );
+
     }
 
 

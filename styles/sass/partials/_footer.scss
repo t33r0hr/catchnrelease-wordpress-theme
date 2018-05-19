@@ -139,6 +139,10 @@ footer {
       
       .widget {
         padding: 0;
+
+        .widget-title {
+          display: none;
+        }
       }
 
       .widget_apsi_widget, .sfsi {
