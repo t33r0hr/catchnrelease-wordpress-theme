@@ -4801,6 +4801,9 @@ footer .widget_nav_menu {
 .site-footer .widget-area .widget-column .widget {
   padding: 0;
 }
+.site-footer .widget-area .widget-column .widget .widget-title {
+  display: none;
+}
 .site-footer .widget-area .widget-column .widget_apsi_widget, .site-footer .widget-area .widget-column .sfsi {
   /* social app icons */
 }
