@@ -195,7 +195,7 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
       return $instance;
     }
 
-    public function _register_one ( $number ) {
+    public function _register_one ( $number = -1 ) {
       parent::_register_one($number);
 
       add_action( 'admin_print_scripts-widgets.php', array( $this, 'enqueue_admin_scripts' ) );
