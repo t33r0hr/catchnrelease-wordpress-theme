@@ -517,8 +517,9 @@ function twentyseventeen_scripts() {
 	wp_enqueue_script ('twentyseventeen-fix-footer-links', get_theme_file_uri( '/assets/js/fix-footer-links.js' ), array('jquery'), '1.0', true );
 
 	wp_enqueue_script( 'twentyseventeen-audio-widget', get_theme_file_uri( '/assets/js/theme-audio.js' ), array('jquery'), '1.0', true );
-	wp_enqueue_script( 'twentyseventeen-polylang-picker-transform', get_theme_file_uri( '/assets/js/select-to-links.js' ), array('jquery'), '1.0', true );
-	wp_enqueue_script( 'twentyseventeen-catchnrelease', get_theme_file_uri( '/assets/js/catchnrelease.js' ), array('jquery'), '1.0', true );
+	wp_enqueue_script( 'catchnrelease-polylang-picker-transform', get_theme_file_uri( '/assets/js/select-to-links.js' ), array('jquery'), '1.0', true );
+	wp_enqueue_script( 'twentyseventeen-shadow-update', get_theme_file_uri( '/assets/js/shadow-update.bundle.js' ), array('jquery'), '1.0', true );
+	wp_enqueue_script( 'catchnrelease-main', get_theme_file_uri( '/assets/js/catchnrelease.js' ), array('jquery'), '1.0', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
@@ -623,6 +624,19 @@ function twentyseventeen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentyseventeen_widget_tag_cloud_args' );
+
+function catchnrelease_wrap_script ( $html, $handle, $src ) {
+
+	$script_id = str_replace('.', '_', $handle);
+
+	//$out = '<!-- wrapped script -->';
+	$out = '<script type="text/javascript" src="' . $src . '" id="' . $script_id . '"></script>';
+
+	return $out;
+
+}
+
+add_filter( 'script_loader_tag', 'catchnrelease_wrap_script', 10, 3 );
 
 require get_parent_theme_file_path( '/inc/logo-widget.php' );
 
