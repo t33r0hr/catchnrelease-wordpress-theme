@@ -50,7 +50,7 @@
       }
     },
     handleEvent: ( ev ) => {
-      console.log('__THEME_AUDIO__::Event(%s)', ev.type)
+      //console.log('__THEME_AUDIO__::Event(%s)', ev.type)
       if ( !__THEME_AUDIO__.playing ) {
         ev.target.pause();
       }
