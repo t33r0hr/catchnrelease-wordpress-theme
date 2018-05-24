@@ -21,43 +21,6 @@
     return getCustomPlayer().find('input[type=checkbox]');
   }
 
-  const playerElement = getThemeAudioEl()
-
-
-  const customPlayer = getCustomPlayer()
-  const customPlayer_checkbox = getPlayerCheckbox();
-  /*const customPlayer_PlayButton = customPlayer.find('button.play');
-  const customPlayer_PauseButton = customPlayer.find('button.pause');*/
-
-  const player = getThemeAudio();
-
-  window.__THEME_AUDIO__ = {
-    player,
-    playing: readStoredState() === 'playing',
-    play: () => {
-      __THEME_AUDIO__.playing = true;
-      getThemeAudioEl().play();
-    },
-    pause: () => {
-      __THEME_AUDIO__.playing = false;
-      getThemeAudioEl().pause();
-    },
-    handleControlCheckbox: ( ev ) => {
-      if ( ev.target.checked ) {
-        __THEME_AUDIO__.play();
-      } else {
-        __THEME_AUDIO__.pause();
-      }
-    },
-    handleEvent: ( ev ) => {
-      //console.log('__THEME_AUDIO__::Event(%s)', ev.type)
-      if ( !__THEME_AUDIO__.playing ) {
-        ev.target.pause();
-      }
-    }
-  };
-
-
   function readStoredState () {
     return localStorage.getItem('cnr-theme-state') || 'playing';
   }
@@ -68,6 +31,7 @@
 
   function toggleState ( nextState ) {
 
+    const customPlayer = getCustomPlayer()
     const currentState = customPlayer.attr('state') || 'loading'
 
     if ( nextState !== currentState ) {
@@ -85,35 +49,56 @@
 
   }
 
-  //player.attr('controls',null);
-  
-  player.on('play',function(ev){
-    toggleState('playing')
-    getPlayerCheckbox().attr('checked', true );
-    writeStoredState('playing');
-  })
+  window.__THEME_AUDIO__ = {
 
-  player.on('pause',function(ev){
-    toggleState('paused')
-    getPlayerCheckbox().attr('checked', false );
-    writeStoredState('paused');
-  })
+    inited: false,
 
+    player: getThemeAudio(),
+    
+    playing: readStoredState() === 'playing',
 
-  toggleState('loading');
+    init: ( player=getThemeAudioEl() ) => {
+      if ( __THEME_AUDIO__.inited ) {
+        return;
+      }
 
-  const storedState = readStoredState()
+      const state = readStoredState();
+      if ( state !== 'playing' ) {
+        player.autoplay = false
+      } else {
+        getPlayerCheckbox().attr('checked', true );        
+      }
 
-  if ( storedState !== 'playing' ) {
-    playerElement.autoplay = false
-    //player.attr('autoplay', null);
-  }
-  
-  toggleState(storedState)
+      __THEME_AUDIO__.inited = true
+    },
 
-  /*if ( storedState === 'playing' ) {
-    playerElement.play();
-  }*/
-
+    play: ( player=getThemeAudioEl() ) => {
+      __THEME_AUDIO__.playing = true;
+      player.play();
+      writeStoredState('playing');
+    },
+    pause: ( player=getThemeAudioEl() ) => {
+      __THEME_AUDIO__.playing = false;
+      player.pause();
+      writeStoredState('paused');
+    },
+    handleControlCheckbox: ( ev ) => {
+      if ( ev.target.checked ) {
+        __THEME_AUDIO__.play();
+      } else {
+        __THEME_AUDIO__.pause();
+      }
+    },
+    handleEvent: ( ev ) => {
+      if ( !__THEME_AUDIO__.inited ) {
+        __THEME_AUDIO__.init(ev.target);
+      }
+      //console.log('__THEME_AUDIO__::Event(%s)', ev.type)
+      if ( !__THEME_AUDIO__.playing ) {
+        __THEME_AUDIO__.pause(ev.target)
+        getPlayerCheckbox().attr('checked', false );
+      }
+    }
+  };
 
 })(jQuery);

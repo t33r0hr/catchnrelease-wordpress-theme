@@ -192,6 +192,10 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
       return $html;
     }
 
+    public function enqueue_scripts() {
+      wp_enqueue_script( 'catchnrelease-theme-audio', get_parent_theme_file_uri( '/assets/js/theme-audio.js') );
+    }
+
     /**
      * Enqueue preview scripts.
      *
