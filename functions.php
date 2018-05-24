@@ -624,21 +624,6 @@ function twentyseventeen_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'twentyseventeen_widget_tag_cloud_args' );
 
-function catchnrelease_wrap_script ( $html, $handle, $src ) {
-
-	$script_id = str_replace('.', '_', $handle);
-
-	//$out = '<!-- wrapped script -->';
-	$out = '<script type="text/javascript" src="' . $src . '" id="' . $script_id . '"></script>';
-
-	return $out;
-
-}
-
-add_filter( 'script_loader_tag', 'catchnrelease_wrap_script', 10, 3 );
-
-
-
 require get_parent_theme_file_path( '/inc/logo-widget.php' );
 
 require_once get_parent_theme_file_path( '/widgets/init.php' );

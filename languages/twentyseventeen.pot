@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: My Holiday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-06 17:44+0200\n"
+"POT-Creation-Date: 2018-05-24 13:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -26,22 +26,6 @@ msgstr ""
 
 #: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-
-#: 404.php:24
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-
-#: archive.php:45 index.php:50 search.php:43
-msgid "Previous page"
-msgstr ""
-
-#: archive.php:46 index.php:51 search.php:44
-msgid "Next page"
-msgstr ""
-
-#: archive.php:47 index.php:52 search.php:45
-msgid "Page"
 msgstr ""
 
 #. translators: %s: post title
@@ -79,67 +63,84 @@ msgstr ""
 msgid "Footer Social Links Menu"
 msgstr ""
 
-#: functions.php:79 functions.php:205
+#: functions.php:79 functions.php:206
 #: template-parts/navigation/navigation-top.php:12
 msgid "Top Menu"
 msgstr ""
 
-#: functions.php:80 functions.php:216
+#: functions.php:80 functions.php:217
 msgid "Social Links Menu"
 msgstr ""
 
-#: functions.php:173
+#: functions.php:81 functions.php:229
+#: template-parts/footer/footer-menu.php:14
+msgid "Further Links Menu"
+msgstr ""
+
+#: functions.php:174
 msgctxt "Theme starter content"
 msgid "Espresso"
 msgstr ""
 
-#: functions.php:177
+#: functions.php:178
 msgctxt "Theme starter content"
 msgid "Sandwich"
 msgstr ""
 
-#: functions.php:181
+#: functions.php:182
 msgctxt "Theme starter content"
 msgid "Coffee"
 msgstr ""
 
-#: functions.php:291
+#: functions.php:301
 msgctxt "Libre Franklin font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:338
+#: functions.php:348
 msgid "Navigation Sidebar"
 msgstr ""
 
-#: functions.php:340
+#: functions.php:350
 msgid "Add widgets here to appear next to main navigation."
 msgstr ""
 
-#: functions.php:348 sidebar.php:18
+#: functions.php:358 sidebar.php:18
 msgid "Blog Sidebar"
 msgstr ""
 
-#: functions.php:350
+#: functions.php:360
 msgid ""
 "Add widgets here to appear in your sidebar on blog posts and archive pages."
 msgstr ""
 
-#: functions.php:358
-msgid "Footer 1"
-msgstr ""
-
-#: functions.php:360 functions.php:370
-msgid "Add widgets here to appear in your footer."
-msgstr ""
-
 #: functions.php:368
-msgid "Footer 2"
+msgid "Footer Start"
+msgstr ""
+
+#: functions.php:370
+msgid "Add widgets here to appear in your footer, aligned at start."
+msgstr ""
+
+#: functions.php:378
+msgid "Footer Center"
+msgstr ""
+
+#: functions.php:380
+msgid "Add widgets here to appear in your footer, aligned at center."
+msgstr ""
+
+#: functions.php:388
+msgid "Footer End"
+msgstr ""
+
+#: functions.php:390
+msgid "Add widgets here to appear in your footer, aligned at end."
 msgstr ""
 
 #. translators: %s: Name of current post
-#: functions.php:396 template-parts/page/content-front-page-panels.php:43
-#: template-parts/page/content-front-page.php:40
+#: functions.php:416 template-parts/page/content-front-page-panels.php:43
+#: template-parts/page/content-front-page.php:45
 #: template-parts/post/content-audio.php:83
 #: template-parts/post/content-gallery.php:70
 #: template-parts/post/content-image.php:59
@@ -149,15 +150,15 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: functions.php:478
+#: functions.php:502
 msgid "Expand child menu"
 msgstr ""
 
-#: functions.php:479
+#: functions.php:503
 msgid "Collapse child menu"
 msgstr ""
 
-#: header.php:29
+#: header.php:26
 msgid "Skip to content"
 msgstr ""
 
@@ -258,7 +259,7 @@ msgctxt ""
 msgid "Edit Gallery"
 msgstr ""
 
-#: inc/logo-widget.php:54
+#: inc/logo-widget.php:54 widgets/class-cnr-widget-media.php:148
 msgid "Title for the widget"
 msgstr ""
 
@@ -302,20 +303,16 @@ msgstr ""
 msgid "Posts"
 msgstr ""
 
-#: post-types/feature/feature.post-type.php:8
-msgid "Game Features"
+#: index.php:50 search.php:43
+msgid "Previous page"
 msgstr ""
 
-#: post-types/feature/feature.post-type.php:9
-msgid "Game Feature"
+#: index.php:51 search.php:44
+msgid "Next page"
 msgstr ""
 
-#: post-types/feature/feature.post-type.php:10
-msgid "Add New Game Feature"
-msgstr ""
-
-#: post-types/feature/feature.post-type.php:11
-msgid "Edit Game Feature"
+#: index.php:52 search.php:45
+msgid "Page"
 msgstr ""
 
 #: search.php:19
@@ -356,17 +353,17 @@ msgstr ""
 msgid "Next Post"
 msgstr ""
 
-#: template-parts/audio/audio-player.php:17
+#: template-parts/audio/audio-player.php:18
 msgctxt "Audio player label for state \"play\"."
 msgid "theme state: play"
 msgstr ""
 
-#: template-parts/audio/audio-player.php:18
+#: template-parts/audio/audio-player.php:19
 msgctxt "Audio player label for state \"pause\"."
 msgid "theme state: pause"
 msgstr ""
 
-#: template-parts/footer/footer-widgets.php:18
+#: template-parts/footer/footer-widgets.php:17
 msgid "Footer"
 msgstr ""
 
@@ -374,11 +371,10 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: template-parts/navigation/navigation-top.php:40
+#: template-parts/navigation/navigation-top.php:41
 msgid "Scroll down to content"
 msgstr ""
 
-#: template-parts/page/content-page.php:21
 #: template-parts/post/content-audio.php:88
 #: template-parts/post/content-gallery.php:75
 #: template-parts/post/content-image.php:64
@@ -399,31 +395,121 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:28
+#: widgets/class-cnr-widget-media.php:58
+msgid "A media item."
+msgstr ""
+
+#: widgets/class-cnr-widget-media.php:66
+msgid "No media selected"
+msgstr ""
+
+#: widgets/class-cnr-widget-media.php:67
+msgctxt "label for button in the media widget"
+msgid "Add Media"
+msgstr ""
+
+#: widgets/class-cnr-widget-media.php:68
+msgctxt ""
+"label for button in the media widget; should preferably not be longer than "
+"~13 characters long"
+msgid "Replace Media"
+msgstr ""
+
+#: widgets/class-cnr-widget-media.php:69
+msgctxt ""
+"label for button in the media widget; should preferably not be longer than "
+"~13 characters long"
+msgid "Edit Media"
+msgstr ""
+
+#: widgets/class-cnr-widget-media.php:70
+msgid "Add to Widget"
+msgstr ""
+
+#. translators: %s: URL to media library
+#: widgets/class-cnr-widget-media.php:73
+#, php-format
+msgid ""
+"We can&#8217;t find that file. Check your <a href=\"%s\">media library</a> "
+"and make sure it wasn&#8217;t deleted."
+msgstr ""
+
+#. translators: %d: widget count
+#: widgets/class-cnr-widget-media.php:77
+#, php-format
+msgid "Media Widget (%d)"
+msgid_plural "Media Widget (%d)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: widgets/class-cnr-widget-media.php:78
+msgid "Media Widget"
+msgstr ""
+
+#: widgets/class-cnr-widget-media.php:79
+msgid ""
+"Looks like this isn&#8217;t the correct kind of file. Please link to an "
+"appropriate file instead."
+msgstr ""
+
+#: widgets/class-cnr-widget-media.php:135
+msgid "Attachment post ID"
+msgstr ""
+
+#: widgets/class-cnr-widget-media.php:142
+msgid "URL to the media file"
+msgstr ""
+
+#: widgets/class-cnr-widget-media.php:406
+#: widgets/social-links/social-links.widget.php:170
+msgid "Title:"
+msgstr ""
+
+#: widgets/social-links/social-links.widget.php:17
+msgid "Social Links"
+msgstr ""
+
+#: widgets/social-links/social-links.widget.php:19
+msgid "Display Links to your social profiles."
+msgstr ""
+
+#: widgets/social-links/social-links.widget.php:108
+msgid "Link Caption"
+msgstr ""
+
+#: widgets/social-links/social-links.widget.php:117
+msgid "Link URL"
+msgstr ""
+
+#: widgets/social-links/social-links.widget.php:166
+msgid "New title"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:26
 msgid "Theme Audio"
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:29
+#: widgets/theme-audio/theme-audio.widget.php:27
 msgid "Theme audio playback widget for background music."
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:35
+#: widgets/theme-audio/theme-audio.widget.php:33
 msgid "No audio selected"
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:36
+#: widgets/theme-audio/theme-audio.widget.php:34
 msgctxt "label for button in the audio widget"
 msgid "Add Audio"
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:37
+#: widgets/theme-audio/theme-audio.widget.php:35
 msgctxt ""
 "label for button in the audio widget; should preferably not be longer than "
 "~13 characters long"
 msgid "Replace Audio"
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:38
+#: widgets/theme-audio/theme-audio.widget.php:36
 msgctxt ""
 "label for button in the audio widget; should preferably not be longer than "
 "~13 characters long"
@@ -431,7 +517,7 @@ msgid "Edit Audio"
 msgstr ""
 
 #. translators: %s: URL to media library
-#: widgets/theme-audio/theme-audio.widget.php:41
+#: widgets/theme-audio/theme-audio.widget.php:39
 #, php-format
 msgid ""
 "We can&#8217;t find that audio file. Check your <a href=\"%s\">media "
@@ -439,37 +525,65 @@ msgid ""
 msgstr ""
 
 #. translators: %d: widget count
-#: widgets/theme-audio/theme-audio.widget.php:45
+#: widgets/theme-audio/theme-audio.widget.php:43
 #, php-format
 msgid "Audio Widget (%d)"
 msgid_plural "Audio Widget (%d)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: widgets/theme-audio/theme-audio.widget.php:46
+#: widgets/theme-audio/theme-audio.widget.php:44
 msgid "Audio Widget"
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:47
+#: widgets/theme-audio/theme-audio.widget.php:45
 msgid ""
 "Looks like this isn&#8217;t the correct kind of file. Please link to an "
 "audio file instead."
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:70
+#: widgets/theme-audio/theme-audio.widget.php:68
 msgid "Preload"
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:75
+#: widgets/theme-audio/theme-audio.widget.php:73
 msgid "Loop"
 msgstr ""
 
+#: widgets/theme-audio/theme-audio.widget.php:78
+msgid "autoplay"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:83
+msgid "Show Controls"
+msgstr ""
+
 #. translators: %s: audio extension
-#: widgets/theme-audio/theme-audio.widget.php:86
+#: widgets/theme-audio/theme-audio.widget.php:94
 #, php-format
 msgid "URL to the %s audio source file"
 msgstr ""
 
-#: widgets/theme-audio/theme-audio.widget.php:221
+#: widgets/theme-audio/theme-audio.widget.php:188
+msgid "Theme Audio Playing"
+msgstr ""
+
+#: widgets/theme-audio/theme-audio.widget.php:271
 msgid "Unable to preview media due to an unknown error."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Catch & Release"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "t33r0hr/catchnrelease-wordpress-theme"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Customization of Twentyseventeen for Catch&Release Game Website"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Matthias Buchholz"
 msgstr ""

@@ -17,6 +17,17 @@
     return document.querySelector('.navigation-top .widget_theme_audio_widget audio');
   }
 
+  function getPlayerCheckbox () {
+    return getCustomPlayer().find('input[type=checkbox]');
+  }
+
+  const playerElement = getThemeAudioEl()
+
+
+  const customPlayer = getCustomPlayer()
+  const customPlayer_checkbox = getPlayerCheckbox();
+  /*const customPlayer_PlayButton = customPlayer.find('button.play');
+  const customPlayer_PauseButton = customPlayer.find('button.pause');*/
 
   const player = getThemeAudio();
 
@@ -31,20 +42,21 @@
       __THEME_AUDIO__.playing = false;
       getThemeAudioEl().pause();
     },
+    handleControlCheckbox: ( ev ) => {
+      if ( ev.target.checked ) {
+        __THEME_AUDIO__.play();
+      } else {
+        __THEME_AUDIO__.pause();
+      }
+    },
     handleEvent: ( ev ) => {
+      console.log('__THEME_AUDIO__::Event(%s)', ev.type)
       if ( !__THEME_AUDIO__.playing ) {
         ev.target.pause();
       }
     }
   };
 
-  const playerElement = getThemeAudioEl()
-
-
-  const customPlayer = getCustomPlayer()
-  const customPlayer_checkbox = getCustomPlayer().find('input[type=checkbox]');
-  /*const customPlayer_PlayButton = customPlayer.find('button.play');
-  const customPlayer_PauseButton = customPlayer.find('button.pause');*/
 
   function readStoredState () {
     return localStorage.getItem('cnr-theme-state') || 'playing';
@@ -73,27 +85,17 @@
 
   }
 
-  customPlayer_checkbox[0].addEventListener ( 'change', function(ev){
-
-    if ( ev.target.checked ) {
-      __THEME_AUDIO__.play();
-    } else {
-      __THEME_AUDIO__.pause();
-    }
-
-  } )
-  
   //player.attr('controls',null);
   
   player.on('play',function(ev){
     toggleState('playing')
-    customPlayer_checkbox.attr('checked', true );
+    getPlayerCheckbox().attr('checked', true );
     writeStoredState('playing');
   })
 
   player.on('pause',function(ev){
     toggleState('paused')
-    customPlayer_checkbox.attr('checked', false );
+    getPlayerCheckbox().attr('checked', false );
     writeStoredState('paused');
   })
 
