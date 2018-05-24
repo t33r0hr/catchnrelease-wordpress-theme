@@ -656,3 +656,5 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 //require get_parent_theme_file_path( '/tools/translate/gettext.php');
+
+require get_parent_theme_file_path( '/shortcode/svg-icons.php' );
