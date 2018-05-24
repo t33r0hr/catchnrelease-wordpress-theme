@@ -1,11 +1,48 @@
 (function($){
 
+ 
+  if ( window.__THEME_AUDIO__ ) {
+    return
+  }
 
-  const player = $('.navigation-top .widget audio');
-  const playerElement = player[0];
+  function getThemeAudio () {
+    return $('.navigation-top .widget_theme_audio_widget audio');
+  }
 
-  const customPlayer = $('.navigation-top .widget_theme_audio_widget');
-  const customPlayer_checkbox = customPlayer.find('input[type=checkbox]');
+  function getCustomPlayer () {
+    return $('.navigation-top .widget_theme_audio_widget .controls');
+  }
+
+  function getThemeAudioEl () {
+    return document.querySelector('.navigation-top .widget_theme_audio_widget audio');
+  }
+
+
+  const player = getThemeAudio();
+
+  window.__THEME_AUDIO__ = {
+    player,
+    playing: readStoredState() === 'playing',
+    play: () => {
+      __THEME_AUDIO__.playing = true;
+      getThemeAudioEl().play();
+    },
+    pause: () => {
+      __THEME_AUDIO__.playing = false;
+      getThemeAudioEl().pause();
+    },
+    handleEvent: ( ev ) => {
+      if ( !__THEME_AUDIO__.playing ) {
+        ev.target.pause();
+      }
+    }
+  };
+
+  const playerElement = getThemeAudioEl()
+
+
+  const customPlayer = getCustomPlayer()
+  const customPlayer_checkbox = getCustomPlayer().find('input[type=checkbox]');
   /*const customPlayer_PlayButton = customPlayer.find('button.play');
   const customPlayer_PauseButton = customPlayer.find('button.pause');*/
 
@@ -39,9 +76,9 @@
   customPlayer_checkbox[0].addEventListener ( 'change', function(ev){
 
     if ( ev.target.checked ) {
-      playerElement.play();
+      __THEME_AUDIO__.play();
     } else {
-      playerElement.pause();
+      __THEME_AUDIO__.pause();
     }
 
   } )
@@ -60,14 +97,14 @@
     writeStoredState('paused');
   })
 
-  window.__THEME_AUDIO__ = player;
 
   toggleState('loading');
 
   const storedState = readStoredState()
 
   if ( storedState !== 'playing' ) {
-    player.attr('autoplay', null);
+    playerElement.autoplay = false
+    //player.attr('autoplay', null);
   }
   
   toggleState(storedState)

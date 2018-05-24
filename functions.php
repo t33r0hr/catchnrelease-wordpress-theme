@@ -518,7 +518,6 @@ function twentyseventeen_scripts() {
 
 	wp_enqueue_script( 'twentyseventeen-audio-widget', get_theme_file_uri( '/assets/js/theme-audio.js' ), array('jquery'), '1.0', true );
 	wp_enqueue_script( 'catchnrelease-polylang-picker-transform', get_theme_file_uri( '/assets/js/select-to-links.js' ), array('jquery'), '1.0', true );
-	wp_enqueue_script( 'twentyseventeen-shadow-update', get_theme_file_uri( '/assets/js/shadow-update.bundle.js' ), array('jquery'), '1.0', true );
 	wp_enqueue_script( 'catchnrelease-main', get_theme_file_uri( '/assets/js/catchnrelease.js' ), array('jquery'), '1.0', true );
 
 }
@@ -637,6 +636,8 @@ function catchnrelease_wrap_script ( $html, $handle, $src ) {
 }
 
 add_filter( 'script_loader_tag', 'catchnrelease_wrap_script', 10, 3 );
+
+
 
 require get_parent_theme_file_path( '/inc/logo-widget.php' );
 

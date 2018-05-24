@@ -205,8 +205,8 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
 
     public function enqueue_admin_scripts () {
 
-      $handle = 'social-links-form';
-      wp_enqueue_script( $handle, get_parent_theme_file_uri('/assets/js/' . $handle . '.js' ) );
+      /*$handle = 'social-links-form';
+      wp_enqueue_script( $handle, get_parent_theme_file_uri('/assets/js/' . $handle . '.js' ) );*/
 
     }
 

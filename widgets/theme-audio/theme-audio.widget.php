@@ -17,6 +17,10 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
 
     public $l10n = array();
 
+    protected $audioEvents = array(
+      'play', 'pause', 'loadeddata', 'loadedmetadata', 'progress'
+    );
+
     public function __construct() {
 
       parent::__construct( 'theme_audio_widget', __('Theme Audio', 'twentyseventeen-cnr' ), array(
@@ -150,8 +154,13 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
 
       $sources = is_array($attr['source']) ? $attr['source'] : array($attr['source']);
 
-      $html = '<audio' .
-          ($attr['loop'] ? ' loop' : '') .
+      $html = '<audio';
+
+      foreach ($this->audioEvents as $audioEvent) {        
+        $html .= " on" . $audioEvent . '="__THEME_AUDIO__.handleEvent(event)"';
+      }
+
+      $html .= ($attr['loop'] ? ' loop' : '') .
           ($attr['controls'] ? ' controls' : '') .
           ($attr['autoplay'] ? ' autoplay' : '') .
           '>';
@@ -248,7 +257,6 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
      * @since 4.8.0
      */
     public function render_control_template_scripts() {
-      echo "render_control_template_scripts";
       parent::render_control_template_scripts()
       ?>
       <script type="text/html" id="tmpl-wp-media-widget-theme-audio-preview">

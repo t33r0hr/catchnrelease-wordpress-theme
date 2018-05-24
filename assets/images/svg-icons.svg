@@ -151,5 +151,10 @@
 <symbol id="icon-pause" viewBox="0 0 24 28">
 <path d="M24 3v22c0 0.547-0.453 1-1 1h-8c-0.547 0-1-0.453-1-1v-22c0-0.547 0.453-1 1-1h8c0.547 0 1 0.453 1 1zM10 3v22c0 0.547-0.453 1-1 1h-8c-0.547 0-1-0.453-1-1v-22c0-0.547 0.453-1 1-1h8c0.547 0 1 0.453 1 1z"></path>
 </symbol>
+<symbol id="navigation-spinner" viewBox="0 0 100 100">
+  <path d="M2 50A48 48 0 0 0 98 50A48 50 0 0 1 2 50" fill="#ffffff" transform="rotate(246 50 51)">
+    <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 51;360 50 51" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
+  </path>
+</symbol>
 </defs>
 </svg>

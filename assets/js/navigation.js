@@ -6,6 +6,13 @@
  */
 
 (function( $ ) {
+
+	if ( window.__CNR_NAVIGATION__ ) {
+		return;
+	}
+
+	window.__CNR_NAVIGATION__ = true;
+
 	var masthead, menuToggle, siteNavContain, siteNavigation;
 
 	function initMainNavigation( container ) {
@@ -57,6 +64,20 @@
 
 		// Add an initial value for the attribute.
 		menuToggle.attr( 'aria-expanded', 'false' );
+
+		var observer = new MutationObserver(function(mutationRecords){
+
+			if ( siteNavContain.hasClass('toggled-on') ) {
+				siteNavContain.removeClass('toggled-on')
+			}
+		})
+
+		observer.observe ( $('.main-navigation .rm-root')[0], {
+			childList: true,
+			subtree: true
+		} )
+
+
 
 		menuToggle.on( 'click.twentyseventeen', function() {
 			siteNavContain.toggleClass( 'toggled-on' );
