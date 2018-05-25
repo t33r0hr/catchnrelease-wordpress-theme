@@ -1,211 +1,88 @@
 
 
-/* footer parts alignment */
+.site-footer {
+  @include hbox;
+  background-color: rgba(1, 156, 210, 1);
 
-.widget-area {
+  .widget {
+    padding: 0;
+  }
 
-  @include vbox-reverse;
+  .widget-area {
+    @include hbox;
+    @include stretch;
+    justify-content: center;
 
-  .footer-widget-start {
-    align-self: start;
+    .footer-widget-start,
+    .footer-widget-end {
+      align-self: center;
+      width: 10rem;
+      align-content: center;
+    }
 
-    ul {
+    .footer-widget-start {
       align-items: start;
     }
-  }
 
-  .footer-widget-end {
-    align-self: end;
-
-    ul {
+    .footer-widget-end {
       align-items: end;
     }
-  }
 
-  .footer-widget-start,  .footer-widget-end {
-
-    font-size: .5rem;
-    
-    ul {
-      @include hbox;
-      @include vbox;
+    .footer-widget-center {
       align-items: center;
       flex: 1;
 
-      li {
-        border: 0;
-        margin: 0;
-        padding: 0.25rem 0;
-      }
-    }
-
-    .widget {
-      flex: 1;
-    }
-  }
-
-
-  .footer-widget-center {
-
-    flex: 1;
-
-  }
-
-}
-
-@media screen and (min-width: $bp_medium) {
-
-  .widget-area {
-
-    @include hbox;
-
-    .widget-column {
-
-      flex-wrap: wrap;
-
-    }
-
-    .footer-widget-start, 
-    .footer-widget-end {
-      @include vbox;
-
       ul {
-        @include vbox;
-        flex: 1;
-        align-items: start;
-      }
+        @include hbox;
+        @include center;
 
-      ul > li {
-        font-size: 0.66rem;
-        padding: 0.125rem 0.25rem;
-        border: 0;
-        text-align: center;
-        flex: 1;
+        li {
+          margin: 0 0.35rem; 
+        }
 
-        a {
-          text-align: center;
+
+        &.menu {
+          text-transform: unset;
+          font-weight: 100;
         }
       }
     }
 
+
+    .widget-column {
+
+      @include center;
+
+    }
+
+    .footer-navigation {
+      padding-top: 0.5rem;
+      padding-bottom: 0.7rem;
+    }
+
   }
-
-}
-
-
-/* footer navigation */
-
-footer {
 
   .widget_nav_menu {
-
-    @include stretch;
-    flex: 1;
-
-    /* ul.menu {
-      @include hbox;
-      @include stretch;
-
-      @media screen and (min-width: $bp_medium) {
-        @include vbox;
-      }
-    }
- */
-
+    padding: 0;    
   }
+
+  img {
+    @include __debug() {
+      border: 1px solid white;
+    }
+  }
+
+  ul:not(.menu) {
+    li {
+      border: none;
+    }
+  }
+
 }
 
-
-.site-footer {
-  background-color: rgba(1, 156, 210, 1);
-  width: 100%;
-  display: inline-block;
-
-  .widget-area {
-
-    padding: 0;
-    @include stretch;
-    @include cross-stretch;
-
-    .widget-column {
-      
-      @include hbox;
-      align-items: start;
-      align-self: stretch;
-
-      &.footer-widget-2 {
-        flex: 1;
-      }
-      
-      .widget {
-        padding: 0;
-
-        .widget-title {
-          display: none;
-        }
-      }
-
-      .widget_apsi_widget, .sfsi {
-        /* social app icons */
-        
-        @media screen and (min-width: $bp_medium) {
-          align-self: start;
-        }
-
-        .aps-each-icon {
-          @media screen and (min-width: $bp_medium) {
-              margin: 0.25rem 0.5rem;
-          }
-
-          img {
-            width: 48px;
-            height: 48px;
-            @include responsive-transform;
-          }
-        }
-
-      }
-
-      .widget_media_image {
-
-        flex: 1;
-        @include center;
-        margin: 0;
-        padding: 0;
-
-        a {
-
-          box-shadow: none;
-
-          img {
-
-            width: auto;
-
-            transition: max-height 300ms linear;
-
-            max-height: 64px;
-
-            @include screen_minimum {
-              max-height: 96px;
-            }
-            
-            @include screen_medium {
-              max-height: 150px;
-            }
-
-            box-shadow: none;
-
-            /* @include responsive-transform; */
-
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-
+.widget_media_image {
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 6rem;
 }

@@ -42,30 +42,27 @@
 .rm-root {  
 
   @media screen and (min-width: $bp_medium) {
-  
+    
+    position: relative;
+
     font-size: 1.5em;
     
     @include hbox;
-    flex-wrap: wrap;
 
-    > div:first-child {
-      flex: 1;
-    }
-
-    .rm-spacer-x {
-      flex: 1;
-    }
   }
 
 
   .rm-level-1 {
     
+    position: absolute;
+    left: 100%;
+
     display: flex;
     flex: 1;
     margin-top: 0.5em;
     height: 4em;
 
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
 
     .rm-spacer {
       display: none;
@@ -116,6 +113,18 @@
 
 }
 
+
+
+.footer-navigation {
+  ul.menu {
+    
+    flex-direction: row;
+    font-weight: 100;
+    text-transform: unset;
+    font-size: 0.5rem;
+
+  }
+}
 
 .widget_nav_menu {
 

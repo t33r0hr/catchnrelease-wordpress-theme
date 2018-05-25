@@ -50,10 +50,10 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
 
         if ( $instance[$icon_id] ) {
 
-          $caption = $instance[$icon_id.'_caption'];
+          //$caption = $instance[$icon_id.'_caption'];
           $link = $instance[$icon_id.'_link'];
 
-          $this->render_icon($icon_id, $caption, $link);
+          $this->render_icon($icon_id, $link);
           /*echo '<li><a href="#" class="cnr-social-icon ' . $icon_id . '">';
           echo twentyseventeen_get_svg( array( 'icon' => $icon_id ) );
           echo '</a></li>';*/
@@ -75,11 +75,10 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
 
     }
 
-    public function render_icon ( $icon_id, $caption, $link ) { ?> 
+    public function render_icon ( $icon_id, $link ) { ?> 
         <li class="<?php echo esc_attr($this->get_field_id($icon_id)); ?>">
           <a href="<?php echo $link; ?>" target="_blank">
             <?php echo twentyseventeen_get_svg( array ( 'icon' => $icon_id ) ); ?>
-            <span><?php echo $caption; ?></span>
           </a>
         </li>
       <?php
@@ -101,6 +100,7 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
       echo '</h3>';
       
       echo '<ul>';
+      /*
       $caption_field_name = $this->get_field_name($icon_id . '_caption');
       $caption_field_id = $this->get_field_id($icon_id . '_caption');
 
@@ -108,7 +108,7 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
       echo '<label for="' . esc_attr($caption_field_name) . '">' . __('Link Caption', 'twentyseventeen-cnr') .  '</label>';
       echo '<input value="'.$instance[$icon_id.'_caption'].'" class="widefat" id="' . esc_attr($caption_field_id) . '" type="text" name="' . esc_attr($caption_field_name) .'">';      
       echo '</li>';
-
+      */
 
       $link_field_name = $this->get_field_name($icon_id . '_link');
       $link_field_id = $this->get_field_id($icon_id . '_link');
@@ -131,9 +131,9 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
       foreach ($icon_ids as $icon_id) {
         echo 'icon_id: ' . $icon_id . "\n";
 
-        $caption_key = $this->get_field_name($icon_id.'_caption');
+        /*$caption_key = $this->get_field_name($icon_id.'_caption');
         echo 'caption_key: ' . $caption_key . "\n";
-        echo "value: " . $instance[$icon_id.'_caption'] . "\n";
+        echo "value: " . $instance[$icon_id.'_caption'] . "\n";*/
 
         $link_key = $this->get_field_name($icon_id.'_link');
         echo 'link_key: ' . $link_key . "\n";
@@ -187,7 +187,7 @@ if ( !class_exists( 'Social_Links_Widget' ) ) {
       foreach ($icon_ids as $icon_id) {
 
         $instance[$icon_id] = $new_instance[$icon_id];
-        $instance[$icon_id.'_caption'] = sanitize_text_field($new_instance[$icon_id.'_caption']);
+        //$instance[$icon_id.'_caption'] = sanitize_text_field($new_instance[$icon_id.'_caption']);
         $instance[$icon_id.'_link'] = $new_instance[$icon_id.'_link'];
 
       }

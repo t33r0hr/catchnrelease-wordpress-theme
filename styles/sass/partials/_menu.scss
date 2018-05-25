@@ -38,3 +38,31 @@ ul.menu {
   }
 
 }
+
+.site-footer {
+
+  ul.menu {
+
+    height: 0.5rem;
+    overflow: hidden;
+
+    li {
+      border: none;
+      margin: 0;
+    }
+
+    li:not(:first-of-type) {
+      padding-left: 1em;
+    }
+    li:not(:last-of-type) {
+
+      padding-right: 1em;
+      border-right: thin solid;
+
+    }
+
+
+
+  }
+
+}

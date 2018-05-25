@@ -2187,10 +2187,10 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 /* Footer widgets */
 
-.site-footer .widget-area {
+/* .site-footer .widget-area {
   padding-bottom: 2em;
   padding-top: 2em;
-}
+} */
 
 /* Social nav */
 
@@ -2419,9 +2419,9 @@ h2.widget-title {
   padding: 0.5em 0;
 }
 
-.widget:not(.widget_tag_cloud) ul li + li {
+/* .widget:not(.widget_tag_cloud) ul li + li {
   margin-top: -1px;
-}
+} */
 
 .widget ul li ul {
   margin: 0 0 -1px;
@@ -2885,11 +2885,11 @@ p > object:only-child {
 .icon {
   display: inline-block;
   fill: currentColor;
-  height: 1em;
+  height: 1.5em;
   position: relative; /* Align more nicely with capital letters */
   top: -0.0625em;
   vertical-align: middle;
-  width: 1em;
+  width: 1.5em;
 }
 
 /*--------------------------------------------------------------

@@ -13,6 +13,8 @@ $whitesmoke: #F3F0F1; // ultra light
 $lightsteelblue: #019cd2; // blue
 $darkblue : #00739E;
 
+$lightblue: rgb(0, 173, 237);
+
 $almostblack: #242229;
 $tomato: #E13F25;
 $light-transparent-50: rgba(255, 255, 255, 0.5);
@@ -20,7 +22,7 @@ $light-transparent-20: rgba(255, 255, 255, 0.2);
 
 // definitions
 
-$color-background-default: $whitesmoke;
+$color-background-default: $lightblue;
 $color-background-dark: $darkslategray;
 $color-background-black: $black;
 $color-background-bright: $white;

@@ -5,7 +5,43 @@ $bp_medium: 48em;
 $bp_large: 67em;
 $bp_larger: 79em;
 
+
 $bp_query_minimum: "(min-width: #{$bp_small})";
 $bp_query_medium: "(min-width: #{$bp_small})";
 $bp_query_large: "(min-width: #{$bp_medium})";
 
+
+$breakpoints: (30em 27em), 
+(48em 40em);
+
+@mixin wrap-inner () {
+
+  width: 100vw;
+
+  @media screen and (min-width: 48rem) {
+    max-width: 36rem;
+  }
+
+  /* @each $var in $breakpoints {
+    @media screen and (min-width: nth($var, 1)) {
+      width: nth($var, 2);
+    }
+  } */
+
+}
+
+@mixin wrap-outer () {
+
+  max-width: 100%;
+
+  @each $var in $breakpoints {
+    @media screen and (min-width: nth($var, 1)) {
+      width: nth($var, 2) * 1.05;
+    }
+  }
+
+  @media screen and (max-width: $bp_larger) {
+    width: $bp_larger * 1.05;;
+  }
+
+}

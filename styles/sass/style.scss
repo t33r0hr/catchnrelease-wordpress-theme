@@ -35,6 +35,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "mixins/breakpoints";
 @import "mixins/nav";
 
+@import 'basics/debug';
 @import 'basics/normalize';
 @import 'basics/remsizing';
 @import 'basics/typography';
@@ -48,10 +49,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "partials/widgets";
 @import "partials/language-selector";
 //@import "partials/navigation";
+@import "partials/menu";
 @import "partials/nav";
 @import "partials/content";
 @import "partials/footer";
-@import "partials/menu";
 
 @import "pages/features";
 @import "pages/press";
