@@ -94,7 +94,7 @@ ul {
 html, body {
   font-size: calc(100vw / 375 * 20);
 }
-@media (min-width: 30rem) {
+@media (min-width: 26.5rem) {
   /* line 15, styles/sass/basics/_remsizing.scss */
   html, body {
     font-size: calc(100vw / 1024 * 20);
@@ -3676,7 +3676,7 @@ p > object:only-child {
     padding-left: 0;
   }
 }
-@media screen and (min-width: 30rem) {
+@media screen and (min-width: 26.5rem) {
   /* Typography */
   /* 
     body,
@@ -4861,8 +4861,8 @@ p > object:only-child {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-  /* padding-left: 0.75em;
-  padding-right: 0.75em; */
+  padding-left: 0.75em;
+  padding-right: 0.75em;
 }
 
 /* line 10, styles/sass/partials/_wrap.scss */
@@ -4900,24 +4900,34 @@ p > object:only-child {
 /* line 44, styles/sass/partials/_wrap.scss */
 .wrap {
   width: 100vw;
-  border: 1px solid yellow;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 26.5rem) {
   /* line 44, styles/sass/partials/_wrap.scss */
   .wrap {
-    width: 42rem;
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 67rem) {
+  /* line 44, styles/sass/partials/_wrap.scss */
+  .wrap {
+    width: 26.5rem;
   }
 }
 
 /* line 48, styles/sass/partials/_wrap.scss */
 .wrap-outer {
   width: 100vw;
-  border: 1px solid yellow;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 26.5rem) {
   /* line 48, styles/sass/partials/_wrap.scss */
   .wrap-outer {
-    width: 42rem;
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 67rem) {
+  /* line 48, styles/sass/partials/_wrap.scss */
+  .wrap-outer {
+    width: 26.5rem;
   }
 }
 
@@ -4926,6 +4936,13 @@ p > object:only-child {
   margin-top: 0;
 }
 
+@media screen and (min-width: 26.5rem) {
+  /* line 59, styles/sass/partials/_wrap.scss */
+  .wrap, .wrap-outer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 /* line 1, styles/sass/partials/_header.scss */
 .site-header {
   background: transparent;
@@ -4954,24 +4971,28 @@ p > object:only-child {
 .widget_theme_audio_widget .controls, .widget_theme_audio_widget .controls label {
   display: flex;
   flex-direction: row;
-  color: #00aded;
+  color: rgba(0, 173, 237, 0.5);
   align-items: center;
   align-self: center;
   margin: 0;
 }
 /* line 30, styles/sass/partials/_audio.scss */
 .widget_theme_audio_widget .controls {
-  font-size: .9rem;
+  font-size: 1em;
   z-index: 1;
 }
+/* line 35, styles/sass/partials/_audio.scss */
+.widget_theme_audio_widget .controls label {
+  padding-top: 3px;
+}
 
-/* line 39, styles/sass/partials/_audio.scss */
+/* line 44, styles/sass/partials/_audio.scss */
 .widget-audio-player {
   /* @include hbox; */
   display: inline-block;
   margin-right: 1.25rem;
 }
-/* line 45, styles/sass/partials/_audio.scss */
+/* line 50, styles/sass/partials/_audio.scss */
 .widget-audio-player > button {
   display: none;
   border: thin solid #ffffff;
@@ -4982,20 +5003,20 @@ p > object:only-child {
   font-size: 13px;
 }
 @media screen and (min-width: 48em) {
-  /* line 55, styles/sass/partials/_audio.scss */
+  /* line 60, styles/sass/partials/_audio.scss */
   .widget-audio-player > button > span {
     display: none;
   }
 }
-/* line 67, styles/sass/partials/_audio.scss */
+/* line 72, styles/sass/partials/_audio.scss */
 .widget-audio-player.playing button.pause {
   display: flex;
 }
-/* line 77, styles/sass/partials/_audio.scss */
+/* line 82, styles/sass/partials/_audio.scss */
 .widget-audio-player.paused button.play {
   display: flex;
 }
-/* line 88, styles/sass/partials/_audio.scss */
+/* line 93, styles/sass/partials/_audio.scss */
 .widget-audio-player .loading button {
   display: none;
 }
@@ -5206,76 +5227,78 @@ ul.menu > li {
   align-items: center;
   align-self: center;
   margin-top: 1.4rem;
+  padding-bottom: 1.4rem;
   flex: 1;
 }
-/* line 45, styles/sass/partials/_nav.scss */
+/* line 46, styles/sass/partials/_nav.scss */
 .main-navigation > button {
   font-size: 1.78rem;
 }
-/* line 49, styles/sass/partials/_nav.scss */
+/* line 50, styles/sass/partials/_nav.scss */
 .main-navigation:not(.toggled-on) .rm-root {
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  /* line 49, styles/sass/partials/_nav.scss */
+  /* line 50, styles/sass/partials/_nav.scss */
   .main-navigation:not(.toggled-on) .rm-root {
     display: flex;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  /* line 62, styles/sass/partials/_nav.scss */
+  /* line 64, styles/sass/partials/_nav.scss */
   .navigation-top {
-    font-size: 1.2em;
+    font-size: 1rem;
   }
 
-  /* line 66, styles/sass/partials/_nav.scss */
+  /* line 68, styles/sass/partials/_nav.scss */
   .main-navigation {
     width: auto;
     width: 100%;
   }
-  /* line 71, styles/sass/partials/_nav.scss */
+  /* line 73, styles/sass/partials/_nav.scss */
   .main-navigation .rm-root {
     display: flex;
     flex-direction: row;
     align-items: stretch;
   }
-  /* line 75, styles/sass/partials/_nav.scss */
+  /* line 77, styles/sass/partials/_nav.scss */
   .main-navigation .rm-root .rm-level-1 {
     margin-top: 0;
+    padding-bottom: 0;
   }
-  /* line 78, styles/sass/partials/_nav.scss */
+  /* line 81, styles/sass/partials/_nav.scss */
   .main-navigation .rm-root .rm-level-1 .rm-spacer-x {
     flex: 1;
     min-width: 1rem;
   }
 }
 @media screen and (min-width: 67rem) {
-  /* line 90, styles/sass/partials/_nav.scss */
-  .top-navigation {
-    font-size: 1.1em;
+  /* line 93, styles/sass/partials/_nav.scss */
+  .navigation-top {
+    font-size: 1em;
   }
 
-  /* line 96, styles/sass/partials/_nav.scss */
+  /* line 99, styles/sass/partials/_nav.scss */
   .main-navigation .rm-root {
     align-items: stretch;
   }
-  /* line 98, styles/sass/partials/_nav.scss */
+  /* line 101, styles/sass/partials/_nav.scss */
   .main-navigation .rm-root .rm-level-1 {
     position: absolute;
     left: 100%;
     margin-top: 0;
   }
-  /* line 103, styles/sass/partials/_nav.scss */
+  /* line 106, styles/sass/partials/_nav.scss */
   .main-navigation .rm-root .rm-level-1 .rm-spacer-x {
-    width: 1.5rem;
+    width: 1.6rem;
   }
-  /* line 111, styles/sass/partials/_nav.scss */
+  /* line 114, styles/sass/partials/_nav.scss */
   .main-navigation .rm-root ul, .main-navigation .rm-root ul > li, .main-navigation .rm-root .menu-main-navigation-container {
     align-items: flex-start;
   }
 }
-/* line 123, styles/sass/partials/_nav.scss */
+/* line 126, styles/sass/partials/_nav.scss */
 .footer-navigation ul.menu {
   flex-direction: row;
   font-weight: 100;
@@ -5283,12 +5306,12 @@ ul.menu > li {
   font-size: 0.5rem;
 }
 
-/* line 133, styles/sass/partials/_nav.scss */
+/* line 136, styles/sass/partials/_nav.scss */
 .widget_nav_menu {
   padding-top: 1rem;
   flex-direction: row;
 }
-/* line 138, styles/sass/partials/_nav.scss */
+/* line 141, styles/sass/partials/_nav.scss */
 .widget_nav_menu h2.widget-title {
   display: none;
 }
@@ -5417,10 +5440,6 @@ html .site, body .site {
 .site-footer .widget_nav_menu {
   padding: 0;
 }
-/* line 68, styles/sass/partials/_footer.scss */
-.site-footer img {
-  border: 1px solid white;
-}
 /* line 75, styles/sass/partials/_footer.scss */
 .site-footer ul:not(.menu) li {
   border: none;
@@ -5434,9 +5453,19 @@ html .site, body .site {
   width: 4rem;
 }
 
+/* line 90, styles/sass/partials/_footer.scss */
+.footer-widget-end .widget_media_image {
+  width: 5rem;
+}
+
 @media screen and (min-width: 48rem) {
-  /* line 90, styles/sass/partials/_footer.scss */
+  /* line 96, styles/sass/partials/_footer.scss */
   .widget_media_image {
+    width: 5rem;
+  }
+
+  /* line 102, styles/sass/partials/_footer.scss */
+  .footer-widget-end .widget_media_image {
     width: 6rem;
   }
 }

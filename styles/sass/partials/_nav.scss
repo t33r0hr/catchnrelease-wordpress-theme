@@ -37,6 +37,7 @@
       @include cross-center;
       align-self: center;
       margin-top: 1.4rem;
+      padding-bottom: 1.4rem;
 
       flex: 1;
     }
@@ -59,8 +60,9 @@
 
 @media screen and (min-width: $bp_medium) {
 
+  
   .navigation-top {
-    font-size: 1.2em;
+    font-size: 1rem;
   }
 
   .main-navigation {
@@ -74,6 +76,7 @@
 
       .rm-level-1 {
         margin-top: 0;
+        padding-bottom: 0;
 
         .rm-spacer-x {
           flex: 1;
@@ -87,8 +90,8 @@
 
 @media screen and (min-width: $bp_large) {
   
-  .top-navigation {
-    font-size: 1.1em;
+  .navigation-top {
+    font-size: 1em;
   }
 
   .main-navigation {
@@ -101,7 +104,7 @@
         margin-top: 0;
 
         .rm-spacer-x {
-          width: 1.5rem;
+          width: 1.6rem;
         }
       }
 

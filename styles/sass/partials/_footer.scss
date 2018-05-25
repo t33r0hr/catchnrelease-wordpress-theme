@@ -86,9 +86,22 @@
   width: 4rem;
 }
 
+.footer-widget-end {
+  .widget_media_image {
+    width: 5rem;
+  }
+}
+
 @media screen and (min-width: $bp_medium) {
+  .widget_media_image {
+    width: 5rem;
+  }
+
+
+.footer-widget-end {
   .widget_media_image {
     width: 6rem;
   }
+}
 }
 

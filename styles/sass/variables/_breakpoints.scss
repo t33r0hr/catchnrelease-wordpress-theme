@@ -1,6 +1,6 @@
 
 $bp_tiny: 20rem;
-$bp_small: 30rem;
+$bp_small: 26.5rem;
 $bp_medium: 48rem;
 $bp_large: 67rem;
 $bp_larger: 79rem;
@@ -51,8 +51,12 @@ $breakpoints: (30em 27em),
 
   width: 100vw;
 
-  @include wrap-bp-medium () {
-    width: 42rem;
+  @include wrap-bp-small () {
+    width: 80vw;
+  }
+
+  @include wrap-bp-large () {
+    width: 26.5rem;
   }
 
   @include __debug() {

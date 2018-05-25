@@ -3,8 +3,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-  /* padding-left: 0.75em;
-  padding-right: 0.75em; */
+  padding-left: 0.75em; 
+  padding-right: 0.75em; 
 }
 
 .wrap:after {
@@ -52,5 +52,12 @@
 .site-header, .site-footer {
   .wrap {
     margin-top: 0;
+  }
+}
+
+@include wrap-bp-small () {
+  .wrap, .wrap-outer {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
