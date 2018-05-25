@@ -1,0 +1,9 @@
+$debugging: false;
+
+@mixin __debug() {
+  
+  @if $debugging {
+    @content;  
+  }
+  
+}

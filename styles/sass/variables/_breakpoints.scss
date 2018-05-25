@@ -1,11 +1,72 @@
 
-$bp_tiny: 20em;
-$bp_small: 30em;
-$bp_medium: 48em;
-$bp_large: 67em;
-$bp_larger: 79em;
+$bp_tiny: 20rem;
+$bp_small: 26.5rem;
+$bp_medium: 48rem;
+$bp_large: 67rem;
+$bp_larger: 79rem;
+
 
 $bp_query_minimum: "(min-width: #{$bp_small})";
 $bp_query_medium: "(min-width: #{$bp_small})";
 $bp_query_large: "(min-width: #{$bp_medium})";
 
+
+$breakpoints: (30em 27em), 
+(48em 40em);
+
+@mixin wrap-min ( $min_width: $bp_small ) {
+
+  @media screen and (min-width: $min-width ) {
+    @content;
+  }
+
+}
+
+@mixin wrap-bp-small () {
+
+  @include wrap-min ( $bp_small ) {
+    @content;
+  }
+
+}
+
+@mixin wrap-bp-medium () {
+
+  @include wrap-min ( $bp_medium ) {
+    @content;
+  }
+
+}
+
+@mixin wrap-bp-large () {
+
+  @include wrap-min ( $bp_large ) {
+    @content;
+  }
+
+}
+
+
+@mixin wrap-inner () {
+
+  width: 100vw;
+
+  @include wrap-bp-small () {
+    width: 80vw;
+  }
+
+  @include wrap-bp-large () {
+    width: 26.5rem;
+  }
+
+  @include __debug() {
+    border: 1px solid yellow;
+  }
+
+}
+
+@mixin wrap-outer () {
+
+  @include wrap-inner();
+
+}

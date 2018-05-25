@@ -182,10 +182,13 @@ if ( !class_exists( 'Theme_Audio_Widget' ) ) {
      */
     public function renderAudioControls ( $attr ) {
 
+      $icon = twentyseventeen_get_svg( array ( 'icon' => 'speaker' ) );
+
       $html = '<div class="controls">' .
           '<input id="' . $this->id_base . '_checkbox" type="checkbox" onchange="__THEME_AUDIO__.handleControlCheckbox(event)">'.
           '<label type="checkbox" for="'.$this->id_base.'_checkbox">'.
-          __('Theme Audio Playing', 'catchandrelease-cnr' ) .
+          //__('Theme Audio Playing', 'catchandrelease-cnr' ) .
+          $icon .
           '</label>'.          
         '</div>';
 

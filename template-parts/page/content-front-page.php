@@ -25,7 +25,7 @@
 	<?php endif; ?>
 
 	<div class="panel-content">
-		<div class="wrap">
+		<div class="wrap-outer">
 			<?php if ( current_user_can('editor') ) { ?>
 				<header class="entry-header">
 					<?php 

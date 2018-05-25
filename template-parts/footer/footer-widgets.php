@@ -36,4 +36,25 @@ if ( is_active_sidebar( 'sidebar-start' ) || is_active_sidebar( 'sidebar-center'
 		
 	</aside><!-- .widget-area -->
 
+	
+
+<?php endif; ?>
+
+
+<?php
+if ( is_active_sidebar( 'sidebar-footer-navigation' ) ) :
+?>
+
+	<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer Navigation', 'twentyseventeen-cnr' ); ?>">
+		<?php
+		if ( is_active_sidebar( 'sidebar-footer-navigation' ) ) { ?>
+			<div class="widget-column footer-navigation">
+				<?php dynamic_sidebar( 'sidebar-footer-navigation' ); ?>
+			</div>
+		<?php } ?>
+		 		
+	</aside><!-- .widget-area -->
+
+	
+
 <?php endif; ?>
