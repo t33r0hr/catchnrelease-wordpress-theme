@@ -16,7 +16,6 @@
     .footer-widget-start,
     .footer-widget-end {
       align-self: center;
-      width: 10rem;
       align-content: center;
     }
 
@@ -84,5 +83,12 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-  width: 6rem;
+  width: 4rem;
 }
+
+@media screen and (min-width: $bp_medium) {
+  .widget_media_image {
+    width: 6rem;
+  }
+}
+
