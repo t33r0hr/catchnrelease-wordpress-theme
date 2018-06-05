@@ -474,7 +474,7 @@ add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
 function twentyseventeen_scripts() {
 	
 	//wp_enqueue_style('twentyseventeen-googlefonts', 'https://fonts.googleapis.com' );
-	wp_enqueue_style('twentyseventeen-raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:n,b,i,bi|Open+Sans+Condensed:300:n,b,i,bi|&subset=latin' );
+	wp_enqueue_style('twentyseventeen-raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:300,500,700' );
 
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'twentyseventeen-fonts', twentyseventeen_fonts_url(), array(), null );
