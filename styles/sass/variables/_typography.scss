@@ -55,7 +55,7 @@ $rem-factor: 0.9;
 @mixin font-default() {
   /* font: $font-sans-serif-regular; */
   font-family: $font-family-sans-serif-regular;
-  font-weight: 400;
+  font-weight: 100;
   font-size: $font-size-base;
   line-height: $global-line-height;
   /* font-weight: 400;

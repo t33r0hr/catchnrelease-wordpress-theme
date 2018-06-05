@@ -8,6 +8,7 @@
   font-size: 1.6em;
 
 
+
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 
@@ -24,7 +25,11 @@
 
   position: relative;
   width: 100%;
-  
+
+  .menu li a {
+    font-weight: 700;
+  }
+
   .rm-root {
     position: relative;
     @include vbox;

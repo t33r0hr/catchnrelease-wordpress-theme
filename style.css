@@ -44,7 +44,7 @@ html, body { font-size: calc(100vw / 375 * 20); }
 @media only screen and (min-width: 64em) { html, body { font-size: calc(100vw / 1440 * 20); } }
 @media screen and (min-width: 123.75em) { html, body { font-size: 27.5px; } }
 
-body, html, a { font-family: raleway, sans-serif; color: #ffffff; line-height: 1.4rem; }
+body, html, a { font-family: raleway, sans-serif; color: #ffffff; line-height: 1.4rem; font-weight: 100; }
 
 .menu .current-menu-item a, .menu .current-lang a, .widget > ul .current-menu-item a, .widget > ul .current-lang a { color: rgba(255, 255, 255, 0.7); }
 
@@ -1443,7 +1443,7 @@ font-style: italic; */ margin-bottom: 1.5em; max-width: 100%; }
 .sale-teaser .layers { position: relative; height: 3.4rem; }
 .sale-teaser .layers .layer { display: flex; position: absolute; width: 100%; height: 100%; display: flex; align-content: center; justify-content: center; }
 .sale-teaser .layers .layer img { height: 100%; width: auto; }
-.sale-teaser .sale-teaser-caption { font-size: 2rem; font-weight: 500; color: #52feb3; }
+.sale-teaser .sale-teaser-caption { font-size: 1.7rem; font-weight: 400; text-transform: uppercase; color: #52feb3; }
 .sale-teaser .links { width: 100%; align-content: center; align-items: center; }
 .sale-teaser .links ul { list-style: none; margin: 0; display: flex; flex-direction: row; justify-content: center; }
 .sale-teaser .links ul li { padding: 0.6rem 0.4rem; }
@@ -1474,6 +1474,7 @@ ul.menu > li { margin: 0; padding: 1em 0.5em; }
 .navigation-top .wrap { display: flex; flex-direction: row; display: flex; align-content: center; justify-content: center; }
 
 .main-navigation { position: relative; width: 100%; }
+.main-navigation .menu li a { font-weight: 700; }
 .main-navigation .rm-root { position: relative; display: flex; flex-direction: column; display: flex; align-content: center; justify-content: center; }
 .main-navigation .rm-root .rm-level-1 { position: relative; display: flex; flex-direction: row; display: flex; align-items: center; align-self: center; margin-top: 1.4rem; padding-bottom: 1.4rem; flex: 1; }
 .main-navigation > button { font-size: 1.78rem; }
@@ -1499,6 +1500,8 @@ ul.menu > li { margin: 0; padding: 1em 0.5em; }
 html, body { display: flex; flex-direction: column; min-height: 100%; flex: 1; align-content: stretch; color: #ffffff; }
 html .site, body .site { display: flex; flex-direction: column; flex: 1; align-content: stretch; }
 
+body { margin-bottom: 10rem; }
+
 .entry-header, .entry-content { display: block; float: none !important; width: auto !important; margin-bottom: 1.5rem; }
 .entry-header .wp-caption, .entry-content .wp-caption { background: transparent; border: none; }
 .entry-header .wp-caption-text, .entry-content .wp-caption-text { font-size: 1.5rem; }
@@ -1510,7 +1513,7 @@ html .site, body .site { display: flex; flex-direction: column; flex: 1; align-c
 
 .entry-footer { border: 0; }
 
-.site-footer { display: flex; flex-direction: row; background-color: #019cd2; }
+.site-footer { display: flex; flex-direction: row; background-color: #019cd2; position: fixed; bottom: 0; left: 0; right: 0; }
 .site-footer .widget { padding: 0; }
 .site-footer .widget-area { display: flex; flex-direction: row; align-items: stretch; justify-content: center; }
 .site-footer .widget-area .footer-widget-start, .site-footer .widget-area .footer-widget-end { align-self: center; align-content: center; }
@@ -1522,6 +1525,8 @@ html .site, body .site { display: flex; flex-direction: column; flex: 1; align-c
 .site-footer .widget-area .footer-widget-center ul.menu { text-transform: unset; font-weight: 100; }
 .site-footer .widget-area .widget-column { display: flex; align-content: center; justify-content: center; }
 .site-footer .widget-area .footer-navigation { padding-top: 0.5rem; padding-bottom: 0.7rem; }
+.site-footer .widget-area .footer-navigation .menu > li > a { color: rgba(255, 255, 255, 0.6); }
+.site-footer .widget-area .footer-navigation .menu > li.current-menu-item > a { color: rgba(255, 255, 255, 0.4); }
 .site-footer .widget_nav_menu { padding: 0; }
 .site-footer ul:not(.menu) li { border: none; }
 
