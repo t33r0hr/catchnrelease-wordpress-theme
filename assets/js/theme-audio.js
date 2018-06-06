@@ -49,25 +49,31 @@
 
   }
 
+  let __AUDIO_ELEMENT__ = undefined;
+
   window.__THEME_AUDIO__ = {
 
     inited: false,
+
+    debugging: localStorage.getItem('__THEME_AUDIO__debugging') === "true",
 
     player: getThemeAudio(),
     
     playing: readStoredState() === 'playing',
 
     init: ( player=getThemeAudioEl() ) => {
+            
       if ( __THEME_AUDIO__.inited ) {
+        if ( __THEME_AUDIO__.debugging === true ) {
+          console.log('__THEME_AUDIO__::init() called on already initialized instance.')
+        }
         return;
       }
 
       const state = readStoredState();
-      if ( state !== 'playing' ) {
-        player.autoplay = false
-      } else {
-        getPlayerCheckbox().attr('checked', true );        
-      }
+      if ( state === 'playing' ) {
+        getPlayerCheckbox().attr('checked', true );
+      } 
 
       __THEME_AUDIO__.inited = true
     },
@@ -90,8 +96,21 @@
       }
     },
     handleEvent: ( ev ) => {
+      __AUDIO_ELEMENT__ = __AUDIO_ELEMENT__ || ev.target
+
+      if ( __AUDIO_ELEMENT__ && __AUDIO_ELEMENT__ !== ev.target ) {
+        if ( __THEME_AUDIO__.debugging === true ) {
+          console.log('New Audio Element', ev.target )
+        }
+        ev.target.pause()
+        return
+      }
+
       if ( !__THEME_AUDIO__.inited ) {
         __THEME_AUDIO__.init(ev.target);
+      }
+      if ( __THEME_AUDIO__.debugging === true ) {
+        console.log('__THEME_AUDIO__::handleEvent(%s)',ev.type,ev)
       }
       //console.log('__THEME_AUDIO__::Event(%s)', ev.type)
       if ( !__THEME_AUDIO__.playing ) {

@@ -6,9 +6,16 @@
 
   window.CATCHANDRELEASE = 1
 
-  $('p > span.embed-youtube').each((i,e)=>{
-    $(e).parent().addClass('responsive-media');
-  })
+  function cnr_attachResponsiveClass () {
+    $('p > span.embed-youtube').each((i,e)=>{
+      $(e).parent().addClass('responsive-media');
+    })
+  }
+
+  if ( 'function' === typeof window.h5r_addHook ) {
+    window.h5r_addHook('done', cnr_attachResponsiveClass)
+  }
+  cnr_attachResponsiveClass()
 
 
 })(jQuery)
