@@ -1470,7 +1470,7 @@ body { margin-bottom: 10rem; }
 
 .entry-footer { border: 0; }
 
-.site-footer { display: flex; flex-direction: row; background-color: #019cd2; position: fixed; bottom: 0; left: 0; right: 0; }
+.site-footer { display: flex; flex-direction: row; background-color: #019cd2; position: fixed; bottom: 0; left: 0; right: 0; z-index: 1; }
 .site-footer .widget { padding: 0; }
 .site-footer .widget-area { display: flex; flex-direction: row; align-items: stretch; justify-content: center; }
 .site-footer .widget-area .footer-widget-start, .site-footer .widget-area .footer-widget-end { align-self: center; align-content: center; }
