@@ -5,7 +5,7 @@ Author: Matthias Buchholz
 Author Email: mb@averagejoe.de
 GitHub Theme URI: t33r0hr/catchnrelease-wordpress-theme
 Description: Customization of Twentyseventeen for Catch&Release Game Website
-Version: 1.5.12
+Version: 1.5.13
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyseventeen-cnr
@@ -1479,8 +1479,8 @@ body { margin-bottom: 10rem; }
 
 .site-footer { display: flex; flex-direction: row; background-color: #019cd2; position: fixed; bottom: 0; left: 0; right: 0; z-index: 1; }
 .site-footer .widget { padding: 0; }
-.site-footer .widget-area { display: flex; flex-direction: row; align-items: stretch; justify-content: center; }
-.site-footer .widget-area:not(:first-of-type) { margin-top: -1.45rem; }
+.site-footer .widget-area { display: flex; flex-direction: row; align-items: stretch; justify-content: center; margin-top: -0.2rem; }
+.site-footer .widget-area:not(:first-of-type) { margin-top: -1.3rem; }
 .site-footer .widget-area .footer-widget-start, .site-footer .widget-area .footer-widget-end { align-self: center; align-content: center; }
 .site-footer .widget-area .footer-widget-start { align-items: start; }
 .site-footer .widget-area .footer-widget-end { align-items: end; }
@@ -1489,18 +1489,18 @@ body { margin-bottom: 10rem; }
 .site-footer .widget-area .footer-widget-center ul li { margin: 0 0.35rem; }
 .site-footer .widget-area .footer-widget-center ul.menu { text-transform: unset; font-weight: 100; }
 .site-footer .widget-area .widget-column { display: flex; align-content: center; justify-content: center; }
-.site-footer .widget-area .footer-navigation { padding-top: 0.5rem; padding-bottom: 0.7rem; }
+.site-footer .widget-area .footer-navigation { padding-top: 0.3rem; padding-bottom: 0.4rem; }
 .site-footer .widget-area .footer-navigation .menu > li > a { color: rgba(255, 255, 255, 0.6); }
 .site-footer .widget-area .footer-navigation .menu > li.current-menu-item > a { color: rgba(255, 255, 255, 0.4); }
 .site-footer .widget_nav_menu { padding: 0; }
 .site-footer ul:not(.menu) li { border: none; }
 
-.widget_media_image { justify-content: center; margin: 0; padding: 0; width: 4rem; }
+.widget_media_image { justify-content: center; margin: 0; padding: 0; width: 3rem; }
 
-.footer-widget-end .widget_media_image { width: 5rem; }
+.footer-widget-end .widget_media_image { width: 4rem; }
 
-@media screen and (min-width: 48rem) { .widget_media_image { width: 5rem; }
-  .footer-widget-end .widget_media_image { width: 6rem; } }
+@media screen and (min-width: 48rem) { .widget_media_image { width: 4rem; }
+  .footer-widget-end .widget_media_image { width: 4.5rem; } }
 .site-content .entry-content header { margin-bottom: 31px; /* @media only screen and (min-width:46.25em) { margin-bottom: 21px;
 } */ font-family: normal normal 400 15px/1.3em raleway, sans-serif; /* font-size: $font-size-base * 1.7; */ line-height: 1.2; }
 .site-content .entry-content .feature-list { list-style: none; font-family: normal normal 400 15px/1.3em raleway, sans-serif; }

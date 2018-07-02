@@ -15,6 +15,8 @@
  * @version 1.0
  */
 
+define( 'PLL_COOKIE', false);
+
 get_header(); ?>
 
 <div class="wrap">
