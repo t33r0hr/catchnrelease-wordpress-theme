@@ -18,6 +18,10 @@
     @include stretch;
     justify-content: center;
 
+    &:not(:first-of-type) {
+      margin-top: -1.45rem;
+    }
+
     .footer-widget-start,
     .footer-widget-end {
       align-self: center;
