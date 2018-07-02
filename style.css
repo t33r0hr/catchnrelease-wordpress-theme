@@ -5,7 +5,7 @@ Author: Matthias Buchholz
 Author Email: mb@averagejoe.de
 GitHub Theme URI: t33r0hr/catchnrelease-wordpress-theme
 Description: Customization of Twentyseventeen for Catch&Release Game Website
-Version: 1.5.13
+Version: 1.5.14
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyseventeen-cnr
@@ -1403,8 +1403,8 @@ padding-top: 1.75rem;*/   /*  padding-bottom: 0.25rem; padding-top: .125rem;
 .sale-teaser .layers .layer { display: flex; position: absolute; height: 100%; width: 100%; display: flex; align-content: center; justify-content: center; }
 .sale-teaser .layers .layer img { height: 100%; width: auto; margin: -2.5rem; margin-top: 0; }
 .sale-teaser .layers .layer:first-of-type img { opacity: 0.4; }
-.sale-teaser .sale-teaser-caption { font-size: 2rem; font-weight: 800; text-transform: uppercase; color: #ff7e1b; padding-top: 1.3rem; }
-@media screen and (min-width: 26.5rem) { .sale-teaser .sale-teaser-caption { font-size: 2.6rem; } }
+.sale-teaser .sale-teaser-caption { font-size: 2rem; font-weight: 900; text-transform: uppercase; font-family: 'Libre Franklin', sans-serif; color: #ff8300; padding-top: 1.3rem; }
+@media screen and (min-width: 26.5rem) { .sale-teaser .sale-teaser-caption { font-size: 2.5rem; } }
 @media screen and (min-width: 48rem) { .sale-teaser .sale-teaser-caption { padding-top: 0; } }
 .sale-teaser .links { width: 100%; align-content: center; align-items: center; }
 .sale-teaser .links ul { list-style: none; margin: 0; display: flex; flex-direction: row; justify-content: center; }
@@ -1412,7 +1412,7 @@ padding-top: 1.75rem;*/   /*  padding-bottom: 0.25rem; padding-top: .125rem;
 .sale-teaser .links ul li:hover { background: #00739E; }
 .sale-teaser .links ul li a > br { display: none; }
 .sale-teaser .links img { width: 6.5rem; height: auto; }
-.sale-teaser .tba { font-size: 1rem; letter-spacing: 0.02rem; font-weight: 400; color: #00739E; }
+.sale-teaser .tba { font-family: 'Libre Franklin', sans-serif; color: #04528d; font-size: 1rem; letter-spacing: 0.02rem; font-weight: 400; color: #00739E; }
 @media screen and (min-width: 26.5rem) { .sale-teaser .tba { font-size: 1.2rem; } }
 
 .widget.widget_polylang, .widget.widget_polylang ul li, .widget.widget_polylang ul li + li { list-style: none; margin: 0; padding: 0; border: none; text-transform: lowercase; }

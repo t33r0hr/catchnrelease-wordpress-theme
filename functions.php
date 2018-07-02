@@ -298,7 +298,7 @@ function twentyseventeen_fonts_url() {
 	 * supported by Libre Franklin, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'twentyseventeen-cnr' );
+	/*$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'twentyseventeen-cnr' );
 
 	if ( 'off' !== $libre_franklin ) {
 		$font_families = array();
@@ -312,6 +312,9 @@ function twentyseventeen_fonts_url() {
 
 		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 	}
+	*/
+
+	$fonts_url = 'https://fonts.googleapis.com/css?family=Libre+Franklin:400,800';
 
 	return esc_url_raw( $fonts_url );
 }
