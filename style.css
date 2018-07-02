@@ -5,7 +5,7 @@ Author: Matthias Buchholz
 Author Email: mb@averagejoe.de
 GitHub Theme URI: t33r0hr/catchnrelease-wordpress-theme
 Description: Customization of Twentyseventeen for Catch&Release Game Website
-Version: 1.5.14
+Version: 1.5.15
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyseventeen-cnr
@@ -1408,8 +1408,8 @@ padding-top: 1.75rem;*/   /*  padding-bottom: 0.25rem; padding-top: .125rem;
 @media screen and (min-width: 48rem) { .sale-teaser .sale-teaser-caption { padding-top: 0; } }
 .sale-teaser .links { width: 100%; align-content: center; align-items: center; }
 .sale-teaser .links ul { list-style: none; margin: 0; display: flex; flex-direction: row; justify-content: center; }
-.sale-teaser .links ul li { padding: 0.6rem 0.4rem; margin: 0.6rem 0.4rem; background: #00aded; border-radius: 1.5rem; }
-.sale-teaser .links ul li:hover { background: #00739E; }
+.sale-teaser .links ul li { padding: 0.6rem 0.4rem; margin: 0.6rem 0.4rem; background: #48cd00; border-radius: 1.5rem; }
+.sale-teaser .links ul li:hover { background: #39A400; }
 .sale-teaser .links ul li a > br { display: none; }
 .sale-teaser .links img { width: 6.5rem; height: auto; }
 .sale-teaser .tba { font-family: 'Libre Franklin', sans-serif; color: #04528d; font-size: 1rem; letter-spacing: 0.02rem; font-weight: 400; color: #00739E; }
